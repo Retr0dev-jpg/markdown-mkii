@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <!-- Toolkit 8.4 gates partial observable properties on the preview flag. -->
+    <LangVersion>preview</LangVersion>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+    <Using Include="Xunit" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/MarkdownMkII.Core/MarkdownMkII.Core.csproj" />
+    <ProjectReference Include="../../src/MarkdownMkII.Storage/MarkdownMkII.Storage.csproj" />
+    <Compile Include="../../src/MarkdownMkII.App/ViewModels/NoteEditorViewModel.cs" Link="ViewModels/NoteEditorViewModel.cs" />
+    <Compile Include="../../src/MarkdownMkII.App/Services/SettingsService.cs" Link="Services/SettingsService.cs" />
+    <Compile Include="../../src/MarkdownMkII.App/Services/Localization/ResourceKey.cs" Link="Services/Localization/ResourceKey.cs" />
+    <Compile Include="../../src/MarkdownMkII.App/Editor/EditorContext.cs" Link="Editor/EditorContext.cs" />
+    <Compile Include="../../src/MarkdownMkII.App/Services/RecoveryDocument.cs" Link="Services/RecoveryDocument.cs" />
+    <Compile Include="../../src/MarkdownMkII.App/Services/SettingsChangedEventArgs.cs" Link="Services/SettingsChangedEventArgs.cs" />
+    <Compile Include="../../src/MarkdownMkII.App/Services/Interop/IntegrityAnchorStore.cs" Link="Services/Interop/IntegrityAnchorStore.cs" />
+  </ItemGroup>
+</Project>

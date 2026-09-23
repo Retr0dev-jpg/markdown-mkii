@@ -1,0 +1,33 @@
+name: Verification
+
+on:
+  push:
+    branches: [main, "cursor/**"]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+      - name: Test MarkdownMkII.Core
+        run: dotnet test tests/MarkdownMkII.Core.Tests --nologo --configuration Release -warnaserror
+      - name: Test editor state and application services
+        run: dotnet test tests/MarkdownMkII.App.Logic.Tests --nologo --configuration Release -warnaserror
+
+      - name: Test SQLite persistence, import/export and large catalog
+        run: dotnet test tests/MarkdownMkII.Storage.Tests --nologo --configuration Release -warnaserror
+
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+      - name: Verify application and tests
+        shell: pwsh
+        run: ./scripts/verify.ps1 -IncludeApp -Configuration Release

@@ -1,0 +1,59 @@
+name: Build and Latest Release
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Build
+        shell: pwsh
+        run: |
+          $publish = Join-Path $env:GITHUB_WORKSPACE "artifacts/publish"
+          dotnet publish src/MarkdownMkII.App --nologo -c Release `
+            -p:PublishProfile=win-x64 `
+            -p:WindowsPackageType=None `
+            -p:WindowsAppSDKSelfContained=true `
+            -p:PublishDir="$publish/"
+          if ($LASTEXITCODE -ne 0) { throw "Publish failed" }
+          Compress-Archive -Path "$publish/*" -DestinationPath (Join-Path $env:GITHUB_WORKSPACE "artifacts/MarkdownMkII-win-x64.zip") -Force
+
+      - name: Publish Latest GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: pwsh
+        run: |
+          $sha = "${{ github.sha }}"
+          $run = "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          $notes = @"
+          Automated build.
+
+          - Commit: ``$sha``
+          - Workflow run: $run
+          "@
+          $files = @(
+            (Join-Path $env:GITHUB_WORKSPACE "artifacts/MarkdownMkII-win-x64.zip")
+          )
+          foreach ($f in $files) {
+            if (-not (Test-Path -LiteralPath $f)) { throw "Missing artifact $f" }
+          }
+          gh release delete latest --yes --cleanup-tag 2>$null
+          gh release create latest @files `
+            --title "Latest" `
+            --notes $notes `
+            --latest `
+            --target $sha

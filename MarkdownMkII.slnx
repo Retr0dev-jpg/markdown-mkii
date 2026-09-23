@@ -1,0 +1,18 @@
+﻿<Solution>
+  <Configurations>
+    <Platform Name="ARM64" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="src/MarkdownMkII.Core/MarkdownMkII.Core.csproj" />
+  <Project Path="src/MarkdownMkII.Storage/MarkdownMkII.Storage.csproj" />
+  <Project Path="tests/MarkdownMkII.Storage.Tests/MarkdownMkII.Storage.Tests.csproj" />
+  <Project Path="tests/MarkdownMkII.Core.Tests/MarkdownMkII.Core.Tests.csproj" />
+  <Project Path="tests/MarkdownMkII.App.Logic.Tests/MarkdownMkII.App.Logic.Tests.csproj" />
+  <Project Path="src/MarkdownMkII.App/MarkdownMkII.App.csproj">
+    <Platform Solution="*|ARM64" Project="ARM64" />
+    <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="*|x86" Project="x86" />
+    <Deploy />
+  </Project>
+</Solution>

@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="MarkdownMkII.Views.EditorPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="using:MarkdownMkII.ViewModels"
+    AllowDrop="True"
+    KeyboardAcceleratorPlacementMode="Hidden"
+    DragOver="OnDragOver"
+    Drop="OnDrop"
+    NavigationCacheMode="Disabled">
+
+<Grid x:Name="EditorRoot" PointerMoved="OnRootPointerMoved" SizeChanged="OnToolbarAvailableSizeChanged">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition x:Name="MinimapColumn" Width="76" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="52" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Border x:Name="FloatingToolbar" Grid.RowSpan="4" Canvas.ZIndex="5"
+                HorizontalAlignment="Center" VerticalAlignment="Top" Margin="8,6,8,0"
+                CornerRadius="9" BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1"
+                Background="{ThemeResource SolidBackgroundFillColorQuarternaryBrush}" Padding="6,0">
+        <StackPanel x:Name="EditorCommands" Orientation="Horizontal" Spacing="4" Padding="2,3" SizeChanged="OnToolbarContentSizeChanged">
+            <StackPanel.Resources>
+                <Style TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+                    <Setter Property="MinWidth" Value="32"/><Setter Property="MinHeight" Value="32"/>
+                    <Setter Property="Padding" Value="8,5"/><Setter Property="FontSize" Value="12"/>
+                    <Setter Property="Background" Value="Transparent"/><Setter Property="BorderThickness" Value="0"/>
+                </Style>
+            </StackPanel.Resources>
+            <Button x:Name="DocumentMenuButton"/>
+            <Button x:Name="BoldButton" Tag="bold" Click="OnToolbarCommand"><SymbolIcon Symbol="Bold"/></Button>
+            <Button x:Name="ItalicButton" Tag="italic" Click="OnToolbarCommand"><SymbolIcon Symbol="Italic"/></Button>
+            <Button x:Name="FormatMenuButton"/>
+            <Button x:Name="InsertMenuButton"/>
+            <Button x:Name="ViewMenuButton"/>
+            <Button x:Name="AllCommandsButton" Tag="palette" Click="OnToolbarCommand"><FontIcon Glyph="&#xE721;" FontSize="15"/></Button>
+            <Button x:Name="CloseEditorButton" Tag="close" Click="OnToolbarCommand"><FontIcon Glyph="&#xE711;" FontSize="15"/></Button>
+        </StackPanel>
+        </Border>
+
+        <Grid x:Name="FindBar" Grid.Row="1" Padding="24,0,20,12" Visibility="Collapsed" ColumnSpacing="8" RowSpacing="8">
+            <Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /></Grid.RowDefinitions>
+            <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+            <TextBox x:Name="FindBox" x:Uid="FindPlaceholder" KeyDown="OnFindKeyDown" />
+            <TextBox x:Name="ReplaceBox" x:Uid="ReplacePlaceholder" Grid.Column="1" KeyDown="OnFindKeyDown" />
+            <Button x:Uid="FindClose" Grid.Column="2" Click="OnFindClose" />
+            <ScrollViewer Grid.Row="1" Grid.ColumnSpan="3" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+                <StackPanel Orientation="Horizontal" Spacing="12">
+                    <CheckBox x:Name="MatchCaseBox" x:Uid="FindMatchCase" />
+                    <CheckBox x:Name="WholeWordBox" x:Uid="FindWholeWord" />
+                    <CheckBox x:Name="RegexBox" x:Uid="FindRegex" />
+                    <CheckBox x:Name="FindInSelectionBox" x:Uid="FindInSelection" Click="OnFindInSelectionChanged" />
+                </StackPanel>
+            </ScrollViewer>
+            <ScrollViewer Grid.Row="2" Grid.ColumnSpan="3" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                    <Button x:Uid="FindPrev" Click="OnFindPrevious" />
+                    <Button x:Uid="FindNext" Click="OnFindNext" />
+                    <Button x:Uid="FindReplace" Click="OnReplace" />
+                    <Button x:Uid="FindReplaceAll" Click="OnReplaceAll" />
+                    <TextBlock x:Name="FindCount" VerticalAlignment="Center" Opacity="0.7" />
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid x:Name="WorkGrid" Grid.Row="1" Padding="20,0,12,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition x:Name="OutlineSplitColumn" Width="0" />
+                    <ColumnDefinition x:Name="OutlineColumn" Width="0" />
+                </Grid.ColumnDefinitions>
+
+                <Grid x:Name="EditorPreviewHost">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition x:Name="EditorColumn" Width="*" />
+                        <ColumnDefinition x:Name="EditorSplitCol" Width="6" />
+                        <ColumnDefinition x:Name="PreviewColumn" Width="0" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition x:Name="EditorRow" Height="*" />
+                        <RowDefinition x:Name="EditorSplitRow" Height="0" />
+                        <RowDefinition x:Name="PreviewRow" Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid x:Name="EditorPane" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition x:Name="LineNumberColumn" Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition x:Name="HeadingRailColumn" Width="14" />
+                        </Grid.ColumnDefinitions>
+                        <Grid x:Name="LineNumberScroller" IsHitTestVisible="False">
+                            <Canvas x:Name="LineNumbers" Width="36" Opacity="0.45"/>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Rectangle
+                                x:Name="CurrentLineHighlight"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Top"
+                                Height="20"
+                                Opacity="0.14"
+                                IsHitTestVisible="False"
+                                Fill="{ThemeResource AccentFillColorDefaultBrush}"
+                                Visibility="Collapsed" />
+                            <RichEditBox
+                                x:Name="EditorBox"
+                                x:Uid="EditorPlaceholder"
+                                Foreground="{ThemeResource TextFillColorPrimaryBrush}"
+                                Background="{ThemeResource SolidBackgroundFillColorTertiaryBrush}"
+                                BorderThickness="0"
+                                Padding="8,8,16,16"
+                                CornerRadius="0"
+                                AcceptsReturn="True"
+                                TextWrapping="Wrap"
+                                FontFamily="Cascadia Code"
+                                FontSize="14"
+                                TextChanged="OnEditorTextChanged"
+                                SelectionChanged="OnEditorSelectionChanged"
+                                PreviewKeyDown="OnEditorPreviewKeyDown"
+                                PointerWheelChanged="OnEditorWheel"
+                                Paste="OnEditorPaste"
+                                SelectionFlyout="{x:Null}"
+                                SelectionHighlightColorWhenNotFocused="{ThemeResource TextControlSelectionHighlightColor}"
+                                Loaded="OnEditorLoaded">
+                                <RichEditBox.Resources>
+                                    <StaticResource x:Key="TextControlBackground" ResourceKey="SolidBackgroundFillColorTertiaryBrush" />
+                                    <StaticResource x:Key="TextControlBackgroundPointerOver" ResourceKey="SolidBackgroundFillColorTertiaryBrush" />
+                                    <StaticResource x:Key="TextControlBackgroundFocused" ResourceKey="SolidBackgroundFillColorTertiaryBrush" />
+                                    <SolidColorBrush x:Key="TextControlBorderBrushFocused" Color="Transparent" />
+                                </RichEditBox.Resources>
+                            </RichEditBox>
+                        </Grid>
+                        <Canvas
+                            x:Name="HeadingRailCanvas"
+                            Grid.Column="2"
+                            Width="14"
+                            Background="Transparent"
+                            PointerPressed="OnHeadingRailPressed"
+                            SizeChanged="OnHeadingRailSizeChanged" />
+
+                    </Grid>
+
+                    <Border
+                        x:Name="EditorSplitter"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Grid.RowSpan="3"
+                        Background="Transparent"
+                        PointerPressed="OnEditorSplitterPressed"
+                        PointerMoved="OnSplitterMoved"
+                        PointerReleased="OnSplitterReleased"
+                        PointerCanceled="OnSplitterReleased"
+                        PointerCaptureLost="OnSplitterCaptureLost">
+                        <Rectangle Width="1" HorizontalAlignment="Center" Opacity="0.28" Fill="{ThemeResource DividerStrokeColorDefaultBrush}" />
+                    </Border>
+
+                    <ScrollViewer
+                        x:Name="PreviewScroller"
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        Grid.RowSpan="3"
+                        Padding="16,8"
+                        PointerWheelChanged="OnPreviewWheel"
+                        ViewChanged="OnPreviewScrollChanged">
+                        <ContentPresenter x:Name="PreviewHost" />
+                    </ScrollViewer>
+                </Grid>
+
+                <Border
+                    x:Name="PreviewSplitter"
+                    Grid.Column="1"
+                    Background="Transparent"
+                    PointerPressed="OnPreviewSplitterPressed"
+                    PointerMoved="OnSplitterMoved"
+                    PointerReleased="OnSplitterReleased"
+                    PointerCanceled="OnSplitterReleased"
+                    PointerCaptureLost="OnSplitterCaptureLost">
+                    <Rectangle Width="1" HorizontalAlignment="Center" Opacity="0.28" Fill="{ThemeResource DividerStrokeColorDefaultBrush}" />
+                </Border>
+
+                <Grid x:Name="OutlinePanel" Grid.Column="2" Padding="8,8,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <StackPanel>
+                        <TextBlock x:Uid="OutlineTitle" Style="{ThemeResource SubtitleTextBlockStyle}" />
+                        <TextBox x:Name="OutlineFilterBox" x:Uid="OutlineFilter" TextChanged="OnOutlineFilterChanged" Margin="0,4,0,8" />
+                        <TextBlock x:Name="TagsLine" Opacity="0.7" TextWrapping="Wrap" />
+                    </StackPanel>
+                    <ListView
+                        x:Name="OutlineList"
+                        Grid.Row="1"
+                        SelectionMode="Single"
+                        IsItemClickEnabled="True"
+                        ItemClick="OnOutlineClick"
+                        RightTapped="OnOutlineRightTapped" />
+                    <TextBlock x:Uid="OutlineOutgoing" Grid.Row="2" Style="{ThemeResource SubtitleTextBlockStyle}" Margin="0,12,0,4" />
+                    <ListView
+                        x:Name="OutgoingList"
+                        Grid.Row="3"
+                        MaxHeight="140"
+                        SelectionMode="Single"
+                        IsItemClickEnabled="True"
+                        ItemClick="OnOutgoingClick" />
+                    <TextBlock x:Uid="OutlineBacklinks" Grid.Row="4" Style="{ThemeResource SubtitleTextBlockStyle}" Margin="0,12,0,4" />
+                    <ListView
+                        x:Name="BacklinksList"
+                        Grid.Row="5"
+                        SelectionMode="Single"
+                        IsItemClickEnabled="True"
+                        ItemClick="OnBacklinkClick" />
+                    <TextBlock x:Uid="OutlineGraph" Grid.Row="6" Style="{ThemeResource SubtitleTextBlockStyle}" Margin="0,12,0,4" />
+                    <ScrollViewer
+                        Grid.Row="7"
+                        MaxHeight="200"
+                        HorizontalScrollBarVisibility="Auto"
+                        VerticalScrollBarVisibility="Auto">
+                        <StackPanel>
+                            <ContentPresenter x:Name="GraphHost" />
+                            <ListView
+                                x:Name="GraphList"
+                                SelectionMode="Single"
+                                IsItemClickEnabled="True"
+                                ItemClick="OnGraphClick" />
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="StatusBar" Grid.Row="3" Padding="28,4,18,10" ColumnSpacing="12">
+            <Grid.Resources><Style TargetType="TextBlock"><Setter Property="FontSize" Value="10" /></Style></Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="StatusPath" Opacity="0.7" TextTrimming="CharacterEllipsis" Tapped="OnStatusPathTapped" />
+            <TextBlock x:Name="StatusLine" Grid.Column="1" Opacity="0.7" Tapped="OnStatusLineTapped" />
+            <TextBlock x:Name="StatusHeading" Visibility="Collapsed" Grid.Column="2" Opacity="0.7" MaxWidth="280" TextTrimming="CharacterEllipsis" />
+            <TextBlock x:Name="StatusWords" Grid.Column="3" Opacity="0.7" />
+            <TextBlock x:Name="StatusChars" Visibility="Collapsed" Grid.Column="4" Opacity="0.7" />
+            <TextBlock x:Name="StatusRead" Grid.Column="5" Opacity="0.7" />
+            <StackPanel Grid.Column="6" Orientation="Horizontal" Spacing="6"><TextBlock x:Name="StatusEncoding" Opacity="0.7" VerticalAlignment="Center"/><Button x:Name="RetrySaveButton" x:Uid="ArchiveRetryButton" Click="OnRetrySave" Visibility="Collapsed" Padding="8,2" MinHeight="24"/></StackPanel>
+        </Grid>
+        <Border x:Name="MinimapPanel" Grid.Column="1" Grid.RowSpan="4"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1,0,0,0"
+                Background="{ThemeResource SolidBackgroundFillColorBaseBrush}" CornerRadius="0,30,30,0">
+            <Grid Margin="7,18,7,18">
+                <Canvas x:Name="MinimapCanvas" Background="Transparent" AutomationProperties.AccessibilityView="Raw"
+                        PointerPressed="OnMinimapPressed" PointerMoved="OnMinimapMoved"
+                        PointerReleased="OnMinimapReleased" PointerCanceled="OnMinimapReleased"
+                        SizeChanged="OnMinimapSizeChanged" />
+                <Border x:Name="MinimapViewport" IsHitTestVisible="False" VerticalAlignment="Top"
+                        BorderBrush="{ThemeResource ControlStrongStrokeColorDefaultBrush}" BorderThickness="1" CornerRadius="3"
+                        Background="{ThemeResource SubtleFillColorSecondaryBrush}" Opacity="0.45" />
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

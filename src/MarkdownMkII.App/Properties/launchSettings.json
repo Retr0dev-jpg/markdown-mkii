@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MarkdownMkII": {
+      "commandName": "MsixPackage",
+      "alwaysReinstallApp": false
+    }
+  }
+}

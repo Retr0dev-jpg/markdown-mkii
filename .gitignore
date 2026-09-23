@@ -1,0 +1,75 @@
+## Build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]64/
+[Ll]og/
+[Ll]ogs/
+publish/
+artifacts/
+*.binlog
+
+## MSIX packaging and signing (never commit certificates)
+AppPackages/
+BundleArtifacts/
+Package.StoreAssociation.xml
+*.appx
+*.appxbundle
+*.appxupload
+*.msix
+*.msixbundle
+*.msixupload
+*.pfx
+*.p12
+*.cer
+
+## Tests and coverage
+TestResults/
+*.trx
+coverage*.json
+coverage*.xml
+*.coverage
+
+## Local verification, backups and UI test profiles
+.artifacts/
+
+## App data that may end up in the repository during manual tests
+notes.db
+notes.db-*
+*.mkii-backup
+diagnostics.log
+sealed-draft.json
+windows-hello.json
+
+## NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+
+## Visual Studio, Rider and VS Code
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+## Editors and AI tools
+.cursor/
+*.swp
+*~
+
+## Operating system
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store

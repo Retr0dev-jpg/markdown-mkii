@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page x:Class="MarkdownMkII.Views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:CommunityToolkit.WinUI.Controls" xmlns:views="using:MarkdownMkII.Views"
+    NavigationCacheMode="Required">
+    <Page.Resources>
+        <Style TargetType="controls:SettingsCard" BasedOn="{StaticResource SettingsRowStyle}" />
+        <Style TargetType="ComboBox"><Setter Property="MinWidth" Value="180" /><Setter Property="MaxWidth" Value="240" /></Style>
+        <Style TargetType="NumberBox"><Setter Property="Width" Value="160" /><Setter Property="SpinButtonPlacementMode" Value="Compact" /></Style>
+    </Page.Resources>
+    <Grid Padding="28,52,28,24" MaxWidth="1064" HorizontalAlignment="Stretch" RowSpacing="20">
+        <Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition Height="*" /></Grid.RowDefinitions>
+        <TextBlock x:Uid="SettingsTitle" Margin="32,0,0,0" Style="{ThemeResource TitleTextBlockStyle}" />
+        <NavigationView x:Name="CategoryNavigation" Grid.Row="1" PaneDisplayMode="Top"
+            IsBackButtonVisible="Collapsed" IsSettingsVisible="False" IsTabStop="False"
+            IsPaneToggleButtonVisible="False" Background="Transparent"
+            SelectionChanged="OnCategorySelectionChanged">
+            <NavigationView.Resources>
+                <SolidColorBrush x:Key="NavigationViewContentBackground" Color="Transparent" />
+            </NavigationView.Resources>
+            <NavigationView.MenuItems>
+                <NavigationViewItem x:Uid="SettingsCategoryAppearance" Tag="Appearance"><NavigationViewItem.Icon><FontIcon Glyph="&#xE790;" /></NavigationViewItem.Icon></NavigationViewItem>
+                <NavigationViewItem x:Uid="SettingsCategoryEditor" Tag="Editor"><NavigationViewItem.Icon><FontIcon Glyph="&#xE70F;" /></NavigationViewItem.Icon></NavigationViewItem>
+                <NavigationViewItem x:Uid="SettingsCategoryWriting" Tag="Writing"><NavigationViewItem.Icon><FontIcon Glyph="&#xE8D2;" /></NavigationViewItem.Icon></NavigationViewItem>
+                <NavigationViewItem x:Uid="SettingsCategoryPreview" Tag="Preview"><NavigationViewItem.Icon><FontIcon Glyph="&#xE890;" /></NavigationViewItem.Icon></NavigationViewItem>
+                <NavigationViewItem x:Uid="SettingsCategoryExport" Tag="Export"><NavigationViewItem.Icon><SymbolIcon Symbol="Share" /></NavigationViewItem.Icon></NavigationViewItem>
+                <NavigationViewItem x:Uid="SettingsCategoryData" Tag="Data"><NavigationViewItem.Icon><FontIcon Glyph="&#xE713;" /></NavigationViewItem.Icon></NavigationViewItem>
+                <NavigationViewItem x:Uid="SettingsCategoryShortcuts" Tag="Shortcuts"><NavigationViewItem.Icon><SymbolIcon Symbol="Keyboard"/></NavigationViewItem.Icon></NavigationViewItem>
+                <NavigationViewItem x:Uid="SettingsCategoryOrganization" Tag="Organization"><NavigationViewItem.Icon><SymbolIcon Symbol="Tag"/></NavigationViewItem.Icon></NavigationViewItem>
+                <NavigationViewItem x:Uid="SettingsCategorySecurity" Tag="Security"><NavigationViewItem.Icon><FontIcon Glyph="&#xE72E;"/></NavigationViewItem.Icon></NavigationViewItem>
+            </NavigationView.MenuItems>
+            <ScrollViewer x:Name="SettingsScroller" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Padding="0,16,0,0">
+                <Grid x:Name="SettingsSections">
+                    <views:SecuritySettings Tag="Security" Visibility="Collapsed"/>
+                    <views:OrganizationSettings Tag="Organization" Visibility="Collapsed"/>
+                    <views:ShortcutSettings Tag="Shortcuts" Visibility="Collapsed"/>
+                    <StackPanel x:Name="AppearanceSection" Tag="Appearance" Spacing="6" Visibility="Collapsed">
+                        <controls:SettingsCard x:Uid="SettingsTheme">
+                            <controls:SettingsCard.HeaderIcon><FontIcon Glyph="&#xE790;" /></controls:SettingsCard.HeaderIcon>
+                            <ComboBox ItemsSource="{x:Bind ViewModel.Themes}" SelectedValuePath="Value" DisplayMemberPath="Label" SelectedValue="{x:Bind ViewModel.SelectedTheme, Mode=TwoWay}" />
+                        </controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="SettingsBackdrop">
+                            <controls:SettingsCard.HeaderIcon><FontIcon Glyph="&#xE91B;" /></controls:SettingsCard.HeaderIcon>
+                            <ComboBox ItemsSource="{x:Bind ViewModel.Backdrops}" SelectedValuePath="Value" DisplayMemberPath="Label" SelectedValue="{x:Bind ViewModel.SelectedBackdrop, Mode=TwoWay}" />
+                        </controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="SettingsRememberWindow">
+                            <controls:SettingsCard.HeaderIcon><FontIcon Glyph="&#xE8A7;" /></controls:SettingsCard.HeaderIcon>
+                            <ToggleSwitch IsOn="{x:Bind ViewModel.RememberWindowPlacement, Mode=TwoWay}" />
+                        </controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="SettingsLanguage">
+                            <controls:SettingsCard.HeaderIcon><FontIcon Glyph="&#xF2B7;" /></controls:SettingsCard.HeaderIcon>
+                            <ComboBox x:Name="LanguageBox" SelectionChanged="OnLanguageChanged" />
+                        </controls:SettingsCard>
+                        <InfoBar x:Uid="SettingsRestart" Margin="0,6,0,0" IsOpen="{x:Bind ViewModel.RestartRequired, Mode=OneWay}" Severity="Informational" />
+                    </StackPanel>
+                    <StackPanel x:Name="EditorSection" Tag="Editor" Spacing="6" Visibility="Collapsed">
+                        <controls:SettingsExpander x:Uid="SettingsTypography" Style="{StaticResource SettingsGroupStyle}">
+                            <controls:SettingsExpander.HeaderIcon><FontIcon Glyph="&#xE8D2;" /></controls:SettingsExpander.HeaderIcon>
+                            <controls:SettingsExpander.Items>
+                                <controls:SettingsCard x:Uid="SettingsFontFamily">
+                                    <controls:SettingsCard.HeaderIcon><SymbolIcon Symbol="Font" /></controls:SettingsCard.HeaderIcon>
+                                    <TextBox Width="200" Text="{x:Bind ViewModel.FontFamily, Mode=TwoWay}" />
+                                </controls:SettingsCard>
+                                <controls:SettingsCard x:Uid="SettingsFontSize">
+                                    <controls:SettingsCard.HeaderIcon><SymbolIcon Symbol="FontSize" /></controls:SettingsCard.HeaderIcon>
+                                    <NumberBox Minimum="10" Maximum="32" SmallChange="1" Value="{x:Bind ViewModel.FontSize, Mode=TwoWay}" />
+                                </controls:SettingsCard>
+                                <controls:SettingsCard x:Uid="SettingsLineHeight">
+                                    <controls:SettingsCard.HeaderIcon><SymbolIcon Symbol="Sort" /></controls:SettingsCard.HeaderIcon>
+                                    <NumberBox Minimum="1" Maximum="2.5" SmallChange="0.05" Value="{x:Bind ViewModel.LineHeight, Mode=TwoWay}" />
+                                </controls:SettingsCard>
+                                <controls:SettingsCard x:Uid="SettingsTabSize">
+                                    <controls:SettingsCard.HeaderIcon><FontIcon Glyph="&#xE7FD;" /></controls:SettingsCard.HeaderIcon>
+                                    <NumberBox Minimum="2" Maximum="8" Value="{x:Bind ViewModel.TabSize, Mode=TwoWay}" />
+                                </controls:SettingsCard>
+                            </controls:SettingsExpander.Items>
+                        </controls:SettingsExpander>
+                        <controls:SettingsCard x:Uid="SettingsWordWrap">
+                            <controls:SettingsCard.HeaderIcon><SymbolIcon Symbol="AlignLeft" /></controls:SettingsCard.HeaderIcon>
+                            <ToggleSwitch IsOn="{x:Bind ViewModel.WordWrap, Mode=TwoWay}" />
+                        </controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="SettingsAutoPair">
+                            <controls:SettingsCard.HeaderIcon><FontIcon Glyph="&#xE943;" /></controls:SettingsCard.HeaderIcon>
+                            <ToggleSwitch IsOn="{x:Bind ViewModel.AutoPairBrackets, Mode=TwoWay}" />
+                        </controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="SettingsLineNumbers">
+                            <controls:SettingsCard.HeaderIcon><FontIcon Glyph="&#xE8BC;" /></controls:SettingsCard.HeaderIcon>
+                            <ToggleSwitch IsOn="{x:Bind ViewModel.ShowLineNumbers, Mode=TwoWay}" />
+                        </controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="SettingsHighlightLine">
+                            <controls:SettingsCard.HeaderIcon><SymbolIcon Symbol="Highlight" /></controls:SettingsCard.HeaderIcon>
+                            <ToggleSwitch IsOn="{x:Bind ViewModel.HighlightCurrentLine, Mode=TwoWay}" />
+                        </controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="SettingsMinimap">
+                            <controls:SettingsCard.HeaderIcon><SymbolIcon Symbol="Map" /></controls:SettingsCard.HeaderIcon>
+                            <ToggleSwitch IsOn="{x:Bind ViewModel.ShowMinimap, Mode=TwoWay}" />
+                        </controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="SettingsOutline">
+                            <controls:SettingsCard.HeaderIcon><SymbolIcon Symbol="List" /></controls:SettingsCard.HeaderIcon>
+                            <ToggleSwitch IsOn="{x:Bind ViewModel.ShowOutline, Mode=TwoWay}" />
+                        </controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="SettingsDefaultView">
+                            <controls:SettingsCard.HeaderIcon><SymbolIcon Symbol="TwoPage" /></controls:SettingsCard.HeaderIcon>
+                            <ComboBox ItemsSource="{x:Bind ViewModel.ViewModes}" SelectedValuePath="Value" DisplayMemberPath="Label" SelectedValue="{x:Bind ViewModel.DefaultViewMode, Mode=TwoWay}" />
+                        </controls:SettingsCard>
+                    </StackPanel>
+                    <StackPanel x:Name="WritingSection" Tag="Writing" Spacing="6" Visibility="Collapsed">
+                        <controls:SettingsCard x:Uid="SettingsSpellCheck">
+                            <controls:SettingsCard.HeaderIcon><SymbolIcon Symbol="Accept" /></controls:SettingsCard.HeaderIcon>
+                            <ToggleSwitch IsOn="{x:Bind ViewModel.SpellCheck, Mode=TwoWay}" />
+                        </controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="SettingsTypewriter">
+                            <controls:SettingsCard.HeaderIcon><SymbolIcon Symbol="Keyboard" /></controls:SettingsCard.HeaderIcon>
+                            <ToggleSwitch IsOn="{x:Bind ViewModel.TypewriterMode, Mode=TwoWay}" />
+                        </controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="SettingsDefaultTemplate">
+                            <controls:SettingsCard.HeaderIcon><SymbolIcon Symbol="Document" /></controls:SettingsCard.HeaderIcon>
+                            <ComboBox ItemsSource="{x:Bind ViewModel.Templates}" SelectedValuePath="Value" DisplayMemberPath="Label" SelectedValue="{x:Bind ViewModel.DefaultTemplate, Mode=TwoWay}" />
+                        </controls:SettingsCard>
+                    </StackPanel>
+                    <StackPanel x:Name="PreviewSection" Tag="Preview" Spacing="6" Visibility="Collapsed">
+                        <controls:SettingsCard x:Uid="SettingsLivePreview">
+                            <controls:SettingsCard.HeaderIcon><SymbolIcon Symbol="View" /></controls:SettingsCard.HeaderIcon>
+                            <ToggleSwitch IsOn="{x:Bind ViewModel.LivePreview, Mode=TwoWay}" />
+                        </controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="SettingsSyncScroll">
+                            <controls:SettingsCard.HeaderIcon><FontIcon Glyph="&#xE895;" /></controls:SettingsCard.HeaderIcon>
+                            <ToggleSwitch IsOn="{x:Bind ViewModel.SyncScroll, Mode=TwoWay}" />
+                        </controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="SettingsRemoteImages">
+                            <controls:SettingsCard.HeaderIcon><SymbolIcon Symbol="Pictures" /></controls:SettingsCard.HeaderIcon>
+                            <ToggleSwitch IsOn="{x:Bind ViewModel.LoadRemoteImages, Mode=TwoWay}" />
+                        </controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="SettingsZoom">
+                            <controls:SettingsCard.HeaderIcon><FontIcon Glyph="&#xE71E;" /></controls:SettingsCard.HeaderIcon>
+                            <NumberBox Minimum="0.7" Maximum="2" SmallChange="0.1" Value="{x:Bind ViewModel.PreviewZoom, Mode=TwoWay}" />
+                        </controls:SettingsCard>
+                    </StackPanel>
+                    <StackPanel x:Name="ExportSection" Tag="Export" Spacing="6" Visibility="Collapsed">
+                        <controls:SettingsCard x:Uid="SettingsCssTheme">
+                            <controls:SettingsCard.HeaderIcon><SymbolIcon Symbol="Page" /></controls:SettingsCard.HeaderIcon>
+                            <ComboBox ItemsSource="{x:Bind ViewModel.CssThemes}" SelectedValuePath="Value" DisplayMemberPath="Label" SelectedValue="{x:Bind ViewModel.CssTheme, Mode=TwoWay}" />
+                        </controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="SettingsIncludeToc">
+                            <controls:SettingsCard.HeaderIcon><SymbolIcon Symbol="List" /></controls:SettingsCard.HeaderIcon>
+                            <ToggleSwitch IsOn="{x:Bind ViewModel.IncludeToc, Mode=TwoWay}" />
+                        </controls:SettingsCard>
+                    </StackPanel>
+                    <StackPanel x:Name="DataSection" Tag="Data" Spacing="6" Visibility="Collapsed">
+                        <controls:SettingsCard x:Uid="ArchiveBackupCard"><Button x:Uid="ArchiveBackupButton" Click="OnBackup"/></controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="ArchiveRestoreCard"><Button x:Uid="ArchiveRestoreButton" Click="OnRestoreBackup"/></controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="SettingsLogLevel">
+                            <controls:SettingsCard.HeaderIcon><SymbolIcon Symbol="Filter" /></controls:SettingsCard.HeaderIcon>
+                            <ComboBox SelectedValuePath="Tag" SelectedValue="{x:Bind ViewModel.LogLevel, Mode=TwoWay}">
+                                <ComboBoxItem x:Uid="LogOff" Tag="Off" />
+                                <ComboBoxItem x:Uid="LogErrors" Tag="ErrorsOnly" />
+                                <ComboBoxItem x:Uid="LogVerbose" Tag="Verbose" />
+                            </ComboBox>
+                        </controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="SettingsLogFile">
+                            <controls:SettingsCard.HeaderIcon><SymbolIcon Symbol="Document" /></controls:SettingsCard.HeaderIcon>
+                            <Button x:Uid="SettingsOpenLog" Command="{x:Bind ViewModel.OpenLogCommand}" />
+                        </controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="SettingsReset">
+                            <controls:SettingsCard.HeaderIcon><SymbolIcon Symbol="Undo" /></controls:SettingsCard.HeaderIcon>
+                            <Button x:Uid="SettingsResetButton" Click="OnResetClick" />
+                        </controls:SettingsCard>
+                        <controls:SettingsCard x:Uid="FactoryResetCard">
+                            <controls:SettingsCard.HeaderIcon><FontIcon Glyph="&#xE74D;" Foreground="{ThemeResource SystemFillColorCriticalBrush}" /></controls:SettingsCard.HeaderIcon>
+                            <Button x:Uid="FactoryResetButton" Click="OnFactoryResetClick" />
+                        </controls:SettingsCard>
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
+        </NavigationView>
+    </Grid>
+</Page>

@@ -1,0 +1,1278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="NavLibrary.Content" xml:space="preserve"><value>Libreria</value></data>
+  <data name="NavEditor.Content" xml:space="preserve"><value>Editor</value></data>
+  <data name="NavSettings.Content" xml:space="preserve"><value>Impostazioni</value></data>
+  <data name="NavInfo.Content" xml:space="preserve"><value>Informazioni</value></data>
+  <data name="LanguageSystemDefault" xml:space="preserve"><value>Come il sistema</value></data>
+  <data name="LanguageItalian" xml:space="preserve"><value>Italiano</value></data>
+  <data name="LanguageEnglish" xml:space="preserve"><value>English</value></data>
+  <data name="CmdNew.Label" xml:space="preserve"><value>Nuova nota</value></data>
+  <data name="CmdOpen.Label" xml:space="preserve"><value>Importa Markdown</value></data>
+  <data name="CmdSave.Label" xml:space="preserve"><value>Salva</value></data>
+  <data name="CmdSaveAs.Label" xml:space="preserve"><value>Salva con nome</value></data>
+  <data name="CmdBold.Label" xml:space="preserve"><value>Grassetto</value></data>
+  <data name="CmdItalic.Label" xml:space="preserve"><value>Corsivo</value></data>
+  <data name="CmdStrike.Label" xml:space="preserve"><value>Barrato</value></data>
+  <data name="CmdCode.Label" xml:space="preserve"><value>Codice</value></data>
+  <data name="CmdLink.Label" xml:space="preserve"><value>Link</value></data>
+  <data name="CmdImage.Label" xml:space="preserve"><value>Immagine</value></data>
+  <data name="CmdBullet.Label" xml:space="preserve"><value>Elenco</value></data>
+  <data name="CmdNumbered.Label" xml:space="preserve"><value>Numerato</value></data>
+  <data name="CmdTask.Label" xml:space="preserve"><value>Attività</value></data>
+  <data name="CmdQuote.Label" xml:space="preserve"><value>Citazione</value></data>
+  <data name="CmdTable.Label" xml:space="preserve"><value>Tabella</value></data>
+  <data name="CmdFence.Label" xml:space="preserve"><value>Blocco codice</value></data>
+  <data name="CmdFind.Label" xml:space="preserve"><value>Trova</value></data>
+  <data name="CmdPrint.Label" xml:space="preserve"><value>Stampa</value></data>
+  <data name="CmdExport.Label" xml:space="preserve"><value>Esporta HTML</value></data>
+  <data name="CmdH1.Label" xml:space="preserve"><value>Titolo 1</value></data>
+  <data name="CmdH2.Label" xml:space="preserve"><value>Titolo 2</value></data>
+  <data name="CmdH3.Label" xml:space="preserve"><value>Titolo 3</value></data>
+  <data name="CmdHeadingCycle.Label" xml:space="preserve"><value>Cicla titolo</value></data>
+  <data name="CmdRule.Label" xml:space="preserve"><value>Riga</value></data>
+  <data name="CmdViewEditor.Label" xml:space="preserve"><value>Editor</value></data>
+  <data name="CmdViewSplit.Label" xml:space="preserve"><value>Diviso</value></data>
+  <data name="CmdViewPreview.Label" xml:space="preserve"><value>Anteprima</value></data>
+  <data name="CmdRefreshPreview.Label" xml:space="preserve"><value>Aggiorna anteprima</value></data>
+  <data name="FindPlaceholder.PlaceholderText" xml:space="preserve"><value>Trova</value></data>
+  <data name="ReplacePlaceholder.PlaceholderText" xml:space="preserve"><value>Sostituisci</value></data>
+  <data name="FindMatchCase.Content" xml:space="preserve"><value>Maiuscole</value></data>
+  <data name="FindWholeWord.Content" xml:space="preserve"><value>Parola</value></data>
+  <data name="FindNext.Content" xml:space="preserve"><value>Successivo</value></data>
+  <data name="FindReplace.Content" xml:space="preserve"><value>Sostituisci</value></data>
+  <data name="FindReplaceAll.Content" xml:space="preserve"><value>Tutti</value></data>
+  <data name="FindClose.Content" xml:space="preserve"><value>Chiudi</value></data>
+  <data name="EditorPlaceholder.PlaceholderText" xml:space="preserve"><value>Scrivi in Markdown…</value></data>
+  <data name="OutlineTitle.Text" xml:space="preserve"><value>Struttura</value></data>
+  <data name="LibraryFolders.Text" xml:space="preserve"><value>Cartelle</value></data>
+  <data name="LibraryAddFolder.Content" xml:space="preserve"><value>Aggiungi cartella</value></data>
+  <data name="LibraryNewNote.Content" xml:space="preserve"><value>Nuova nota</value></data>
+  <data name="LibraryRemoveFolder.Content" xml:space="preserve"><value>Rimuovi</value></data>
+  <data name="LibraryRecents.Text" xml:space="preserve"><value>Recenti</value></data>
+  <data name="LibrarySearch.PlaceholderText" xml:space="preserve"><value>Filtra file, [[, #tag, orphan:</value></data>
+  <data name="Ok" xml:space="preserve"><value>OK</value></data>
+  <data name="Cancel" xml:space="preserve"><value>Annulla</value></data>
+  <data name="Save" xml:space="preserve"><value>Salva</value></data>
+  <data name="DontSave" xml:space="preserve"><value>Non salvare</value></data>
+  <data name="SaveAll" xml:space="preserve"><value>Salva tutto</value></data>
+  <data name="CloseWithoutSaving" xml:space="preserve"><value>Chiudi senza salvare</value></data>
+  <data name="Untitled" xml:space="preserve"><value>Senza titolo</value></data>
+  <data name="Words" xml:space="preserve"><value>parole</value></data>
+  <data name="Characters" xml:space="preserve"><value>caratteri</value></data>
+  <data name="LargeFile" xml:space="preserve"><value>file grande</value></data>
+  <data name="SaveChangesTitle" xml:space="preserve"><value>Salvare le modifiche?</value></data>
+  <data name="LinkUrl" xml:space="preserve"><value>URL del link</value></data>
+  <data name="UnsavedDocuments" xml:space="preserve"><value>Documenti non salvati</value></data>
+  <data name="UnsavedDocumentsMessage" xml:space="preserve"><value>Ci sono modifiche non salvate. Chiudere comunque?</value></data>
+  <data name="LibraryEmpty" xml:space="preserve"><value>Aggiungi una cartella alla libreria.</value></data>
+  <data name="LibraryScanFailed" xml:space="preserve"><value>Scansione non riuscita.</value></data>
+  <data name="LibraryNoteFailed" xml:space="preserve"><value>Creazione della nota non riuscita.</value></data>
+  <data name="LibraryDeleteNote.Label" xml:space="preserve"><value>Elimina nota</value></data>
+  <data name="LibraryDeleteConfirm" xml:space="preserve"><value>Eliminare «{0}»? Il file verrà rimosso dal disco.</value></data>
+  <data name="LibraryDeleteFailed" xml:space="preserve"><value>Eliminazione della nota non riuscita.</value></data>
+  <data name="LibraryNewFolder.Label" xml:space="preserve"><value>Nuova cartella</value></data>
+  <data name="OutlineOutgoing.Text" xml:space="preserve"><value>Collegamenti</value></data>
+  <data name="SettingsFormatOnSave.Header" xml:space="preserve"><value>Formatta al salvataggio</value></data>
+  <data name="SettingsFormatOnSave.Description" xml:space="preserve"><value>Rinumera gli elenchi e rimuove gli spazi finali quando salvi.</value></data>
+  <data name="RecoveryTitle" xml:space="preserve"><value>Recupero documenti</value></data>
+  <data name="RecoveryMessage" xml:space="preserve"><value>Copie di recupero trovate: {0}. Ripristinarle in schede separate?</value></data>
+  <data name="RecoveryOpen" xml:space="preserve"><value>Ripristina</value></data>
+  <data name="SettingsTitle.Text" xml:space="preserve"><value>Impostazioni</value></data>
+  <data name="SettingsAppearance.Text" xml:space="preserve"><value>Aspetto</value></data>
+  <data name="SettingsTheme.Header" xml:space="preserve"><value>Tema</value></data>
+  <data name="SettingsBackdrop.Header" xml:space="preserve"><value>Sfondo finestra</value></data>
+  <data name="SettingsNavLabels.Header" xml:space="preserve"><value>Etichette di navigazione</value></data>
+  <data name="SettingsLanguage.Header" xml:space="preserve"><value>Lingua</value></data>
+  <data name="SettingsLanguage.Description" xml:space="preserve"><value>Il cambio lingua richiede il riavvio.</value></data>
+  <data name="SettingsRestart.Title" xml:space="preserve"><value>Riavvio necessario</value></data>
+  <data name="SettingsRestart.Message" xml:space="preserve"><value>La lingua scelta verrà applicata al prossimo avvio.</value></data>
+  <data name="SettingsEditor.Text" xml:space="preserve"><value>Editor</value></data>
+  <data name="SettingsFontFamily.Header" xml:space="preserve"><value>Famiglia di caratteri</value></data>
+  <data name="SettingsFontSize.Header" xml:space="preserve"><value>Dimensione carattere</value></data>
+  <data name="SettingsLineHeight.Header" xml:space="preserve"><value>Interlinea</value></data>
+  <data name="SettingsTabSize.Header" xml:space="preserve"><value>Tabulazione</value></data>
+  <data name="SettingsWordWrap.Header" xml:space="preserve"><value>A capo automatico</value></data>
+  <data name="SettingsAutosave.Header" xml:space="preserve"><value>Salvataggio automatico</value></data>
+  <data name="SettingsSpellCheck.Header" xml:space="preserve"><value>Controllo ortografico</value></data>
+  <data name="SettingsLineNumbers.Header" xml:space="preserve"><value>Numeri di riga</value></data>
+  <data name="SettingsDefaultView.Header" xml:space="preserve"><value>Vista predefinita</value></data>
+  <data name="SettingsPreview.Text" xml:space="preserve"><value>Anteprima</value></data>
+  <data name="SettingsLivePreview.Header" xml:space="preserve"><value>Anteprima in tempo reale</value></data>
+  <data name="SettingsSyncScroll.Header" xml:space="preserve"><value>Scorrimento sincronizzato</value></data>
+  <data name="SettingsRemoteImages.Header" xml:space="preserve"><value>Carica immagini remote</value></data>
+  <data name="SettingsZoom.Header" xml:space="preserve"><value>Zoom anteprima</value></data>
+  <data name="SettingsDiagnostics.Text" xml:space="preserve"><value>Diagnostica</value></data>
+  <data name="SettingsLogLevel.Header" xml:space="preserve"><value>Livello di log</value></data>
+  <data name="LogOff.Content" xml:space="preserve"><value>Off</value></data>
+  <data name="LogErrors.Content" xml:space="preserve"><value>Solo errori</value></data>
+  <data name="LogVerbose.Content" xml:space="preserve"><value>Dettagliato</value></data>
+  <data name="SettingsLogFile.Header" xml:space="preserve"><value>Registro</value></data>
+  <data name="SettingsOpenLog.Content" xml:space="preserve"><value>Apri log</value></data>
+  <data name="SettingsReset.Header" xml:space="preserve"><value>Ripristina predefiniti</value></data>
+  <data name="SettingsResetButton.Content" xml:space="preserve"><value>Ripristina</value></data>
+  <data name="InfoTitle.Text" xml:space="preserve"><value>Informazioni</value></data>
+  <data name="InfoBlurb.Text" xml:space="preserve"><value>Il tuo spazio per scrivere e organizzare le note.</value></data>
+  <data name="InfoVersion.Text" xml:space="preserve"><value>Versione: </value></data>
+  <data name="InfoSettings.Text" xml:space="preserve"><value>Impostazioni: </value></data>
+  <data name="InfoLog.Text" xml:space="preserve"><value>Log: </value></data>
+  <data name="InfoOpenLog.Content" xml:space="preserve"><value>Apri registro diagnostico</value></data>
+  <data name="SaveFailed" xml:space="preserve"><value>Salvataggio non riuscito</value></data>
+  <data name="SaveFailedMessage" xml:space="preserve"><value>Impossibile salvare «{0}». Il documento resta aperto.</value></data>
+  <data name="GoToLine" xml:space="preserve"><value>Vai alla riga</value></data>
+  <data name="FileChangedTitle" xml:space="preserve"><value>File modificato</value></data>
+  <data name="FileChangedMessage" xml:space="preserve"><value>Il file è cambiato su disco. Ricaricare?</value></data>
+  <data name="Reload" xml:space="preserve"><value>Ricarica</value></data>
+  <data name="SettingsHighlightLine.Header" xml:space="preserve"><value>Evidenzia riga corrente</value></data>
+  <data name="CmdCopyHtml.Label" xml:space="preserve"><value>Copia HTML</value></data>
+  <data name="CmdReveal.Label" xml:space="preserve"><value>Mostra in Esplora file</value></data>
+  <data name="CmdDuplicateLine.Label" xml:space="preserve"><value>Duplica riga</value></data>
+  <data name="CmdDeleteLine.Label" xml:space="preserve"><value>Elimina riga</value></data>
+  <data name="CmdMoveLineUp.Label" xml:space="preserve"><value>Sposta riga su</value></data>
+  <data name="CmdMoveLineDown.Label" xml:space="preserve"><value>Sposta riga giù</value></data>
+  <data name="SettingsStartPage.Header" xml:space="preserve"><value>Pagina iniziale</value></data>
+  <data name="SettingsStartPage.Description" xml:space="preserve"><value>Libreria, editor o ultima pagina usata.</value></data>
+  <data name="SettingsRememberWindow.Header" xml:space="preserve"><value>Ricorda posizione finestra</value></data>
+  <data name="LibraryItemCount" xml:space="preserve"><value>{0} elementi</value></data>
+  <data name="CmdSaveAll.Label" xml:space="preserve"><value>Salva tutto</value></data>
+  <data name="CmdToc.Label" xml:space="preserve"><value>Indice</value></data>
+  <data name="CmdRename.Label" xml:space="preserve"><value>Rinomina</value></data>
+  <data name="CmdCopyPath.Label" xml:space="preserve"><value>Copia percorso</value></data>
+  <data name="CmdShare.Label" xml:space="preserve"><value>Condividi</value></data>
+  <data name="CmdCloseAll.Label" xml:space="preserve"><value>Chiudi tutte</value></data>
+  <data name="CmdCloseOthers.Label" xml:space="preserve"><value>Chiudi le altre</value></data>
+  <data name="CmdImmersive.Label" xml:space="preserve"><value>Schermo intero</value></data>
+  <data name="FindPrev.Content" xml:space="preserve"><value>Precedente</value></data>
+  <data name="FindRegex.Content" xml:space="preserve"><value>Regex</value></data>
+  <data name="FindCount" xml:space="preserve"><value>{0} risultati</value></data>
+  <data name="PreviewEmpty" xml:space="preserve"><value>Anteprima vuota</value></data>
+  <data name="FrontMatter" xml:space="preserve"><value>Front matter</value></data>
+  <data name="CodeFence" xml:space="preserve"><value>codice</value></data>
+  <data name="TableTruncated" xml:space="preserve"><value>Tabella troncata ({0}×{1}).</value></data>
+  <data name="PreviewStub" xml:space="preserve"><value>{0} non reso in anteprima</value></data>
+  <data name="TocHeading" xml:space="preserve"><value>Indice</value></data>
+  <data name="RenameTitle" xml:space="preserve"><value>Rinomina nota</value></data>
+  <data name="RenameFailed" xml:space="preserve"><value>Rinomina non riuscita</value></data>
+  <data name="RenameInvalid" xml:space="preserve"><value>Il nome contiene caratteri non validi.</value></data>
+  <data name="RenameExists" xml:space="preserve"><value>Esiste già un file chiamato «{0}».</value></data>
+  <data name="ShareEmpty" xml:space="preserve"><value>Nessun documento da condividere.</value></data>
+  <data name="ShareFailed" xml:space="preserve"><value>Condivisione non riuscita.</value></data>
+  <data name="LibraryReveal.Content" xml:space="preserve"><value>Mostra cartella</value></data>
+  <data name="SettingsOutline.Header" xml:space="preserve"><value>Mostra struttura</value></data>
+  <data name="SettingsExport.Text" xml:space="preserve"><value>Esportazione</value></data>
+  <data name="SettingsCssTheme.Header" xml:space="preserve"><value>Tema CSS HTML</value></data>
+  <data name="SettingsResetConfirm" xml:space="preserve"><value>Ripristinare le preferenze? Le note e la lingua non cambiano.</value></data>
+  <data name="CmdFormat.Label" xml:space="preserve"><value>Formatta</value></data>
+  <data name="CmdCopyMarkdown.Label" xml:space="preserve"><value>Copia Markdown</value></data>
+  <data name="CmdReopen.Label" xml:space="preserve"><value>Riapri scheda</value></data>
+  <data name="CmdComment.Label" xml:space="preserve"><value>Commenta</value></data>
+  <data name="CmdFootnote.Label" xml:space="preserve"><value>Nota a piè</value></data>
+  <data name="CmdWiki.Label" xml:space="preserve"><value>Wikilink</value></data>
+  <data name="CmdCallout.Label" xml:space="preserve"><value>Riquadro</value></data>
+  <data name="CmdFrontMatter.Label" xml:space="preserve"><value>Imposta campo front matter…</value></data>
+  <data name="CmdSortLines.Label" xml:space="preserve"><value>Ordina righe</value></data>
+  <data name="CmdJoinLines.Label" xml:space="preserve"><value>Unisci righe</value></data>
+  <data name="CmdUpper.Label" xml:space="preserve"><value>Maiuscole</value></data>
+  <data name="CmdLower.Label" xml:space="preserve"><value>Minuscole</value></data>
+  <data name="CmdTitleCase.Label" xml:space="preserve"><value>Maiuscole iniziali</value></data>
+  <data name="CmdMath.Label" xml:space="preserve"><value>Matematica</value></data>
+  <data name="CmdMathBlock.Label" xml:space="preserve"><value>Blocco matematica</value></data>
+  <data name="CmdNextIssue.Label" xml:space="preserve"><value>Avviso successivo</value></data>
+  <data name="WikiTarget" xml:space="preserve"><value>Destinazione wikilink</value></data>
+  <data name="DiagramStub" xml:space="preserve"><value>diagramma (sorgente)</value></data>
+  <data name="CmdTimestamp.Label" xml:space="preserve"><value>Data e ora</value></data>
+  <data name="CmdOpenWith.Label" xml:space="preserve"><value>Apri con</value></data>
+  <data name="CmdWordWrap.Label" xml:space="preserve"><value>A capo</value></data>
+  <data name="CmdPalette.Label" xml:space="preserve"><value>Cerca comandi</value></data>
+  <data name="PalettePlaceholder.PlaceholderText" xml:space="preserve"><value>Filtra comandi…</value></data>
+  <data name="CmdQuickOpen.Label" xml:space="preserve"><value>Apri nota</value></data>
+  <data name="QuickOpenPlaceholder.PlaceholderText" xml:space="preserve"><value>Filtra file…</value></data>
+  <data name="CmdGoToHeading.Label" xml:space="preserve"><value>Vai al titolo</value></data>
+  <data name="HeadingPlaceholder.PlaceholderText" xml:space="preserve"><value>Filtra titoli…</value></data>
+  <data name="CmdHighlight.Label" xml:space="preserve"><value>Evidenzia</value></data>
+  <data name="CmdSuperscript.Label" xml:space="preserve"><value>Apice</value></data>
+  <data name="CmdSubscript.Label" xml:space="preserve"><value>Pedice</value></data>
+  <data name="CmdInserted.Label" xml:space="preserve"><value>Sottolineato</value></data>
+  <data name="CmdDefinition.Label" xml:space="preserve"><value>Definizione</value></data>
+  <data name="CmdDuplicateNote.Label" xml:space="preserve"><value>Duplica nota</value></data>
+  <data name="CmdCopyHeading.Label" xml:space="preserve"><value>Copia link titolo</value></data>
+  <data name="CmdSelectLine.Label" xml:space="preserve"><value>Seleziona riga</value></data>
+  <data name="CmdPrevIssue.Label" xml:space="preserve"><value>Avviso precedente</value></data>
+  <data name="OutlineBacklinks.Text" xml:space="preserve"><value>Backlink</value></data>
+  <data name="DuplicateFailed" xml:space="preserve"><value>Duplicazione non riuscita</value></data>
+  <data name="CmdAddTableRow.Label" xml:space="preserve"><value>Aggiungi riga tabella</value></data>
+  <data name="CmdDeleteTableRow.Label" xml:space="preserve"><value>Elimina riga tabella</value></data>
+  <data name="CmdAddTableColumn.Label" xml:space="preserve"><value>Aggiungi colonna</value></data>
+  <data name="CmdDeleteTableColumn.Label" xml:space="preserve"><value>Elimina colonna</value></data>
+  <data name="CmdAlignLeft.Label" xml:space="preserve"><value>Allinea colonna a sinistra</value></data>
+  <data name="CmdAlignCenter.Label" xml:space="preserve"><value>Allinea colonna al centro</value></data>
+  <data name="CmdAlignRight.Label" xml:space="preserve"><value>Allinea colonna a destra</value></data>
+  <data name="IssueCount" xml:space="preserve"><value>{0} avvisi</value></data>
+  <data name="CmdNewDaily.Label" xml:space="preserve"><value>Nota del giorno</value></data>
+  <data name="CmdNewFromTemplate.Label" xml:space="preserve"><value>Nuovo da modello</value></data>
+  <data name="CmdReplaceVault.Label" xml:space="preserve"><value>Sostituisci nel vault</value></data>
+  <data name="WikiEmbedMissing" xml:space="preserve"><value>Nota mancante: {0}</value></data>
+  <data name="Template.blank" xml:space="preserve"><value>Vuoto</value></data>
+  <data name="Template.starter" xml:space="preserve"><value>Avvio</value></data>
+  <data name="Template.daily" xml:space="preserve"><value>Nota del giorno</value></data>
+  <data name="Template.meeting" xml:space="preserve"><value>Riunione</value></data>
+  <data name="Template.zettel" xml:space="preserve"><value>Zettel</value></data>
+  <data name="SettingsDefaultTemplate.Header" xml:space="preserve"><value>Modello nuova nota</value></data>
+  <data name="SettingsDefaultTemplate.Description" xml:space="preserve"><value>Usato per le nuove note.</value></data>
+  <data name="VaultReplaceQuery" xml:space="preserve"><value>Testo da cercare nel vault</value></data>
+  <data name="VaultReplaceWith" xml:space="preserve"><value>Sostituisci con</value></data>
+  <data name="VaultReplaceDone" xml:space="preserve"><value>File modificati: {0}</value></data>
+  <data name="CmdMoveHeadingUp.Label" xml:space="preserve"><value>Sposta titolo su</value></data>
+  <data name="CmdMoveHeadingDown.Label" xml:space="preserve"><value>Sposta titolo giù</value></data>
+  <data name="CmdSelectHeading.Label" xml:space="preserve"><value>Seleziona sezione titolo</value></data>
+  <data name="CmdFoldHeading.Label" xml:space="preserve"><value>Comprimi/espandi titolo</value></data>
+  <data name="CmdFoldAll.Label" xml:space="preserve"><value>Comprimi tutti i titoli</value></data>
+  <data name="CmdUnfoldAll.Label" xml:space="preserve"><value>Espandi tutti i titoli</value></data>
+  <data name="CmdPin.Label" xml:space="preserve"><value>Fissa/sgancia scheda</value></data>
+  <data name="CmdWikiGraph.Label" xml:space="preserve"><value>Grafo wiki</value></data>
+  <data name="OutlineGraph.Text" xml:space="preserve"><value>Grafo</value></data>
+  <data name="CmdToggleNewlines.Label" xml:space="preserve"><value>LF / CRLF</value></data>
+  <data name="CmdCycleEncoding.Label" xml:space="preserve"><value>Codifica file</value></data>
+  <data name="CmdGoToDefinition.Label" xml:space="preserve"><value>Vai alla definizione</value></data>
+  <data name="SettingsTypewriter.Header" xml:space="preserve"><value>Modalità macchina da scrivere</value></data>
+  <data name="SettingsTypewriter.Description" xml:space="preserve"><value>Mantiene la riga corrente visibile mentre scrivi.</value></data>
+  <data name="CmdMermaid.Label" xml:space="preserve"><value>Diagramma mermaid</value></data>
+  <data name="CmdStar.Label" xml:space="preserve"><value>Preferito</value></data>
+  <data name="LibraryStar.Label" xml:space="preserve"><value>Aggiungi ai preferiti</value></data>
+  <data name="LibraryUnstar.Label" xml:space="preserve"><value>Togli dai preferiti</value></data>
+  <data name="FrontMatterKey" xml:space="preserve"><value>Campo front matter</value></data>
+  <data name="FrontMatterValue" xml:space="preserve"><value>Valore</value></data>
+  <data name="MermaidKind" xml:space="preserve"><value>flowchart, sequence, pie, state, class o gantt</value></data>
+  <data name="CmdVaultIssues.Label" xml:space="preserve"><value>Avvisi del vault</value></data>
+  <data name="CmdHistory.Label" xml:space="preserve"><value>Cronologia locale</value></data>
+  <data name="VaultIssuesEmpty" xml:space="preserve"><value>Nessun avviso nel vault.</value></data>
+  <data name="HistoryEmpty" xml:space="preserve"><value>Nessuna versione precedente.</value></data>
+  <data name="CmdExtractNote.Label" xml:space="preserve"><value>Estrai in nota</value></data>
+  <data name="CmdLinkify.Label" xml:space="preserve"><value>Collega menzioni</value></data>
+  <data name="CmdCopyWikilink.Label" xml:space="preserve"><value>Copia wikilink</value></data>
+  <data name="CmdTypographer.Label" xml:space="preserve"><value>Tipografo</value></data>
+  <data name="CmdSlides.Label" xml:space="preserve"><value>Diapositive</value></data>
+  <data name="CmdNextSlide.Label" xml:space="preserve"><value>Diapositiva successiva</value></data>
+  <data name="CmdPrevSlide.Label" xml:space="preserve"><value>Diapositiva precedente</value></data>
+  <data name="CmdKanban.Label" xml:space="preserve"><value>Lavagna kanban</value></data>
+  <data name="CmdViewSplitVertical.Label" xml:space="preserve"><value>Dividi in verticale</value></data>
+  <data name="FindInSelection.Content" xml:space="preserve"><value>Nella selezione</value></data>
+  <data name="SlideIndex" xml:space="preserve"><value>{0} / {1}</value></data>
+  <data name="KanbanEmpty" xml:space="preserve"><value>Nessuna attività da mostrare sulla lavagna.</value></data>
+  <data name="SettingsMinimap.Header" xml:space="preserve"><value>Minimap</value></data>
+  <data name="SettingsMinimap.Description" xml:space="preserve"><value>Mostra una miniatura navigabile del documento sul bordo destro.</value></data>
+  <data name="CmdFocus.Label" xml:space="preserve"><value>Modalità focus</value></data>
+  <data name="CmdCompare.Label" xml:space="preserve"><value>Confronta con disco</value></data>
+  <data name="CmdRandomNote.Label" xml:space="preserve"><value>Nota casuale</value></data>
+  <data name="CmdExportVault.Label" xml:space="preserve"><value>Esporta vault HTML</value></data>
+  <data name="CmdCompareTabs.Label" xml:space="preserve"><value>Confronta schede</value></data>
+  <data name="CmdInsertWikiGraph.Label" xml:space="preserve"><value>Inserisci grafo wiki</value></data>
+  <data name="CmdBlockId.Label" xml:space="preserve"><value>Identificatore di blocco</value></data>
+  <data name="CmdStampUpdated.Label" xml:space="preserve"><value>Aggiorna data nel front matter</value></data>
+  <data name="SettingsStampUpdated.Header" xml:space="preserve"><value>Data di aggiornamento al salvataggio</value></data>
+  <data name="SettingsStampUpdated.Description" xml:space="preserve"><value>Scrive il campo YAML updated con la data odierna quando salvi.</value></data>
+  <data name="CmdGitHistory.Label" xml:space="preserve"><value>Cronologia git</value></data>
+  <data name="CmdRelated.Label" xml:space="preserve"><value>Note correlate</value></data>
+  <data name="GitHistoryEmpty" xml:space="preserve"><value>Nessun commit git per questo file.</value></data>
+  <data name="CmdMoc.Label" xml:space="preserve"><value>Inserisci mappa dei contenuti</value></data>
+  <data name="CmdRenameTag.Label" xml:space="preserve"><value>Rinomina tag nel vault</value></data>
+  <data name="CmdExportGraph.Label" xml:space="preserve"><value>Esporta grafo JSON</value></data>
+  <data name="VaultStats" xml:space="preserve"><value>{0} note · {1} parole · {2} tag · {3} orfane · {4} attività aperte · {5} wikilink non risolti · {6} note del giorno</value></data>
+  <data name="OutlineFilter.PlaceholderText" xml:space="preserve"><value>Filtra titoli…</value></data>
+  <data name="VaultExportDone" xml:space="preserve"><value>File HTML esportati: {0}</value></data>
+  <data name="CompareFailed" xml:space="preserve"><value>Impossibile leggere il file su disco.</value></data>
+  <data name="CmdEgoGraph.Label" xml:space="preserve"><value>Inserisci grafo della nota</value></data>
+  <data name="CmdBacklinks.Label" xml:space="preserve"><value>Inserisci sezione backlink</value></data>
+  <data name="BacklinksHeading" xml:space="preserve"><value>Backlink</value></data>
+  <data name="CmdCopyQuote.Label" xml:space="preserve"><value>Copia come citazione</value></data>
+  <data name="CmdEnsureId.Label" xml:space="preserve"><value>Assegna ID alla nota</value></data>
+  <data name="CmdQueryTable.Label" xml:space="preserve"><value>Inserisci tabella dal vault</value></data>
+  <data name="CmdArchive.Label" xml:space="preserve"><value>Archivia nota</value></data>
+  <data name="ArchiveFailed" xml:space="preserve"><value>Impossibile archiviare la nota.</value></data>
+  <data name="CmdNewWeekly.Label" xml:space="preserve"><value>Nota della settimana</value></data>
+  <data name="Template.weekly" xml:space="preserve"><value>Nota settimanale</value></data>
+  <data name="CmdRestoreGit.Label" xml:space="preserve"><value>Ripristina revisione git</value></data>
+  <data name="GitShowFailed" xml:space="preserve"><value>Impossibile leggere quella revisione git.</value></data>
+  <data name="CmdUnarchive.Label" xml:space="preserve"><value>Ripristina dall’archivio</value></data>
+  <data name="CmdConvertWikilinks.Label" xml:space="preserve"><value>Converti wikilink in Markdown</value></data>
+  <data name="CmdConvertMarkdownLinks.Label" xml:space="preserve"><value>Converti link Markdown in wikilink</value></data>
+  <data name="CmdInsertCalendar.Label" xml:space="preserve"><value>Inserisci calendario del mese</value></data>
+  <data name="CmdNumberHeadings.Label" xml:space="preserve"><value>Numera i titoli</value></data>
+  <data name="CmdBibliography.Label" xml:space="preserve"><value>Inserisci bibliografia</value></data>
+  <data name="BibliographyHeading" xml:space="preserve"><value>Riferimenti</value></data>
+  <data name="CmdGitCommit.Label" xml:space="preserve"><value>Commit git</value></data>
+  <data name="GitCommitFailed" xml:space="preserve"><value>Commit git non riuscito.</value></data>
+  <data name="GitCommitDone" xml:space="preserve"><value>Commit git creato.</value></data>
+  <data name="ExportAssetsDone" xml:space="preserve"><value>Immagini e file copiati: {0}</value></data>
+  <data name="CmdNewMonthly.Label" xml:space="preserve"><value>Nota del mese</value></data>
+  <data name="Template.monthly" xml:space="preserve"><value>Nota mensile</value></data>
+  <data name="CmdInsertTemplate.Label" xml:space="preserve"><value>Inserisci modello</value></data>
+  <data name="CmdMoveNote.Label" xml:space="preserve"><value>Sposta nota</value></data>
+  <data name="MoveFailed" xml:space="preserve"><value>Impossibile spostare la nota.</value></data>
+  <data name="CmdNewYearly.Label" xml:space="preserve"><value>Nota dell’anno</value></data>
+  <data name="Template.yearly" xml:space="preserve"><value>Nota annuale</value></data>
+  <data name="CmdReflow.Label" xml:space="preserve"><value>Riformatta paragrafo</value></data>
+  <data name="SettingsIncludeToc.Header" xml:space="preserve"><value>Indice nell’HTML</value></data>
+  <data name="SettingsIncludeToc.Description" xml:space="preserve"><value>Inserisce un sommario dei titoli in cima all’HTML esportato.</value></data>
+  <data name="CmdNewYesterday.Label" xml:space="preserve"><value>Nota di ieri</value></data>
+  <data name="CmdNewTomorrow.Label" xml:space="preserve"><value>Nota di domani</value></data>
+  <data name="CmdNewQuarterly.Label" xml:space="preserve"><value>Nota del trimestre</value></data>
+  <data name="Template.quarterly" xml:space="preserve"><value>Nota trimestrale</value></data>
+  <data name="CmdSortTable.Label" xml:space="preserve"><value>Ordina tabella</value></data>
+  <data name="CmdStripFrontMatter.Label" xml:space="preserve"><value>Rimuovi front matter</value></data>
+  <data name="CmdRenameHeading.Label" xml:space="preserve"><value>Rinomina titolo</value></data>
+  <data name="CmdEnsureTitle.Label" xml:space="preserve"><value>Assegna titolo YAML</value></data>
+  <data name="CmdTransposeTable.Label" xml:space="preserve"><value>Trasponi tabella</value></data>
+  <data name="CmdCopyRelativePath.Label" xml:space="preserve"><value>Copia percorso relativo</value></data>
+  <data name="CmdExportMarkdownVault.Label" xml:space="preserve"><value>Esporta vault Markdown</value></data>
+  <data name="VaultMarkdownExportDone" xml:space="preserve"><value>File Markdown esportati: {0}</value></data>
+  <data name="CmdPromoteHeading.Label" xml:space="preserve"><value>Promuovi titolo</value></data>
+  <data name="CmdDemoteHeading.Label" xml:space="preserve"><value>Retrocedi titolo</value></data>
+  <data name="CmdDuplicateTableRow.Label" xml:space="preserve"><value>Duplica riga tabella</value></data>
+  <data name="CmdMoveTableLeft.Label" xml:space="preserve"><value>Sposta colonna a sinistra</value></data>
+  <data name="CmdMoveTableRight.Label" xml:space="preserve"><value>Sposta colonna a destra</value></data>
+  <data name="CmdMoveTableRowUp.Label" xml:space="preserve"><value>Sposta riga tabella in alto</value></data>
+  <data name="CmdMoveTableRowDown.Label" xml:space="preserve"><value>Sposta riga tabella in basso</value></data>
+  <data name="CmdCopyTable.Label" xml:space="preserve"><value>Copia tabella CSV</value></data>
+  <data name="CmdTableFromCsv.Label" xml:space="preserve"><value>Tabella da CSV</value></data>
+  <data name="CmdGitDiff.Label" xml:space="preserve"><value>Inserisci diff git</value></data>
+  <data name="GitDiffEmpty" xml:space="preserve"><value>Nessun diff rispetto a HEAD.</value></data>
+  <data name="CmdDuplicateTableColumn.Label" xml:space="preserve"><value>Duplica colonna tabella</value></data>
+  <data name="CmdTableToList.Label" xml:space="preserve"><value>Tabella in elenco</value></data>
+  <data name="CmdListToTable.Label" xml:space="preserve"><value>Elenco in tabella</value></data>
+  <data name="CmdSortTableDesc.Label" xml:space="preserve"><value>Ordina tabella decrescente</value></data>
+  <data name="CmdCheckTasks.Label" xml:space="preserve"><value>Spunta attività</value></data>
+  <data name="CmdUncheckTasks.Label" xml:space="preserve"><value>Togli spunta alle attività</value></data>
+  <data name="CmdEnsureAlias.Label" xml:space="preserve"><value>Aggiungi alias YAML</value></data>
+  <data name="CmdEnsureTags.Label" xml:space="preserve"><value>Aggiungi tag YAML</value></data>
+  <data name="CmdUnwrapWikilinks.Label" xml:space="preserve"><value>Togli wikilink</value></data>
+  <data name="CmdWrapDetails.Label" xml:space="preserve"><value>Avvolgi in details</value></data>
+  <data name="CmdDuplicateHeading.Label" xml:space="preserve"><value>Duplica sezione titolo</value></data>
+  <data name="CmdGitBlame.Label" xml:space="preserve"><value>Inserisci git blame</value></data>
+  <data name="GitBlameEmpty" xml:space="preserve"><value>Nessun blame git per questo file.</value></data>
+  <data name="CmdCopyTableTsv.Label" xml:space="preserve"><value>Copia tabella TSV</value></data>
+  <data name="CmdStripYamlKey.Label" xml:space="preserve"><value>Rimuovi chiave YAML</value></data>
+  <data name="CmdNormalizeListMarkers.Label" xml:space="preserve"><value>Normalizza elenchi</value></data>
+  <data name="CmdToSetextHeading.Label" xml:space="preserve"><value>Titolo setext</value></data>
+  <data name="CmdGitStat.Label" xml:space="preserve"><value>Inserisci git shortstat</value></data>
+  <data name="GitStatEmpty" xml:space="preserve"><value>Nessun shortstat git per questo file.</value></data>
+  <data name="CmdCopyTableHtml.Label" xml:space="preserve"><value>Copia tabella HTML</value></data>
+  <data name="CmdFormatTable.Label" xml:space="preserve"><value>Allinea tabella</value></data>
+  <data name="CmdRenameYamlKey.Label" xml:space="preserve"><value>Rinomina chiave YAML</value></data>
+  <data name="CmdFromSetextHeading.Label" xml:space="preserve"><value>Titolo ATX da setext</value></data>
+  <data name="CmdUnwrapDetails.Label" xml:space="preserve"><value>Togli details</value></data>
+  <data name="CmdGitNumStat.Label" xml:space="preserve"><value>Inserisci git numstat</value></data>
+  <data name="GitNumStatEmpty" xml:space="preserve"><value>Nessun numstat git per questo file.</value></data>
+  <data name="CmdNestQuote.Label" xml:space="preserve"><value>Annida citazione</value></data>
+  <data name="CmdUnnestQuote.Label" xml:space="preserve"><value>Togli livello citazione</value></data>
+  <data name="CmdReverseLines.Label" xml:space="preserve"><value>Inverti righe</value></data>
+  <data name="CmdSortList.Label" xml:space="preserve"><value>Ordina elenco</value></data>
+  <data name="CmdEnsureDescription.Label" xml:space="preserve"><value>Assegna descrizione YAML</value></data>
+  <data name="CmdEnsureDate.Label" xml:space="preserve"><value>Assegna data YAML</value></data>
+  <data name="CmdGitLog.Label" xml:space="preserve"><value>Inserisci log git</value></data>
+  <data name="GitLogEmpty" xml:space="preserve"><value>Nessun log git per questo file.</value></data>
+  <data name="CmdDuplicateListItem.Label" xml:space="preserve"><value>Duplica voce elenco</value></data>
+  <data name="CmdConvertToOrderedList.Label" xml:space="preserve"><value>Elenco numerato</value></data>
+  <data name="CmdConvertToBulletList.Label" xml:space="preserve"><value>Elenco puntato</value></data>
+  <data name="CmdStripTrailingWhitespace.Label" xml:space="preserve"><value>Togli spazi finali</value></data>
+  <data name="CmdMoveListItemUp.Label" xml:space="preserve"><value>Sposta voce elenco su</value></data>
+  <data name="CmdMoveListItemDown.Label" xml:space="preserve"><value>Sposta voce elenco giù</value></data>
+  <data name="CmdDeleteListItem.Label" xml:space="preserve"><value>Elimina voce elenco</value></data>
+  <data name="CmdEnsureStatus.Label" xml:space="preserve"><value>Assegna stato YAML</value></data>
+  <data name="CmdGitStatus.Label" xml:space="preserve"><value>Inserisci git status</value></data>
+  <data name="GitStatusEmpty" xml:space="preserve"><value>Nessuna modifica git nel vault.</value></data>
+  <data name="CmdGitNameStatus.Label" xml:space="preserve"><value>Inserisci git name-status</value></data>
+  <data name="GitNameStatusEmpty" xml:space="preserve"><value>Nessun name-status git per questo file.</value></data>
+  <data name="CmdIndentList.Label" xml:space="preserve"><value>Indenta elenco</value></data>
+  <data name="CmdOutdentList.Label" xml:space="preserve"><value>Riduci indent elenco</value></data>
+  <data name="CmdQuoteToCallout.Label" xml:space="preserve"><value>Citazione in callout</value></data>
+  <data name="CmdEnsureAuthor.Label" xml:space="preserve"><value>Assegna autore YAML</value></data>
+  <data name="CmdEnsureCssclass.Label" xml:space="preserve"><value>Assegna cssclass YAML</value></data>
+  <data name="CmdGitReflog.Label" xml:space="preserve"><value>Inserisci git reflog</value></data>
+  <data name="GitReflogEmpty" xml:space="preserve"><value>Nessun reflog git per questo vault.</value></data>
+  <data name="CmdCalloutToQuote.Label" xml:space="preserve"><value>Callout in citazione</value></data>
+  <data name="CmdLinesToTaskList.Label" xml:space="preserve"><value>Righe in elenco attività</value></data>
+  <data name="CmdSentenceCase.Label" xml:space="preserve"><value>Maiuscola di frase</value></data>
+  <data name="CmdEnsureLang.Label" xml:space="preserve"><value>Assegna lingua YAML</value></data>
+  <data name="CmdEnsureType.Label" xml:space="preserve"><value>Assegna tipo YAML</value></data>
+  <data name="CmdGitStash.Label" xml:space="preserve"><value>Inserisci git stash</value></data>
+  <data name="GitStashEmpty" xml:space="preserve"><value>Nessuno stash git per questo vault.</value></data>
+  <data name="CmdTaskListToLines.Label" xml:space="preserve"><value>Attività in righe</value></data>
+  <data name="CmdSortYamlKeys.Label" xml:space="preserve"><value>Ordina chiavi YAML</value></data>
+  <data name="CmdGitTags.Label" xml:space="preserve"><value>Inserisci git tag</value></data>
+  <data name="GitTagsEmpty" xml:space="preserve"><value>Nessun tag git per questo vault.</value></data>
+  <data name="CmdGitRemotes.Label" xml:space="preserve"><value>Inserisci git remote</value></data>
+  <data name="GitRemotesEmpty" xml:space="preserve"><value>Nessun remote git per questo vault.</value></data>
+  <data name="CmdCycleCalloutKind.Label" xml:space="preserve"><value>Cicla tipo callout</value></data>
+  <data name="CmdAssignMissingBlockIds.Label" xml:space="preserve"><value>Assegna block id ai titoli</value></data>
+  <data name="CmdGitBranches.Label" xml:space="preserve"><value>Inserisci git branch</value></data>
+  <data name="GitBranchesEmpty" xml:space="preserve"><value>Nessun branch git per questo vault.</value></data>
+  <data name="CmdStripBlockIds.Label" xml:space="preserve"><value>Rimuovi block id</value></data>
+  <data name="CmdGitWorktrees.Label" xml:space="preserve"><value>Inserisci git worktree</value></data>
+  <data name="GitWorktreesEmpty" xml:space="preserve"><value>Nessun worktree git per questo vault.</value></data>
+  <data name="CmdCycleBulletMarker.Label" xml:space="preserve"><value>Cicla marcatore elenco</value></data>
+  <data name="CmdGitSubmodules.Label" xml:space="preserve"><value>Inserisci git submodule</value></data>
+  <data name="GitSubmodulesEmpty" xml:space="preserve"><value>Nessun submodule git per questo vault.</value></data>
+  <data name="CmdUnwrapFence.Label" xml:space="preserve"><value>Togli fence codice</value></data>
+  <data name="CmdStripHtmlComments.Label" xml:space="preserve"><value>Rimuovi commenti HTML</value></data>
+  <data name="CmdGitConfig.Label" xml:space="preserve"><value>Inserisci git config</value></data>
+  <data name="GitConfigEmpty" xml:space="preserve"><value>Nessuna config git locale per questo vault.</value></data>
+  <data name="CmdStripEmptyYamlKeys.Label" xml:space="preserve"><value>Rimuovi chiavi YAML vuote</value></data>
+  <data name="CmdSetFenceLanguage.Label" xml:space="preserve"><value>Lingua del fence</value></data>
+  <data name="CmdGitContributors.Label" xml:space="preserve"><value>Inserisci git shortlog</value></data>
+  <data name="GitContributorsEmpty" xml:space="preserve"><value>Nessun contributor git per questo vault.</value></data>
+  <data name="CmdGitIgnore.Label" xml:space="preserve"><value>Inserisci gitignore</value></data>
+  <data name="GitIgnoreEmpty" xml:space="preserve"><value>Nessun .gitignore per questo vault.</value></data>
+  <data name="CmdGitCherry.Label" xml:space="preserve"><value>Inserisci git cherry</value></data>
+  <data name="GitCherryEmpty" xml:space="preserve"><value>Nessun commit cherry per questo vault.</value></data>
+  <data name="CmdGitHooks.Label" xml:space="preserve"><value>Inserisci git hooks</value></data>
+  <data name="GitHooksEmpty" xml:space="preserve"><value>Nessun hook git per questo vault.</value></data>
+  <data name="CmdGitNotes.Label" xml:space="preserve"><value>Inserisci git notes</value></data>
+  <data name="GitNotesEmpty" xml:space="preserve"><value>Nessuna git note per questo vault.</value></data>
+  <data name="CmdGitBisect.Label" xml:space="preserve"><value>Inserisci git bisect</value></data>
+  <data name="GitBisectEmpty" xml:space="preserve"><value>Nessun log bisect git per questo vault.</value></data>
+  <data name="CmdGitDescribe.Label" xml:space="preserve"><value>Inserisci git describe</value></data>
+  <data name="GitDescribeEmpty" xml:space="preserve"><value>Nessun git describe per questo vault.</value></data>
+  <data name="CmdGitShowRef.Label" xml:space="preserve"><value>Inserisci git show-ref</value></data>
+  <data name="GitShowRefEmpty" xml:space="preserve"><value>Nessun git show-ref per questo vault.</value></data>
+  <data name="CmdGitSparse.Label" xml:space="preserve"><value>Inserisci git sparse-checkout</value></data>
+  <data name="GitSparseEmpty" xml:space="preserve"><value>Nessun sparse-checkout git per questo vault.</value></data>
+  <data name="CmdGitLsFiles.Label" xml:space="preserve"><value>Inserisci git ls-files</value></data>
+  <data name="GitLsFilesEmpty" xml:space="preserve"><value>Nessun file tracciato git per questo vault.</value></data>
+  <data name="CmdGitLsRemote.Label" xml:space="preserve"><value>Inserisci git ls-remote</value></data>
+  <data name="GitLsRemoteEmpty" xml:space="preserve"><value>Nessun git ls-remote per questo vault.</value></data>
+  <data name="CmdGitRevList.Label" xml:space="preserve"><value>Inserisci git rev-list</value></data>
+  <data name="GitRevListEmpty" xml:space="preserve"><value>Nessun git rev-list per questo vault.</value></data>
+  <data name="CmdGitCountObjects.Label" xml:space="preserve"><value>Inserisci git count-objects</value></data>
+  <data name="GitCountObjectsEmpty" xml:space="preserve"><value>Nessun git count-objects per questo vault.</value></data>
+  <data name="CmdGitNameRev.Label" xml:space="preserve"><value>Inserisci git name-rev</value></data>
+  <data name="GitNameRevEmpty" xml:space="preserve"><value>Nessun git name-rev per questo vault.</value></data>
+  <data name="CmdGitForEachRef.Label" xml:space="preserve"><value>Inserisci git for-each-ref</value></data>
+  <data name="GitForEachRefEmpty" xml:space="preserve"><value>Nessun git for-each-ref per questo vault.</value></data>
+  <data name="CmdGitLsTree.Label" xml:space="preserve"><value>Inserisci git ls-tree</value></data>
+  <data name="GitLsTreeEmpty" xml:space="preserve"><value>Nessun git ls-tree per questo vault.</value></data>
+  <data name="CmdGitRevParse.Label" xml:space="preserve"><value>Inserisci git rev-parse</value></data>
+  <data name="GitRevParseEmpty" xml:space="preserve"><value>Nessun git rev-parse per questo vault.</value></data>
+  <data name="CmdGitSymbolicRef.Label" xml:space="preserve"><value>Inserisci git symbolic-ref</value></data>
+  <data name="GitSymbolicRefEmpty" xml:space="preserve"><value>Nessun git symbolic-ref per questo vault.</value></data>
+  <data name="CmdGitVersion.Label" xml:space="preserve"><value>Inserisci git version</value></data>
+  <data name="GitVersionEmpty" xml:space="preserve"><value>Nessun git version per questo vault.</value></data>
+  <data name="CmdGitMergeBase.Label" xml:space="preserve"><value>Inserisci git merge-base</value></data>
+  <data name="GitMergeBaseEmpty" xml:space="preserve"><value>Nessun git merge-base per questo vault.</value></data>
+  <data name="CmdGitCheckIgnore.Label" xml:space="preserve"><value>Inserisci git check-ignore</value></data>
+  <data name="GitCheckIgnoreEmpty" xml:space="preserve"><value>Nessun file ignorato git per questo vault.</value></data>
+  <data name="CmdGitDiffNameOnly.Label" xml:space="preserve"><value>Inserisci git diff --name-only</value></data>
+  <data name="GitDiffNameOnlyEmpty" xml:space="preserve"><value>Nessun git diff --name-only per questo vault.</value></data>
+  <data name="CmdGitUntracked.Label" xml:space="preserve"><value>Inserisci git untracked</value></data>
+  <data name="GitUntrackedEmpty" xml:space="preserve"><value>Nessun file untracked git per questo vault.</value></data>
+  <data name="CmdGitDiffCached.Label" xml:space="preserve"><value>Inserisci git diff --cached</value></data>
+  <data name="GitDiffCachedEmpty" xml:space="preserve"><value>Nessun git diff --cached per questo vault.</value></data>
+  <data name="CmdGitDiffStat.Label" xml:space="preserve"><value>Inserisci git diff --stat</value></data>
+  <data name="GitDiffStatEmpty" xml:space="preserve"><value>Nessun git diff --stat per questo vault.</value></data>
+  <data name="CmdGitStashShow.Label" xml:space="preserve"><value>Inserisci git stash show</value></data>
+  <data name="GitStashShowEmpty" xml:space="preserve"><value>Nessun git stash show per questo vault.</value></data>
+  <data name="CmdGitClean.Label" xml:space="preserve"><value>Inserisci git clean -n</value></data>
+  <data name="GitCleanEmpty" xml:space="preserve"><value>Nessun git clean -n per questo vault.</value></data>
+  <data name="CmdGitShowNameOnly.Label" xml:space="preserve"><value>Inserisci git show --name-only</value></data>
+  <data name="GitShowNameOnlyEmpty" xml:space="preserve"><value>Nessun git show --name-only per questo vault.</value></data>
+  <data name="CmdGitModified.Label" xml:space="preserve"><value>Inserisci git ls-files -m</value></data>
+  <data name="GitModifiedEmpty" xml:space="preserve"><value>Nessun file git modificato per questo vault.</value></data>
+  <data name="CmdGitDiffCheck.Label" xml:space="preserve"><value>Inserisci git diff --check</value></data>
+  <data name="GitDiffCheckEmpty" xml:space="preserve"><value>Nessun git diff --check per questo vault.</value></data>
+  <data name="CmdGitDeleted.Label" xml:space="preserve"><value>Inserisci git ls-files -d</value></data>
+  <data name="GitDeletedEmpty" xml:space="preserve"><value>Nessun file git eliminato per questo vault.</value></data>
+  <data name="CmdGitDiffCachedStat.Label" xml:space="preserve"><value>Inserisci git diff --cached --stat</value></data>
+  <data name="GitDiffCachedStatEmpty" xml:space="preserve"><value>Nessun git diff --cached --stat per questo vault.</value></data>
+  <data name="CmdGitUnmerged.Label" xml:space="preserve"><value>Inserisci git ls-files -u</value></data>
+  <data name="GitUnmergedEmpty" xml:space="preserve"><value>Nessun file git unmerged per questo vault.</value></data>
+  <data name="CmdGitCachedNameStatus.Label" xml:space="preserve"><value>Inserisci git diff --cached --name-status</value></data>
+  <data name="GitCachedNameStatusEmpty" xml:space="preserve"><value>Nessun git diff --cached --name-status per questo vault.</value></data>
+  <data name="CmdGitKilled.Label" xml:space="preserve"><value>Inserisci git ls-files -k</value></data>
+  <data name="GitKilledEmpty" xml:space="preserve"><value>Nessun file git killed per questo vault.</value></data>
+  <data name="CmdGitDiffRaw.Label" xml:space="preserve"><value>Inserisci git diff --raw</value></data>
+  <data name="GitDiffRawEmpty" xml:space="preserve"><value>Nessun git diff --raw per questo vault.</value></data>
+  <data name="CmdGitSkipWorktree.Label" xml:space="preserve"><value>Inserisci git skip-worktree</value></data>
+  <data name="GitSkipWorktreeEmpty" xml:space="preserve"><value>Nessun file git skip-worktree per questo vault.</value></data>
+  <data name="CmdGitAssumeUnchanged.Label" xml:space="preserve"><value>Inserisci git assume-unchanged</value></data>
+  <data name="GitAssumeUnchangedEmpty" xml:space="preserve"><value>Nessun file git assume-unchanged per questo vault.</value></data>
+  <data name="CmdGitShowStat.Label" xml:space="preserve"><value>Inserisci git show --stat</value></data>
+  <data name="GitShowStatEmpty" xml:space="preserve"><value>Nessun git show --stat per questo vault.</value></data>
+  <data name="CmdGitLogOneline.Label" xml:space="preserve"><value>Inserisci git log --oneline</value></data>
+  <data name="GitLogOnelineEmpty" xml:space="preserve"><value>Nessun git log --oneline per questo vault.</value></data>
+  <data name="CmdGitCachedNumstat.Label" xml:space="preserve"><value>Inserisci git diff --cached --numstat</value></data>
+  <data name="GitCachedNumstatEmpty" xml:space="preserve"><value>Nessun git diff --cached --numstat per questo vault.</value></data>
+  <data name="CmdGitLogGraph.Label" xml:space="preserve"><value>Inserisci git log --graph</value></data>
+  <data name="GitLogGraphEmpty" xml:space="preserve"><value>Nessun git log --graph per questo vault.</value></data>
+  <data name="CmdGitLogDecorate.Label" xml:space="preserve"><value>Inserisci git log --decorate</value></data>
+  <data name="GitLogDecorateEmpty" xml:space="preserve"><value>Nessun git log --decorate per questo vault.</value></data>
+  <data name="CmdGitDiffCachedCheck.Label" xml:space="preserve"><value>Inserisci git diff --cached --check</value></data>
+  <data name="GitDiffCachedCheckEmpty" xml:space="preserve"><value>Nessun git diff --cached --check per questo vault.</value></data>
+  <data name="CmdGitLogFirstParent.Label" xml:space="preserve"><value>Inserisci git log --first-parent</value></data>
+  <data name="GitLogFirstParentEmpty" xml:space="preserve"><value>Nessun git log --first-parent per questo vault.</value></data>
+  <data name="CmdGitDiffIgnoreSpace.Label" xml:space="preserve"><value>Inserisci git diff --ignore-all-space</value></data>
+  <data name="GitDiffIgnoreSpaceEmpty" xml:space="preserve"><value>Nessun git diff --ignore-all-space per questo vault.</value></data>
+  <data name="CmdGitLogMerges.Label" xml:space="preserve"><value>Inserisci git log --merges</value></data>
+  <data name="GitLogMergesEmpty" xml:space="preserve"><value>Nessun git log --merges per questo vault.</value></data>
+  <data name="CmdGitLogNoMerges.Label" xml:space="preserve"><value>Inserisci git log --no-merges</value></data>
+  <data name="GitLogNoMergesEmpty" xml:space="preserve"><value>Nessun git log --no-merges per questo vault.</value></data>
+  <data name="CmdGitLogReverse.Label" xml:space="preserve"><value>Inserisci git log --reverse</value></data>
+  <data name="GitLogReverseEmpty" xml:space="preserve"><value>Nessun git log --reverse per questo vault.</value></data>
+  <data name="CmdGitLogAll.Label" xml:space="preserve"><value>Inserisci git log --all</value></data>
+  <data name="GitLogAllEmpty" xml:space="preserve"><value>Nessun git log --all per questo vault.</value></data>
+  <data name="CmdGitLogTopo.Label" xml:space="preserve"><value>Inserisci git log --topo-order</value></data>
+  <data name="GitLogTopoEmpty" xml:space="preserve"><value>Nessun git log --topo-order per questo vault.</value></data>
+  <data name="CmdGitLogDate.Label" xml:space="preserve"><value>Inserisci git log --date-order</value></data>
+  <data name="GitLogDateEmpty" xml:space="preserve"><value>Nessun git log --date-order per questo vault.</value></data>
+  <data name="CmdGitLogAuthorDate.Label" xml:space="preserve"><value>Inserisci git log --author-date-order</value></data>
+  <data name="GitLogAuthorDateEmpty" xml:space="preserve"><value>Nessun git log --author-date-order per questo vault.</value></data>
+  <data name="CmdGitLogParents.Label" xml:space="preserve"><value>Inserisci git log --parents</value></data>
+  <data name="GitLogParentsEmpty" xml:space="preserve"><value>Nessun git log --parents per questo vault.</value></data>
+  <data name="CmdGitFormatPatch.Label" xml:space="preserve"><value>Inserisci git format-patch</value></data>
+  <data name="GitFormatPatchEmpty" xml:space="preserve"><value>Nessun git format-patch per questo vault.</value></data>
+  <data name="CmdGitWhatchanged.Label" xml:space="preserve"><value>Inserisci git whatchanged</value></data>
+  <data name="GitWhatchangedEmpty" xml:space="preserve"><value>Nessun git whatchanged per questo vault.</value></data>
+  <data name="CmdGitLogChildren.Label" xml:space="preserve"><value>Inserisci git log --children</value></data>
+  <data name="GitLogChildrenEmpty" xml:space="preserve"><value>Nessun git log --children per questo vault.</value></data>
+  <data name="CmdGitLogNoDecorate.Label" xml:space="preserve"><value>Inserisci git log --no-decorate</value></data>
+  <data name="GitLogNoDecorateEmpty" xml:space="preserve"><value>Nessun git log --no-decorate per questo vault.</value></data>
+  <data name="CmdGitLogSkip.Label" xml:space="preserve"><value>Inserisci git log --skip</value></data>
+  <data name="GitLogSkipEmpty" xml:space="preserve"><value>Nessun git log --skip per questo vault.</value></data>
+  <data name="CmdGitLogNoAbbrev.Label" xml:space="preserve"><value>Inserisci git log --no-abbrev</value></data>
+  <data name="GitLogNoAbbrevEmpty" xml:space="preserve"><value>Nessun git log --no-abbrev per questo vault.</value></data>
+  <data name="CmdGitLogSource.Label" xml:space="preserve"><value>Inserisci git log --source</value></data>
+  <data name="GitLogSourceEmpty" xml:space="preserve"><value>Nessun git log --source per questo vault.</value></data>
+  <data name="CmdGitLogMailmap.Label" xml:space="preserve"><value>Inserisci git log --use-mailmap</value></data>
+  <data name="GitLogMailmapEmpty" xml:space="preserve"><value>Nessun git log --use-mailmap per questo vault.</value></data>
+  <data name="CmdGitLogPretty.Label" xml:space="preserve"><value>Inserisci git log --pretty</value></data>
+  <data name="GitLogPrettyEmpty" xml:space="preserve"><value>Nessun git log --pretty per questo vault.</value></data>
+  <data name="CmdGitLogNoWalk.Label" xml:space="preserve"><value>Inserisci git log --no-walk</value></data>
+  <data name="GitLogNoWalkEmpty" xml:space="preserve"><value>Nessun git log --no-walk per questo vault.</value></data>
+  <data name="CmdGitLogAbbrev.Label" xml:space="preserve"><value>Inserisci git log --abbrev-commit</value></data>
+  <data name="GitLogAbbrevEmpty" xml:space="preserve"><value>Nessun git log --abbrev-commit per questo vault.</value></data>
+  <data name="CmdGitLogNoColor.Label" xml:space="preserve"><value>Inserisci git log --no-color</value></data>
+  <data name="GitLogNoColorEmpty" xml:space="preserve"><value>Nessun git log --no-color per questo vault.</value></data>
+  <data name="CmdGitLogDateShort.Label" xml:space="preserve"><value>Inserisci git log --date=short</value></data>
+  <data name="GitLogDateShortEmpty" xml:space="preserve"><value>Nessun git log --date=short per questo vault.</value></data>
+  <data name="CmdGitLogEncoding.Label" xml:space="preserve"><value>Inserisci git log --encoding</value></data>
+  <data name="GitLogEncodingEmpty" xml:space="preserve"><value>Nessun git log --encoding per questo vault.</value></data>
+  <data name="CmdGitLogFollow.Label" xml:space="preserve"><value>Inserisci git log --follow</value></data>
+  <data name="GitLogFollowEmpty" xml:space="preserve"><value>Nessun git log --follow per questo vault.</value></data>
+  <data name="CmdGitLogBoundary.Label" xml:space="preserve"><value>Inserisci git log --boundary</value></data>
+  <data name="GitLogBoundaryEmpty" xml:space="preserve"><value>Nessun git log --boundary per questo vault.</value></data>
+  <data name="CmdGitLogLeftRight.Label" xml:space="preserve"><value>Inserisci git log --left-right</value></data>
+  <data name="GitLogLeftRightEmpty" xml:space="preserve"><value>Nessun git log --left-right per questo vault.</value></data>
+  <data name="CmdGitLogCherryMark.Label" xml:space="preserve"><value>Inserisci git log --cherry-mark</value></data>
+  <data name="GitLogCherryMarkEmpty" xml:space="preserve"><value>Nessun git log --cherry-mark per questo vault.</value></data>
+  <data name="CmdGitLogSimplify.Label" xml:space="preserve"><value>Inserisci git log --simplify-by-decoration</value></data>
+  <data name="GitLogSimplifyEmpty" xml:space="preserve"><value>Nessun git log --simplify-by-decoration per questo vault.</value></data>
+  <data name="CmdGitLogSimplifyMerges.Label" xml:space="preserve"><value>Inserisci git log --simplify-merges</value></data>
+  <data name="GitLogSimplifyMergesEmpty" xml:space="preserve"><value>Nessun git log --simplify-merges per questo vault.</value></data>
+  <data name="CmdGitLogFullHistory.Label" xml:space="preserve"><value>Inserisci git log --full-history</value></data>
+  <data name="GitLogFullHistoryEmpty" xml:space="preserve"><value>Nessun git log --full-history per questo vault.</value></data>
+  <data name="CmdGitLogAncestry.Label" xml:space="preserve"><value>Inserisci git log --ancestry-path</value></data>
+  <data name="GitLogAncestryEmpty" xml:space="preserve"><value>Nessun git log --ancestry-path per questo vault.</value></data>
+  <data name="CmdGitLogRemoveEmpty.Label" xml:space="preserve"><value>Inserisci git log --remove-empty</value></data>
+  <data name="GitLogRemoveEmptyEmpty" xml:space="preserve"><value>Nessun git log --remove-empty per questo vault.</value></data>
+  <data name="CmdGitLogShowPulls.Label" xml:space="preserve"><value>Inserisci git log --show-pulls</value></data>
+  <data name="GitLogShowPullsEmpty" xml:space="preserve"><value>Nessun git log --show-pulls per questo vault.</value></data>
+  <data name="CmdGitLogLeftOnly.Label" xml:space="preserve"><value>Inserisci git log --left-only</value></data>
+  <data name="GitLogLeftOnlyEmpty" xml:space="preserve"><value>Nessun git log --left-only per questo vault.</value></data>
+  <data name="CmdGitLogRightOnly.Label" xml:space="preserve"><value>Inserisci git log --right-only</value></data>
+  <data name="GitLogRightOnlyEmpty" xml:space="preserve"><value>Nessun git log --right-only per questo vault.</value></data>
+  <data name="CmdGitLogMaxParents.Label" xml:space="preserve"><value>Inserisci git log --max-parents=1</value></data>
+  <data name="GitLogMaxParentsEmpty" xml:space="preserve"><value>Nessun git log --max-parents=1 per questo vault.</value></data>
+  <data name="CmdGitLogMinParents.Label" xml:space="preserve"><value>Inserisci git log --min-parents=2</value></data>
+  <data name="GitLogMinParentsEmpty" xml:space="preserve"><value>Nessun git log --min-parents=2 per questo vault.</value></data>
+  <data name="CmdGitLogInvertGrep.Label" xml:space="preserve"><value>Inserisci git log --invert-grep</value></data>
+  <data name="GitLogInvertGrepEmpty" xml:space="preserve"><value>Nessun git log --invert-grep per questo vault.</value></data>
+  <data name="CmdGitLogFixedStrings.Label" xml:space="preserve"><value>Inserisci git log --fixed-strings</value></data>
+  <data name="GitLogFixedStringsEmpty" xml:space="preserve"><value>Nessun git log --fixed-strings per questo vault.</value></data>
+  <data name="CmdGitLogRegexpIgnoreCase.Label" xml:space="preserve"><value>Inserisci git log --regexp-ignore-case</value></data>
+  <data name="GitLogRegexpIgnoreCaseEmpty" xml:space="preserve"><value>Nessun git log --regexp-ignore-case per questo vault.</value></data>
+  <data name="CmdGitLogAllMatch.Label" xml:space="preserve"><value>Inserisci git log --all-match</value></data>
+  <data name="GitLogAllMatchEmpty" xml:space="preserve"><value>Nessun git log --all-match per questo vault.</value></data>
+  <data name="CmdGitLogExtendedRegexp.Label" xml:space="preserve"><value>Inserisci git log --extended-regexp</value></data>
+  <data name="GitLogExtendedRegexpEmpty" xml:space="preserve"><value>Nessun git log --extended-regexp per questo vault.</value></data>
+  <data name="CmdGitLogPerlRegexp.Label" xml:space="preserve"><value>Inserisci git log --perl-regexp</value></data>
+  <data name="GitLogPerlRegexpEmpty" xml:space="preserve"><value>Nessun git log --perl-regexp per questo vault.</value></data>
+  <data name="CmdGitLogBasicRegexp.Label" xml:space="preserve"><value>Inserisci git log --basic-regexp</value></data>
+  <data name="GitLogBasicRegexpEmpty" xml:space="preserve"><value>Nessun git log --basic-regexp per questo vault.</value></data>
+  <data name="CmdGitLogGrepReflog.Label" xml:space="preserve"><value>Inserisci git log --grep-reflog</value></data>
+  <data name="GitLogGrepReflogEmpty" xml:space="preserve"><value>Nessun git log --grep-reflog per questo vault.</value></data>
+  <data name="CmdGitLogWalkReflogs.Label" xml:space="preserve"><value>Inserisci git log --walk-reflogs</value></data>
+  <data name="GitLogWalkReflogsEmpty" xml:space="preserve"><value>Nessun git log --walk-reflogs per questo vault.</value></data>
+  <data name="CmdGitLogSize.Label" xml:space="preserve"><value>Inserisci git log --log-size</value></data>
+  <data name="GitLogSizeEmpty" xml:space="preserve"><value>Nessun git log --log-size per questo vault.</value></data>
+  <data name="CmdGitLogFullDiff.Label" xml:space="preserve"><value>Inserisci git log --full-diff</value></data>
+  <data name="GitLogFullDiffEmpty" xml:space="preserve"><value>Nessun git log --full-diff per questo vault.</value></data>
+  <data name="CmdGitLogFuller.Label" xml:space="preserve"><value>Inserisci git log --pretty=fuller</value></data>
+  <data name="GitLogFullerEmpty" xml:space="preserve"><value>Nessun git log --pretty=fuller per questo vault.</value></data>
+  <data name="CmdGitLogPrettyFull.Label" xml:space="preserve"><value>Inserisci git log --pretty=full</value></data>
+  <data name="GitLogPrettyFullEmpty" xml:space="preserve"><value>Nessun git log --pretty=full per questo vault.</value></data>
+  <data name="CmdGitLogPrettyRaw.Label" xml:space="preserve"><value>Inserisci git log --pretty=raw</value></data>
+  <data name="GitLogPrettyRawEmpty" xml:space="preserve"><value>Nessun git log --pretty=raw per questo vault.</value></data>
+  <data name="CmdGitLogPrettyEmail.Label" xml:space="preserve"><value>Inserisci git log --pretty=email</value></data>
+  <data name="GitLogPrettyEmailEmpty" xml:space="preserve"><value>Nessun git log --pretty=email per questo vault.</value></data>
+  <data name="CmdGitLogPrettyReference.Label" xml:space="preserve"><value>Inserisci git log --pretty=reference</value></data>
+  <data name="GitLogPrettyReferenceEmpty" xml:space="preserve"><value>Nessun git log --pretty=reference per questo vault.</value></data>
+  <data name="CmdGitLogDateIso.Label" xml:space="preserve"><value>Inserisci git log --date=iso</value></data>
+  <data name="GitLogDateIsoEmpty" xml:space="preserve"><value>Nessun git log --date=iso per questo vault.</value></data>
+  <data name="CmdGitLogDateRelative.Label" xml:space="preserve"><value>Inserisci git log --date=relative</value></data>
+  <data name="GitLogDateRelativeEmpty" xml:space="preserve"><value>Nessun git log --date=relative per questo vault.</value></data>
+  <data name="CmdGitLogPrettyMedium.Label" xml:space="preserve"><value>Inserisci git log --pretty=medium</value></data>
+  <data name="GitLogPrettyMediumEmpty" xml:space="preserve"><value>Nessun git log --pretty=medium per questo vault.</value></data>
+  <data name="CmdGitLogPrettyMbox.Label" xml:space="preserve"><value>Inserisci git log --pretty=mbox</value></data>
+  <data name="GitLogPrettyMboxEmpty" xml:space="preserve"><value>Nessun git log --pretty=mbox per questo vault.</value></data>
+  <data name="CmdGitLogDateIsoStrict.Label" xml:space="preserve"><value>Inserisci git log --date=iso-strict</value></data>
+  <data name="GitLogDateIsoStrictEmpty" xml:space="preserve"><value>Nessun git log --date=iso-strict per questo vault.</value></data>
+  <data name="CmdGitLogDateRfc.Label" xml:space="preserve"><value>Inserisci git log --date=rfc</value></data>
+  <data name="GitLogDateRfcEmpty" xml:space="preserve"><value>Nessun git log --date=rfc per questo vault.</value></data>
+  <data name="CmdGitLogDateUnix.Label" xml:space="preserve"><value>Inserisci git log --date=unix</value></data>
+  <data name="GitLogDateUnixEmpty" xml:space="preserve"><value>Nessun git log --date=unix per questo vault.</value></data>
+  <data name="CmdGitLogDateLocal.Label" xml:space="preserve"><value>Inserisci git log --date=local</value></data>
+  <data name="GitLogDateLocalEmpty" xml:space="preserve"><value>Nessun git log --date=local per questo vault.</value></data>
+  <data name="CmdGitLogDateRaw.Label" xml:space="preserve"><value>Inserisci git log --date=raw</value></data>
+  <data name="GitLogDateRawEmpty" xml:space="preserve"><value>Nessun git log --date=raw per questo vault.</value></data>
+  <data name="CmdGitLogDateHuman.Label" xml:space="preserve"><value>Inserisci git log --date=human</value></data>
+  <data name="GitLogDateHumanEmpty" xml:space="preserve"><value>Nessun git log --date=human per questo vault.</value></data>
+  <data name="CmdGitLogPrettyShort.Label" xml:space="preserve"><value>Inserisci git log --pretty=short</value></data>
+  <data name="GitLogPrettyShortEmpty" xml:space="preserve"><value>Nessun git log --pretty=short per questo vault.</value></data>
+  <data name="CmdGitLogPrettyOneline.Label" xml:space="preserve"><value>Inserisci git log --pretty=oneline</value></data>
+  <data name="GitLogPrettyOnelineEmpty" xml:space="preserve"><value>Nessun git log --pretty=oneline per questo vault.</value></data>
+  <data name="CmdGitLogDateIsoLocal.Label" xml:space="preserve"><value>Inserisci git log --date=iso-local</value></data>
+  <data name="GitLogDateIsoLocalEmpty" xml:space="preserve"><value>Nessun git log --date=iso-local per questo vault.</value></data>
+  <data name="CmdGitLogDateDefault.Label" xml:space="preserve"><value>Inserisci git log --date=default</value></data>
+  <data name="GitLogDateDefaultEmpty" xml:space="preserve"><value>Nessun git log --date=default per questo vault.</value></data>
+  <data name="CmdGitLogDateIso8601.Label" xml:space="preserve"><value>Inserisci git log --date=iso8601</value></data>
+  <data name="GitLogDateIso8601Empty" xml:space="preserve"><value>Nessun git log --date=iso8601 per questo vault.</value></data>
+  <data name="CmdGitLogDateIsoStrictLocal.Label" xml:space="preserve"><value>Inserisci git log --date=iso-strict-local</value></data>
+  <data name="GitLogDateIsoStrictLocalEmpty" xml:space="preserve"><value>Nessun git log --date=iso-strict-local per questo vault.</value></data>
+  <data name="CmdGitLogDateRfc3339.Label" xml:space="preserve"><value>Inserisci git log --date=rfc3339</value></data>
+  <data name="GitLogDateRfc3339Empty" xml:space="preserve"><value>Nessun git log --date=rfc3339 per questo vault.</value></data>
+  <data name="CmdGitLogDateFormat.Label" xml:space="preserve"><value>Inserisci git log --date=format</value></data>
+  <data name="GitLogDateFormatEmpty" xml:space="preserve"><value>Nessun git log --date=format per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatLocal.Label" xml:space="preserve"><value>Inserisci git log --date=format-local</value></data>
+  <data name="GitLogDateFormatLocalEmpty" xml:space="preserve"><value>Nessun git log --date=format-local per questo vault.</value></data>
+  <data name="CmdGitLogPrettyFormat.Label" xml:space="preserve"><value>Inserisci git log --pretty=format</value></data>
+  <data name="GitLogPrettyFormatEmpty" xml:space="preserve"><value>Nessun git log --pretty=format per questo vault.</value></data>
+  <data name="CmdGitLogDateRfcLocal.Label" xml:space="preserve"><value>Inserisci git log --date=rfc-local</value></data>
+  <data name="GitLogDateRfcLocalEmpty" xml:space="preserve"><value>Nessun git log --date=rfc-local per questo vault.</value></data>
+  <data name="CmdGitLogDateShortLocal.Label" xml:space="preserve"><value>Inserisci git log --date=short-local</value></data>
+  <data name="GitLogDateShortLocalEmpty" xml:space="preserve"><value>Nessun git log --date=short-local per questo vault.</value></data>
+  <data name="CmdGitLogDateDefaultLocal.Label" xml:space="preserve"><value>Inserisci git log --date=default-local</value></data>
+  <data name="GitLogDateDefaultLocalEmpty" xml:space="preserve"><value>Nessun git log --date=default-local per questo vault.</value></data>
+  <data name="CmdGitLogPrettyTformat.Label" xml:space="preserve"><value>Inserisci git log --pretty=tformat</value></data>
+  <data name="GitLogPrettyTformatEmpty" xml:space="preserve"><value>Nessun git log --pretty=tformat per questo vault.</value></data>
+  <data name="CmdGitLogDateRelativeLocal.Label" xml:space="preserve"><value>Inserisci git log --date=relative-local</value></data>
+  <data name="GitLogDateRelativeLocalEmpty" xml:space="preserve"><value>Nessun git log --date=relative-local per questo vault.</value></data>
+  <data name="CmdGitLogPrettyAe.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %ae</value></data>
+  <data name="GitLogPrettyAeEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %ae per questo vault.</value></data>
+  <data name="CmdGitLogDateIso8601Local.Label" xml:space="preserve"><value>Inserisci git log --date=iso8601-local</value></data>
+  <data name="GitLogDateIso8601LocalEmpty" xml:space="preserve"><value>Nessun git log --date=iso8601-local per questo vault.</value></data>
+  <data name="CmdGitLogPrettyCn.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %cn</value></data>
+  <data name="GitLogPrettyCnEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %cn per questo vault.</value></data>
+  <data name="CmdGitLogPrettyCe.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %ce</value></data>
+  <data name="GitLogPrettyCeEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %ce per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatYm.Label" xml:space="preserve"><value>Inserisci git log --date=format %Y-%m</value></data>
+  <data name="GitLogDateFormatYmEmpty" xml:space="preserve"><value>Nessun git log --date=format %Y-%m per questo vault.</value></data>
+  <data name="CmdGitLogPrettyAn.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %aN</value></data>
+  <data name="GitLogPrettyAnEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %aN per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatY.Label" xml:space="preserve"><value>Inserisci git log --date=format %Y</value></data>
+  <data name="GitLogDateFormatYEmpty" xml:space="preserve"><value>Nessun git log --date=format %Y per questo vault.</value></data>
+  <data name="CmdGitLogPrettyCname.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %cN</value></data>
+  <data name="GitLogPrettyCnameEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %cN per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatMd.Label" xml:space="preserve"><value>Inserisci git log --date=format %m-%d</value></data>
+  <data name="GitLogDateFormatMdEmpty" xml:space="preserve"><value>Nessun git log --date=format %m-%d per questo vault.</value></data>
+  <data name="CmdGitLogPrettyAemail.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %aE</value></data>
+  <data name="GitLogPrettyAemailEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %aE per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatHm.Label" xml:space="preserve"><value>Inserisci git log --date=format %H:%M</value></data>
+  <data name="GitLogDateFormatHmEmpty" xml:space="preserve"><value>Nessun git log --date=format %H:%M per questo vault.</value></data>
+  <data name="CmdGitLogPrettyCemail.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %cE</value></data>
+  <data name="GitLogPrettyCemailEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %cE per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatHms.Label" xml:space="preserve"><value>Inserisci git log --date=format %H:%M:%S</value></data>
+  <data name="GitLogDateFormatHmsEmpty" xml:space="preserve"><value>Nessun git log --date=format %H:%M:%S per questo vault.</value></data>
+  <data name="CmdGitLogPrettyAname.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %an</value></data>
+  <data name="GitLogPrettyAnameEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %an per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatA.Label" xml:space="preserve"><value>Inserisci git log --date=format %a</value></data>
+  <data name="GitLogDateFormatAEmpty" xml:space="preserve"><value>Nessun git log --date=format %a per questo vault.</value></data>
+  <data name="CmdGitLogPrettyBody.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %b</value></data>
+  <data name="GitLogPrettyBodyEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %b per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatWd.Label" xml:space="preserve"><value>Inserisci git log --date=format %A</value></data>
+  <data name="GitLogDateFormatWdEmpty" xml:space="preserve"><value>Nessun git log --date=format %A per questo vault.</value></data>
+  <data name="CmdGitLogPrettyF.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %f</value></data>
+  <data name="GitLogPrettyFEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %f per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatMon.Label" xml:space="preserve"><value>Inserisci git log --date=format %B</value></data>
+  <data name="GitLogDateFormatMonEmpty" xml:space="preserve"><value>Nessun git log --date=format %B per questo vault.</value></data>
+  <data name="CmdGitLogPrettyD.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %d</value></data>
+  <data name="GitLogPrettyDEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %d per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatM.Label" xml:space="preserve"><value>Inserisci git log --date=format %m</value></data>
+  <data name="GitLogDateFormatMEmpty" xml:space="preserve"><value>Nessun git log --date=format %m per questo vault.</value></data>
+  <data name="CmdGitLogPrettyT.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %t</value></data>
+  <data name="GitLogPrettyTEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %t per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatD.Label" xml:space="preserve"><value>Inserisci git log --date=format %d</value></data>
+  <data name="GitLogDateFormatDEmpty" xml:space="preserve"><value>Nessun git log --date=format %d per questo vault.</value></data>
+  <data name="CmdGitLogPrettyP.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %p</value></data>
+  <data name="GitLogPrettyPEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %p per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatH.Label" xml:space="preserve"><value>Inserisci git log --date=format %H</value></data>
+  <data name="GitLogDateFormatHEmpty" xml:space="preserve"><value>Nessun git log --date=format %H per questo vault.</value></data>
+  <data name="CmdGitLogPrettyGd.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %gD</value></data>
+  <data name="GitLogPrettyGdEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %gD per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatI.Label" xml:space="preserve"><value>Inserisci git log --date=format %I</value></data>
+  <data name="GitLogDateFormatIEmpty" xml:space="preserve"><value>Nessun git log --date=format %I per questo vault.</value></data>
+  <data name="CmdGitLogPrettyGn.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %gn</value></data>
+  <data name="GitLogPrettyGnEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %gn per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatMin.Label" xml:space="preserve"><value>Inserisci git log --date=format %M</value></data>
+  <data name="GitLogDateFormatMinEmpty" xml:space="preserve"><value>Nessun git log --date=format %M per questo vault.</value></data>
+  <data name="CmdGitLogPrettyGs.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %gs</value></data>
+  <data name="GitLogPrettyGsEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %gs per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatS.Label" xml:space="preserve"><value>Inserisci git log --date=format %S</value></data>
+  <data name="GitLogDateFormatSEmpty" xml:space="preserve"><value>Nessun git log --date=format %S per questo vault.</value></data>
+  <data name="CmdGitLogPrettyGe.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %gE</value></data>
+  <data name="GitLogPrettyGeEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %gE per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatT.Label" xml:space="preserve"><value>Inserisci git log --date=format %T</value></data>
+  <data name="GitLogDateFormatTEmpty" xml:space="preserve"><value>Nessun git log --date=format %T per questo vault.</value></data>
+  <data name="CmdGitLogPrettyCi.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %cI</value></data>
+  <data name="GitLogPrettyCiEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %cI per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatR.Label" xml:space="preserve"><value>Inserisci git log --date=format %R</value></data>
+  <data name="GitLogDateFormatREmpty" xml:space="preserve"><value>Nessun git log --date=format %R per questo vault.</value></data>
+  <data name="CmdGitLogPrettyCd.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %cD</value></data>
+  <data name="GitLogPrettyCdEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %cD per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatF.Label" xml:space="preserve"><value>Inserisci git log --date=format %F</value></data>
+  <data name="GitLogDateFormatFEmpty" xml:space="preserve"><value>Nessun git log --date=format %F per questo vault.</value></data>
+  <data name="CmdGitLogPrettyCr.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %cr</value></data>
+  <data name="GitLogPrettyCrEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %cr per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatZ.Label" xml:space="preserve"><value>Inserisci git log --date=format %z</value></data>
+  <data name="GitLogDateFormatZEmpty" xml:space="preserve"><value>Nessun git log --date=format %z per questo vault.</value></data>
+  <data name="CmdGitLogPrettyCt.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %ct</value></data>
+  <data name="GitLogPrettyCtEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %ct per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatX.Label" xml:space="preserve"><value>Inserisci git log --date=format %X</value></data>
+  <data name="GitLogDateFormatXEmpty" xml:space="preserve"><value>Nessun git log --date=format %X per questo vault.</value></data>
+  <data name="CmdGitLogPrettyAd.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %ad</value></data>
+  <data name="GitLogPrettyAdEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %ad per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatP.Label" xml:space="preserve"><value>Inserisci git log --date=format %P</value></data>
+  <data name="GitLogDateFormatPEmpty" xml:space="preserve"><value>Nessun git log --date=format %P per questo vault.</value></data>
+  <data name="CmdGitLogPrettyAt.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %at</value></data>
+  <data name="GitLogPrettyAtEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %at per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatJ.Label" xml:space="preserve"><value>Inserisci git log --date=format %j</value></data>
+  <data name="GitLogDateFormatJEmpty" xml:space="preserve"><value>Nessun git log --date=format %j per questo vault.</value></data>
+  <data name="CmdGitLogPrettyAi.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %ai</value></data>
+  <data name="GitLogPrettyAiEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %ai per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatU.Label" xml:space="preserve"><value>Inserisci git log --date=format %u</value></data>
+  <data name="GitLogDateFormatUEmpty" xml:space="preserve"><value>Nessun git log --date=format %u per questo vault.</value></data>
+  <data name="CmdGitLogPrettyAs.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %as</value></data>
+  <data name="GitLogPrettyAsEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %as per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatW.Label" xml:space="preserve"><value>Inserisci git log --date=format %w</value></data>
+  <data name="GitLogDateFormatWEmpty" xml:space="preserve"><value>Nessun git log --date=format %w per questo vault.</value></data>
+  <data name="CmdGitLogPrettyCs.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %cs</value></data>
+  <data name="GitLogPrettyCsEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %cs per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatV.Label" xml:space="preserve"><value>Inserisci git log --date=format %V</value></data>
+  <data name="GitLogDateFormatVEmpty" xml:space="preserve"><value>Nessun git log --date=format %V per questo vault.</value></data>
+  <data name="CmdGitLogPrettyN.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %N</value></data>
+  <data name="GitLogPrettyNEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %N per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatG.Label" xml:space="preserve"><value>Inserisci git log --date=format %G</value></data>
+  <data name="GitLogDateFormatGEmpty" xml:space="preserve"><value>Nessun git log --date=format %G per questo vault.</value></data>
+  <data name="CmdGitLogPrettyE.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %e</value></data>
+  <data name="GitLogPrettyEEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %e per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatC.Label" xml:space="preserve"><value>Inserisci git log --date=format %C</value></data>
+  <data name="GitLogDateFormatCEmpty" xml:space="preserve"><value>Nessun git log --date=format %C per questo vault.</value></data>
+  <data name="CmdGitLogPrettyTree.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %T</value></data>
+  <data name="GitLogPrettyTreeEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %T per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatWn.Label" xml:space="preserve"><value>Inserisci git log --date=format %W</value></data>
+  <data name="GitLogDateFormatWnEmpty" xml:space="preserve"><value>Nessun git log --date=format %W per questo vault.</value></data>
+  <data name="CmdGitLogPrettyGk.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %GK</value></data>
+  <data name="GitLogPrettyGkEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %GK per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatB.Label" xml:space="preserve"><value>Inserisci git log --date=format %b</value></data>
+  <data name="GitLogDateFormatBEmpty" xml:space="preserve"><value>Nessun git log --date=format %b per questo vault.</value></data>
+  <data name="CmdGitLogPrettyGg.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %GG</value></data>
+  <data name="GitLogPrettyGgEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %GG per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatK.Label" xml:space="preserve"><value>Inserisci git log --date=format %k</value></data>
+  <data name="GitLogDateFormatKEmpty" xml:space="preserve"><value>Nessun git log --date=format %k per questo vault.</value></data>
+  <data name="CmdGitLogPrettyGf.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %GF</value></data>
+  <data name="GitLogPrettyGfEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %GF per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatE.Label" xml:space="preserve"><value>Inserisci git log --date=format %e</value></data>
+  <data name="GitLogDateFormatEEmpty" xml:space="preserve"><value>Nessun git log --date=format %e per questo vault.</value></data>
+  <data name="CmdGitLogPrettyGt.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %GT</value></data>
+  <data name="GitLogPrettyGtEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %GT per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatNs.Label" xml:space="preserve"><value>Inserisci git log --date=format %N</value></data>
+  <data name="GitLogDateFormatNsEmpty" xml:space="preserve"><value>Nessun git log --date=format %N per questo vault.</value></data>
+  <data name="CmdGitLogPrettyGp.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %GP</value></data>
+  <data name="GitLogPrettyGpEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %GP per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatLc.Label" xml:space="preserve"><value>Inserisci git log --date=format %c</value></data>
+  <data name="GitLogDateFormatLcEmpty" xml:space="preserve"><value>Nessun git log --date=format %c per questo vault.</value></data>
+  <data name="CmdGitLogPrettyCl.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %cl</value></data>
+  <data name="GitLogPrettyClEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %cl per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatTz.Label" xml:space="preserve"><value>Inserisci git log --date=format %Z</value></data>
+  <data name="GitLogDateFormatTzEmpty" xml:space="preserve"><value>Nessun git log --date=format %Z per questo vault.</value></data>
+  <data name="CmdGitLogPrettyAh.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %ah</value></data>
+  <data name="GitLogPrettyAhEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %ah per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatLx.Label" xml:space="preserve"><value>Inserisci git log --date=format %x</value></data>
+  <data name="GitLogDateFormatLxEmpty" xml:space="preserve"><value>Nessun git log --date=format %x per questo vault.</value></data>
+  <data name="CmdGitLogPrettyCh.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %ch</value></data>
+  <data name="GitLogPrettyChEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %ch per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatEpoch.Label" xml:space="preserve"><value>Inserisci git log --date=format %s</value></data>
+  <data name="GitLogDateFormatEpochEmpty" xml:space="preserve"><value>Nessun git log --date=format %s per questo vault.</value></data>
+  <data name="CmdGitLogPrettyAl.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %al</value></data>
+  <data name="GitLogPrettyAlEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %al per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatAmpm.Label" xml:space="preserve"><value>Inserisci git log --date=format %r</value></data>
+  <data name="GitLogDateFormatAmpmEmpty" xml:space="preserve"><value>Nessun git log --date=format %r per questo vault.</value></data>
+  <data name="CmdGitLogPrettyAlm.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %aL</value></data>
+  <data name="GitLogPrettyAlmEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %aL per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatMdy.Label" xml:space="preserve"><value>Inserisci git log --date=format %D</value></data>
+  <data name="GitLogDateFormatMdyEmpty" xml:space="preserve"><value>Nessun git log --date=format %D per questo vault.</value></data>
+  <data name="CmdGitLogPrettyClm.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %cL</value></data>
+  <data name="GitLogPrettyClmEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %cL per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatAp.Label" xml:space="preserve"><value>Inserisci git log --date=format %p</value></data>
+  <data name="GitLogDateFormatApEmpty" xml:space="preserve"><value>Nessun git log --date=format %p per questo vault.</value></data>
+  <data name="CmdGitLogPrettyGsigner.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %GS</value></data>
+  <data name="GitLogPrettyGsignerEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %GS per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatWeekday.Label" xml:space="preserve"><value>Inserisci git log --date=format %A</value></data>
+  <data name="GitLogDateFormatWeekdayEmpty" xml:space="preserve"><value>Nessun git log --date=format %A per questo vault.</value></data>
+  <data name="CmdGitLogPrettyGstatus.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %G?</value></data>
+  <data name="GitLogPrettyGstatusEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %G? per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatYy.Label" xml:space="preserve"><value>Inserisci git log --date=format %y</value></data>
+  <data name="GitLogDateFormatYyEmpty" xml:space="preserve"><value>Nessun git log --date=format %y per questo vault.</value></data>
+  <data name="CmdGitLogPrettyGhash.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %GH</value></data>
+  <data name="GitLogPrettyGhashEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %GH per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatUsweek.Label" xml:space="preserve"><value>Inserisci git log --date=format %U</value></data>
+  <data name="GitLogDateFormatUsweekEmpty" xml:space="preserve"><value>Nessun git log --date=format %U per questo vault.</value></data>
+  <data name="CmdGitLogPrettyGlocal.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %GL</value></data>
+  <data name="GitLogPrettyGlocalEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %GL per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatTwelve.Label" xml:space="preserve"><value>Inserisci git log --date=format %l</value></data>
+  <data name="GitLogDateFormatTwelveEmpty" xml:space="preserve"><value>Nessun git log --date=format %l per questo vault.</value></data>
+  <data name="CmdGitLogPrettyGnm.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %gN</value></data>
+  <data name="GitLogPrettyGnmEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %gN per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatPlus.Label" xml:space="preserve"><value>Inserisci git log --date=format %+</value></data>
+  <data name="GitLogDateFormatPlusEmpty" xml:space="preserve"><value>Nessun git log --date=format %+ per questo vault.</value></data>
+  <data name="CmdGitLogPrettyM.Label" xml:space="preserve"><value>Inserisci git log --pretty=format %h %m</value></data>
+  <data name="GitLogPrettyMEmpty" xml:space="preserve"><value>Nessun git log --pretty=format %h %m per questo vault.</value></data>
+  <data name="CmdGitLogDateFormatN.Label" xml:space="preserve"><value>Inserisci git log --date=format %n</value></data>
+  <data name="GitLogDateFormatNEmpty" xml:space="preserve"><value>Nessun git log --date=format %n per questo vault.</value></data>
+  <data name="WorkspaceSettings.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Impostazioni</value></data>
+  <data name="WorkspaceSettings.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Impostazioni</value></data>
+  <data name="WorkspaceInfo.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Informazioni</value></data>
+  <data name="WorkspaceInfo.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Informazioni</value></data>
+  <data name="WorkspaceSave.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Salva · Ctrl+S</value></data>
+  <data name="WorkspaceSave.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Salva · Ctrl+S</value></data>
+  <data name="WorkspaceBack.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Torna alla nota</value></data>
+  <data name="WorkspaceBack.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Torna alla nota</value></data>
+  <data name="WorkspaceEditMode.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Editor</value></data>
+  <data name="WorkspaceEditMode.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Editor</value></data>
+  <data name="WorkspaceEditMode.Label" xml:space="preserve"><value>Editor</value></data>
+  <data name="WorkspacePreviewMode.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Anteprima</value></data>
+  <data name="WorkspacePreviewMode.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Anteprima</value></data>
+  <data name="WorkspacePreviewMode.Label" xml:space="preserve"><value>Anteprima</value></data>
+  <data name="WorkspaceInspector.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Indice e collegamenti</value></data>
+  <data name="WorkspaceInspector.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Indice e collegamenti</value></data>
+  <data name="WorkspaceInspector.Label" xml:space="preserve"><value>Indice e collegamenti</value></data>
+  <data name="WorkspaceLibrary.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Libreria</value></data>
+  <data name="WorkspaceLibrary.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Libreria</value></data>
+  <data name="WorkspaceLibrary.Label" xml:space="preserve"><value>Libreria</value></data>
+  <data name="WorkspaceNotes" xml:space="preserve"><value>Note aperte</value></data>
+  <data name="WorkspaceSaved" xml:space="preserve"><value>Salvato</value></data>
+  <data name="WorkspaceUnsaved" xml:space="preserve"><value>Da salvare</value></data>
+  <data name="WorkspaceNew" xml:space="preserve"><value>Nuova nota</value></data>
+  <data name="WorkspaceEmptyNote" xml:space="preserve"><value>Inizia a scrivere…</value></data>
+  <data name="WorkspacePin" xml:space="preserve"><value>Fissa nota</value></data>
+  <data name="WorkspaceUnpin" xml:space="preserve"><value>Rimuovi fissaggio</value></data>
+  <data name="WorkspaceClose" xml:space="preserve"><value>Chiudi nota</value></data>
+  <data name="SettingsCategoryAppearance.Content" xml:space="preserve"><value>Aspetto</value></data>
+  <data name="SettingsCategoryEditor.Content" xml:space="preserve"><value>Editor</value></data>
+  <data name="SettingsCategoryWriting.Content" xml:space="preserve"><value>Scrittura</value></data>
+  <data name="SettingsCategoryPreview.Content" xml:space="preserve"><value>Anteprima</value></data>
+  <data name="SettingsCategoryExport.Content" xml:space="preserve"><value>Esportazione</value></data>
+  <data name="SettingsCategoryData.Content" xml:space="preserve"><value>Dati</value></data>
+  <data name="SettingsTypography.Header" xml:space="preserve"><value>Caratteri e spaziatura</value></data>
+  <data name="SettingsTypography.Description" xml:space="preserve"><value>Scegli carattere, dimensione, interlinea e tabulazione.</value></data>
+  <data name="SettingsTheme.Description" xml:space="preserve"><value>Usa il tema di Windows oppure scegli chiaro o scuro.</value></data>
+  <data name="SettingsBackdrop.Description" xml:space="preserve"><value>Materiale e trasparenza dello sfondo della finestra.</value></data>
+  <data name="SettingsRememberWindow.Description" xml:space="preserve"><value>Ripristina dimensioni e posizione al prossimo avvio.</value></data>
+  <data name="SettingsWordWrap.Description" xml:space="preserve"><value>Adatta il testo alla larghezza disponibile.</value></data>
+  <data name="SettingsAutoPair.Header" xml:space="preserve"><value>Chiusura automatica delle parentesi</value></data>
+  <data name="SettingsAutoPair.Description" xml:space="preserve"><value>Aggiunge ), ], } e ` di chiusura quando il cursore è a fine parola o davanti a uno spazio.</value></data>
+  <data name="SettingsLineNumbers.Description" xml:space="preserve"><value>Mostra i numeri delle righe accanto al documento.</value></data>
+  <data name="SettingsHighlightLine.Description" xml:space="preserve"><value>Evidenzia la riga in cui stai scrivendo.</value></data>
+  <data name="SettingsOutline.Description" xml:space="preserve"><value>Mostra titoli, collegamenti e backlink nel pannello laterale.</value></data>
+  <data name="SettingsDefaultView.Description" xml:space="preserve"><value>Vista usata quando apri o crei una nota.</value></data>
+  <data name="SettingsAutosave.Description" xml:space="preserve"><value>Salva le modifiche dopo una breve pausa nella scrittura.</value></data>
+  <data name="SettingsSpellCheck.Description" xml:space="preserve"><value>Segnala gli errori ortografici mentre scrivi.</value></data>
+  <data name="SettingsLivePreview.Description" xml:space="preserve"><value>Aggiorna l’anteprima quando cambia il documento.</value></data>
+  <data name="SettingsSyncScroll.Description" xml:space="preserve"><value>Mantiene allineati editor e anteprima nelle viste divise.</value></data>
+  <data name="SettingsRemoteImages.Description" xml:space="preserve"><value>Consenti all’anteprima di scaricare immagini da Internet.</value></data>
+  <data name="SettingsZoom.Description" xml:space="preserve"><value>Scala del testo e dei contenuti nell’anteprima.</value></data>
+  <data name="SettingsCssTheme.Description" xml:space="preserve"><value>Aspetto dei file HTML esportati.</value></data>
+  <data name="SettingsLogLevel.Description" xml:space="preserve"><value>Scegli quali eventi conservare nel registro diagnostico.</value></data>
+  <data name="SettingsLogFile.Description" xml:space="preserve"><value>Apri il registro per consultare gli eventi dell’app.</value></data>
+  <data name="SettingsReset.Description" xml:space="preserve"><value>Ripristina le preferenze iniziali; conserva note e lingua.</value></data>
+  <data name="SecurityHelloRetired" xml:space="preserve"><value>La chiave dell’archivio è stata rinnovata, quindi lo sblocco con Windows Hello è stato disattivato. Puoi riattivarlo nelle impostazioni di sicurezza.</value></data>
+  <data name="SecurityDamagedNotes" xml:space="preserve"><value>{0} note protette sono danneggiate e non possono essere aperte. Le altre note sono state sbloccate normalmente; per i contenuti persi usa un backup.</value></data>
+  <data name="SecurityIntegrityTitle" xml:space="preserve"><value>Controllo di integrità delle note protette</value></data>
+  <data name="SecurityIntegrityUnverifiable" xml:space="preserve"><value>Il sigillo che protegge l’archivio delle note protette manca o è stato alterato, quindi non è possibile stabilire quali note siano state modificate fuori dall’app.</value></data>
+  <data name="SecurityIntegrityRolledBack" xml:space="preserve"><value>L’archivio è più vecchio dell’ultimo stato salvato su questo dispositivo: è stato sostituito con una copia precedente.</value></data>
+  <data name="SecurityIntegrityChanged" xml:space="preserve"><value>Queste note protette sono state riportate a una versione precedente, sostituite o rimosse fuori dall’app:</value></data>
+  <data name="SecurityIntegrityMissingNote" xml:space="preserve"><value>(nota rimossa o illeggibile)</value></data>
+  <data name="SecurityIntegrityMore" xml:space="preserve"><value>…e altre {0}.</value></data>
+  <data name="SecurityIntegrityAdvice" xml:space="preserve"><value>Se non l’hai fatto tu, blocca le note e ripristina un backup dalle impostazioni. Se sei stato tu a ripristinare o copiare l’archivio, accetta lo stato attuale: le modifiche alle note protette restano bloccate finché non scegli.</value></data>
+  <data name="SecurityIntegrityAccept" xml:space="preserve"><value>Accetta lo stato attuale</value></data>
+  <data name="SecurityIntegrityLock" xml:space="preserve"><value>Blocca le note</value></data>
+  <data name="SecurityDraftLost" xml:space="preserve"><value>Una modifica non salvata a una nota protetta non è più recuperabile perché la nota è stata eliminata.</value></data>
+  <data name="FactoryResetCard.Header" xml:space="preserve"><value>Reset completo dell’app</value></data>
+  <data name="FactoryResetCard.Description" xml:space="preserve"><value>Elimina definitivamente tutte le note, gli allegati, la cronologia, la protezione e le preferenze.</value></data>
+  <data name="FactoryResetButton.Content" xml:space="preserve"><value>Elimina tutto…</value></data>
+  <data name="FactoryResetTitle" xml:space="preserve"><value>Reset completo</value></data>
+  <data name="FactoryResetBody" xml:space="preserve"><value>Verranno eliminati in modo definitivo: tutte le note (anche protette, archiviate e nel cestino), gli allegati, la cronologia delle versioni, la password, il codice di recupero, lo sblocco con Windows Hello, i backup automatici creati prima dei ripristini, il registro diagnostico e le preferenze. La lingua resta invariata. I backup salvati altrove e i file esportati non vengono toccati.</value></data>
+  <data name="FactoryResetBackup" xml:space="preserve"><value>Salva prima un backup completo</value></data>
+  <data name="FactoryResetConfirmWord" xml:space="preserve"><value>ELIMINA</value></data>
+  <data name="FactoryResetConfirmHint" xml:space="preserve"><value>Per confermare scrivi {0}</value></data>
+  <data name="FactoryResetDone" xml:space="preserve"><value>L’app è stata riportata allo stato iniziale.</value></data>
+  <data name="FactoryResetLeftovers" xml:space="preserve"><value>Alcuni file sono in uso e non sono stati eliminati:</value></data>
+  <data name="FactoryResetFailed" xml:space="preserve"><value>Il reset non è stato completato.</value></data>
+  <data name="FactoryResetNoBackup" xml:space="preserve"><value>Il backup non è stato salvato, quindi il reset è stato annullato. Nessun dato è stato eliminato.</value></data>
+  <data name="SettingsOption.System" xml:space="preserve"><value>Come Windows</value></data>
+  <data name="SettingsOption.Light" xml:space="preserve"><value>Chiaro</value></data>
+  <data name="SettingsOption.Dark" xml:space="preserve"><value>Scuro</value></data>
+  <data name="SettingsOption.Mica" xml:space="preserve"><value>Mica</value></data>
+  <data name="SettingsOption.MicaAlt" xml:space="preserve"><value>Mica alternativo</value></data>
+  <data name="SettingsOption.Acrylic" xml:space="preserve"><value>Acrilico</value></data>
+  <data name="SettingsOption.Solid" xml:space="preserve"><value>Tinta unita</value></data>
+  <data name="SettingsOption.Library" xml:space="preserve"><value>Libreria</value></data>
+  <data name="SettingsOption.Editor" xml:space="preserve"><value>Editor</value></data>
+  <data name="SettingsOption.LastUsed" xml:space="preserve"><value>Ultima pagina usata</value></data>
+  <data name="SettingsOption.Preview" xml:space="preserve"><value>Anteprima</value></data>
+  <data name="SettingsOption.Split" xml:space="preserve"><value>Editor e anteprima affiancati</value></data>
+  <data name="SettingsOption.SplitVertical" xml:space="preserve"><value>Editor e anteprima sovrapposti</value></data>
+  <data name="SettingsOption.fluent" xml:space="preserve"><value>Chiaro</value></data>
+  <data name="SettingsOption.dark" xml:space="preserve"><value>Scuro</value></data>
+  <data name="InfoAppCard.Description" xml:space="preserve"><value>Note Markdown, sempre salvate nel tuo archivio locale.</value></data>
+  <data name="InfoVersionCard.Header" xml:space="preserve"><value>Versione</value></data>
+  <data name="InfoVersionCard.Description" xml:space="preserve"><value>Versione dell’app e architettura del processo.</value></data>
+  <data name="InfoComponents.Header" xml:space="preserve"><value>Componenti</value></data>
+  <data name="InfoComponents.Description" xml:space="preserve"><value>Piattaforma su cui l’app è in esecuzione.</value></data>
+  <data name="InfoDataPaths.Header" xml:space="preserve"><value>Dettagli tecnici</value></data>
+  <data name="InfoDataPaths.Description" xml:space="preserve"><value>Percorsi dei dati e strumenti diagnostici.</value></data>
+  <data name="InfoSettingsPath.Header" xml:space="preserve"><value>Impostazioni</value></data>
+  <data name="InfoRecoveryPath.Header" xml:space="preserve"><value>Bozze di recupero</value></data>
+  <data name="InfoHistoryPath.Header" xml:space="preserve"><value>Cronologia</value></data>
+  <data name="InfoLogPath.Header" xml:space="preserve"><value>Registro diagnostico</value></data>
+  <data name="InfoDiagnostics.Header" xml:space="preserve"><value>Informazioni di diagnostica</value></data>
+  <data name="InfoDiagnostics.Description" xml:space="preserve"><value>Copia versione, sistema e percorsi da allegare a una segnalazione.</value></data>
+  <data name="InfoCopyDiagnostics.Content" xml:space="preserve"><value>Copia informazioni</value></data>
+  <data name="InfoDiagnosticsCopied.Title" xml:space="preserve"><value>Informazioni copiate</value></data>
+  <data name="InfoDiagnosticsCopied.Message" xml:space="preserve"><value>Puoi incollarle nella tua segnalazione.</value></data>
+  <data name="LibraryIntro.Text" xml:space="preserve"><value>Le tue note, in un unico posto.</value></data>
+  <data name="LibraryFolderMenu.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Cartelle della libreria</value></data>
+  <data name="LibraryFolderMenu.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Gestisci cartelle</value></data>
+  <data name="LibraryAddFolderMenu.Text" xml:space="preserve"><value>Aggiungi cartella</value></data>
+  <data name="LibraryCreateFolderMenu.Text" xml:space="preserve"><value>Nuova sottocartella</value></data>
+  <data name="LibraryRevealFolderMenu.Text" xml:space="preserve"><value>Mostra cartella in Esplora file</value></data>
+  <data name="LibraryManageMenu.Text" xml:space="preserve"><value>Gestisci cartelle</value></data>
+  <data name="LibraryManageDescription" xml:space="preserve"><value>Scegli le cartelle da raccogliere nella libreria. Scollegare una cartella non elimina i file dal disco.</value></data>
+  <data name="LibraryDisconnectFolder" xml:space="preserve"><value>Scollega cartella</value></data>
+  <data name="LibraryCatalogSearch.PlaceholderText" xml:space="preserve"><value>Cerca nelle note o usa #tag…</value></data>
+  <data name="LibraryCatalogSearch.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Cerca nella libreria</value></data>
+  <data name="LibraryCatalogSearch.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Cerca titoli e contenuti. Ricerca avanzata: #tag, tags:, todo:, orphan:, [[</value></data>
+  <data name="LibraryFolderFilter.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Filtra per cartella</value></data>
+  <data name="LibraryAllFolders" xml:space="preserve"><value>Tutte le cartelle</value></data>
+  <data name="LibraryViewAll.Content" xml:space="preserve"><value>Tutte le note</value></data>
+  <data name="LibraryViewRecent.Content" xml:space="preserve"><value>Recenti</value></data>
+  <data name="LibraryViewStarred.Content" xml:space="preserve"><value>Preferite</value></data>
+  <data name="LibraryViewArchive.Content" xml:space="preserve"><value>Archivio</value></data>
+  <data name="LibrarySort.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Ordina le note</value></data>
+  <data name="LibrarySortModified.Content" xml:space="preserve"><value>Ultime modificate</value></data>
+  <data name="LibrarySortTitle.Content" xml:space="preserve"><value>Titolo: A–Z</value></data>
+  <data name="LibrarySortOldest.Content" xml:space="preserve"><value>Meno recenti</value></data>
+  <data name="LibrarySortOpened" xml:space="preserve"><value>Ultime aperte</value></data>
+  <data name="LibraryRefresh.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Aggiorna libreria</value></data>
+  <data name="LibraryRefresh.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Aggiorna libreria</value></data>
+  <data name="LibraryNoteActions.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Azioni sulla nota</value></data>
+  <data name="LibraryNoteActions.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Azioni sulla nota</value></data>
+  <data name="LibraryNoPreview" xml:space="preserve"><value>Una pagina pronta per le tue idee.</value></data>
+  <data name="LibraryModifiedOn" xml:space="preserve"><value>Modificata il {0}</value></data>
+  <data name="LibraryNoteCount" xml:space="preserve"><value>{0} note</value></data>
+  <data name="LibraryResultCount" xml:space="preserve"><value>{0} risultati</value></data>
+  <data name="LibrarySearchFailed" xml:space="preserve"><value>La ricerca non è riuscita. Prova ad aggiornare la libreria.</value></data>
+  <data name="LibraryTagAction" xml:space="preserve"><value>Esplora questo tag</value></data>
+  <data name="LibraryEmptyLibraryTitle" xml:space="preserve"><value>Uno spazio per le tue note</value></data>
+  <data name="LibraryEmptyLibraryDescription" xml:space="preserve"><value>Aggiungi una cartella di file Markdown per ritrovare qui idee, progetti e appunti.</value></data>
+  <data name="LibraryEmptyNotesTitle" xml:space="preserve"><value>La prossima idea parte da qui</value></data>
+  <data name="LibraryEmptyNotesDescription" xml:space="preserve"><value>Queste cartelle non contengono ancora note Markdown. Crea la prima nota.</value></data>
+  <data name="LibraryEmptyResultsTitle" xml:space="preserve"><value>Nessuna nota trovata</value></data>
+  <data name="LibraryEmptyResultsDescription" xml:space="preserve"><value>Prova altre parole oppure rimuovi i filtri per esplorare la raccolta.</value></data>
+  <data name="LibraryEmptyRecentTitle" xml:space="preserve"><value>Riprendi da dove eri rimasto</value></data>
+  <data name="LibraryEmptyRecentDescription" xml:space="preserve"><value>Le note che apri compariranno qui, dalla più recente.</value></data>
+  <data name="LibraryEmptyStarredTitle" xml:space="preserve"><value>Tieni vicine le idee importanti</value></data>
+  <data name="LibraryEmptyStarredDescription" xml:space="preserve"><value>Premi la stella su una nota per ritrovarla tra le preferite.</value></data>
+  <data name="LibraryEmptyArchiveTitle" xml:space="preserve"><value>I progetti conclusi, al loro posto</value></data>
+  <data name="LibraryEmptyArchiveDescription" xml:space="preserve"><value>Le note archiviate compariranno qui. Potrai ripristinarle dal loro menu.</value></data>
+  <data name="LibraryClearFilters" xml:space="preserve"><value>Rimuovi filtri</value></data>
+  <data name="LibraryShowAll" xml:space="preserve"><value>Esplora tutte le note</value></data>
+  <data name="LibraryOpenNote" xml:space="preserve"><value>Apri nota</value></data>
+  <data name="LibraryOneNote" xml:space="preserve"><value>1 nota</value></data>
+  <data name="LibraryOneResult" xml:space="preserve"><value>1 risultato</value></data>
+  <data name="LibraryClose" xml:space="preserve"><value>Chiudi</value></data>
+  <data name="CmdUndo.Label" xml:space="preserve"><value>Annulla</value></data>
+  <data name="CmdRedo.Label" xml:space="preserve"><value>Ripeti</value></data>
+  <data name="EditorMenuDocument" xml:space="preserve"><value>Nota</value></data>
+  <data name="EditorMenuFormat" xml:space="preserve"><value>Formato</value></data>
+  <data name="EditorMenuInsert" xml:space="preserve"><value>Inserisci</value></data>
+  <data name="EditorMenuView" xml:space="preserve"><value>Vista</value></data>
+  <data name="EditorMenuCommands" xml:space="preserve"><value>Comandi</value></data>
+  <data name="EditorMenuAllCommands" xml:space="preserve"><value>Cerca comandi</value></data>
+  <data name="EditorMenuCut" xml:space="preserve"><value>Taglia</value></data>
+  <data name="EditorMenuCopy" xml:space="preserve"><value>Copia</value></data>
+  <data name="EditorMenuPaste" xml:space="preserve"><value>Incolla</value></data>
+  <data name="EditorMenuLines" xml:space="preserve"><value>Righe</value></data>
+  <data name="EditorMenuTable" xml:space="preserve"><value>Tabella</value></data>
+  <data name="EditorMenuList" xml:space="preserve"><value>Elemento elenco</value></data>
+  <data name="EditorMenuMoreStyles" xml:space="preserve"><value>Altri stili</value></data>
+  <data name="EditorMenuHeadings" xml:space="preserve"><value>Titoli</value></data>
+  <data name="EditorMenuLists" xml:space="preserve"><value>Elenchi</value></data>
+  <data name="EditorMenuTransform" xml:space="preserve"><value>Trasforma testo</value></data>
+  <data name="EditorMenuHeading4" xml:space="preserve"><value>Titolo 4</value></data>
+  <data name="EditorMenuHeading5" xml:space="preserve"><value>Titolo 5</value></data>
+  <data name="EditorMenuHeading6" xml:space="preserve"><value>Titolo 6</value></data>
+  <data name="EditorMenuMathDiagrams" xml:space="preserve"><value>Formule e diagrammi</value></data>
+  <data name="EditorMenuStructure" xml:space="preserve"><value>Struttura della nota</value></data>
+  <data name="EditorMenuMoveRows" xml:space="preserve"><value>Sposta riga</value></data>
+  <data name="EditorMenuColumns" xml:space="preserve"><value>Colonne</value></data>
+  <data name="EditorMenuAlignment" xml:space="preserve"><value>Allineamento</value></data>
+  <data name="EditorMenuSort" xml:space="preserve"><value>Ordina</value></data>
+  <data name="EditorMenuCopyAs" xml:space="preserve"><value>Copia come</value></data>
+  <data name="EditorMenuHeadingSection" xml:space="preserve"><value>Sezione del titolo</value></data>
+  <data name="EditorMenuOrganize" xml:space="preserve"><value>Organizza nota</value></data>
+  <data name="EditorMenuExportShare" xml:space="preserve"><value>Esporta e condividi</value></data>
+  <data name="EditorMenuFile" xml:space="preserve"><value>File e percorso</value></data>
+  <data name="EditorMenuHistory" xml:space="preserve"><value>Cronologia e confronto</value></data>
+  <data name="EditorMenuTabs" xml:space="preserve"><value>Schede</value></data>
+  <data name="EditorMenuNavigation" xml:space="preserve"><value>Navigazione</value></data>
+  <data name="EditorMenuReading" xml:space="preserve"><value>Modalità di lettura</value></data>
+  <data name="EditorMenuSections" xml:space="preserve"><value>Sezioni comprimibili</value></data>
+  <data name="EditorMenuSelectAll" xml:space="preserve"><value>Seleziona tutto</value></data>
+  <data name="ArchiveActionFailed" xml:space="preserve"><value>Operazione non riuscita</value></data>
+  <data name="ArchiveAddTag" xml:space="preserve"><value>Aggiungi un tag…</value></data>
+  <data name="ArchiveBackupDone" xml:space="preserve"><value>Backup creato.</value></data>
+  <data name="ArchiveBackupTitle" xml:space="preserve"><value>Backup dell’archivio</value></data>
+  <data name="ArchiveCategories" xml:space="preserve"><value>Categorie</value></data>
+  <data name="ArchiveCategory" xml:space="preserve"><value>Categoria</value></data>
+  <data name="ArchiveChooseNote" xml:space="preserve"><value>Scegli una nota</value></data>
+  <data name="ArchiveCloseEditor" xml:space="preserve"><value>Chiudi editor</value></data>
+  <data name="ArchiveColor" xml:space="preserve"><value>Colore</value></data>
+  <data name="ArchiveCommandSearch" xml:space="preserve"><value>Cerca comandi</value></data>
+  <data name="ArchiveCopySuffix" xml:space="preserve"><value>(copia)</value></data>
+  <data name="ArchiveDeleteForever" xml:space="preserve"><value>Elimina definitivamente</value></data>
+  <data name="ArchiveEmpty" xml:space="preserve"><value>Nessuna nota. Crea una nota o importa i tuoi file Markdown.</value></data>
+  <data name="ArchiveExport" xml:space="preserve"><value>Esporta Markdown…</value></data>
+  <data name="ArchiveImport" xml:space="preserve"><value>Importa note</value></data>
+  <data name="ArchiveImportSelected" xml:space="preserve"><value>Importa selezionate</value></data>
+  <data name="ArchiveImportWarnings" xml:space="preserve"><value>Risultato dell’importazione</value></data>
+  <data name="ArchiveNewCategory" xml:space="preserve"><value>Oppure crea una categoria…</value></data>
+  <data name="ArchiveOpenFailed" xml:space="preserve"><value>Impossibile aprire l’archivio.</value></data>
+  <data name="ArchiveRemoveTag" xml:space="preserve"><value>Rimuovi tag</value></data>
+  <data name="ArchiveRestoreBackup" xml:space="preserve"><value>Ripristina backup</value></data>
+  <data name="ArchiveRestoreDescription" xml:space="preserve"><value>Il backup sostituirà l’archivio e le preferenze. Prima verrà conservata una copia dei dati attuali.</value></data>
+  <data name="ArchiveRestoreDone" xml:space="preserve"><value>Archivio ripristinato. La copia precedente è nei dettagli tecnici dell’archivio.</value></data>
+  <data name="ArchiveSaveFailed" xml:space="preserve"><value>Salvataggio non riuscito</value></data>
+  <data name="ArchiveSaving" xml:space="preserve"><value>Salvataggio…</value></data>
+  <data name="ArchiveSearchNotes" xml:space="preserve"><value>Cerca note…</value></data>
+  <data name="ArchiveTags" xml:space="preserve"><value>Tag</value></data>
+  <data name="ArchiveUncategorized" xml:space="preserve"><value>Senza categoria</value></data>
+  <data name="ArchiveAll" xml:space="preserve"><value>Tutte le note</value></data>
+  <data name="ArchiveFavorites" xml:space="preserve"><value>Preferiti</value></data>
+  <data name="ArchiveArchived" xml:space="preserve"><value>Archivio</value></data>
+  <data name="ArchiveDeleted" xml:space="preserve"><value>Cestino</value></data>
+  <data name="ArchiveTrash" xml:space="preserve"><value>Sposta nel cestino</value></data>
+  <data name="ArchiveRestoreNote" xml:space="preserve"><value>Ripristina nota</value></data>
+  <data name="CommandFrequent" xml:space="preserve"><value>Azioni frequenti</value></data>
+  <data name="CommandRecent" xml:space="preserve"><value>Recenti</value></data>
+  <data name="CommandNoResults" xml:space="preserve"><value>Nessun comando trovato.</value></data>
+  <data name="CommandKeyboardHint" xml:space="preserve"><value>↑ ↓ per scegliere · Invio per eseguire · Esc per chiudere</value></data>
+  <data name="OrganizationNameConflict" xml:space="preserve"><value>Questo nome è già utilizzato. Scegline un altro.</value></data>
+  <data name="ShortcutPressKeys" xml:space="preserve"><value>Premi la combinazione desiderata…</value></data>
+  <data name="ShortcutReady" xml:space="preserve"><value>Combinazione disponibile.</value></data>
+  <data name="ShortcutRemove" xml:space="preserve"><value>Rimuovi combinazione</value></data>
+  <data name="ShortcutReserved" xml:space="preserve"><value>Questa combinazione è riservata alla digitazione o al sistema.</value></data>
+  <data name="ShortcutConflict" xml:space="preserve"><value>Combinazione già assegnata a «{0}».</value></data>
+  <data name="CommandSearchBox.PlaceholderText" xml:space="preserve"><value>Cerca un’azione…</value></data>
+  <data name="ArchiveCloseEditorButton.Label" xml:space="preserve"><value>Chiudi editor</value></data>
+  <data name="ArchiveSearchBox.PlaceholderText" xml:space="preserve"><value>Cerca note…</value></data>
+  <data name="ArchiveCategoryBox.Header" xml:space="preserve"><value>Categoria</value></data>
+  <data name="ArchiveTagBox.Header" xml:space="preserve"><value>Tag</value></data>
+  <data name="ArchiveImportFilesItem.Text" xml:space="preserve"><value>Importa file Markdown…</value></data>
+  <data name="ArchiveImportFolderItem.Text" xml:space="preserve"><value>Importa cartella…</value></data>
+  <data name="ArchiveExportAllItem.Text" xml:space="preserve"><value>Esporta raccolta…</value></data>
+  <data name="OrganizationIntro.Text" xml:space="preserve"><value>Categorie e tag sono condivisi da tutte le note. Rinominare aggiorna le associazioni; eliminare lascia intatte le note.</value></data>
+  <data name="OrganizationNameBox.PlaceholderText" xml:space="preserve"><value>Nuovo nome…</value></data>
+  <data name="OrganizationAddButton.Content" xml:space="preserve"><value>Aggiungi</value></data>
+  <data name="SettingsCategoryShortcuts.Content" xml:space="preserve"><value>Scorciatoie</value></data>
+  <data name="SettingsCategoryOrganization.Content" xml:space="preserve"><value>Categorie e tag</value></data>
+  <data name="ArchiveBackupCard.Header" xml:space="preserve"><value>Backup completo</value></data>
+  <data name="ArchiveBackupCard.Description" xml:space="preserve"><value>Conserva note, allegati, cronologia e preferenze in un unico file.</value></data>
+  <data name="ArchiveBackupButton.Content" xml:space="preserve"><value>Crea backup…</value></data>
+  <data name="ArchiveRestoreCard.Header" xml:space="preserve"><value>Ripristina archivio</value></data>
+  <data name="ArchiveRestoreCard.Description" xml:space="preserve"><value>Importa un backup. Una copia dell’archivio attuale viene conservata prima del ripristino.</value></data>
+  <data name="ArchiveRestoreButton.Content" xml:space="preserve"><value>Ripristina…</value></data>
+  <data name="ShortcutIntro.Text" xml:space="preserve"><value>Cerca un’azione e scegli la combinazione. Le modifiche si applicano subito; nessuna scorciatoia viene sostituita senza avviso.</value></data>
+  <data name="ShortcutSearchBox.PlaceholderText" xml:space="preserve"><value>Cerca azione o combinazione…</value></data>
+  <data name="ShortcutResetAllButton.Content" xml:space="preserve"><value>Ripristina tutte</value></data>
+  <data name="ShortcutEditButton.Content" xml:space="preserve"><value>Modifica</value></data>
+  <data name="InfoDatabasePath.Header" xml:space="preserve"><value>Archivio delle note</value></data>
+  <data name="ArchiveRetryButton.Content" xml:space="preserve"><value>Riprova</value></data>
+  <data name="ArchiveImportAttachments.Content" xml:space="preserve"><value>Copia gli allegati locali nell’archivio</value></data>
+  <data name="InfoCopyPath.Content" xml:space="preserve"><value>Copia</value></data>
+  <data name="InfoOpenPath.Content" xml:space="preserve"><value>Apri cartella</value></data>
+  <data name="CommandCategoryNotes" xml:space="preserve"><value>Note</value></data>
+  <data name="CommandCategoryFormat" xml:space="preserve"><value>Formato</value></data>
+  <data name="CommandCategoryInsert" xml:space="preserve"><value>Inserisci</value></data>
+  <data name="CommandCategoryView" xml:space="preserve"><value>Vista</value></data>
+  <data name="CommandCategoryMetadata" xml:space="preserve"><value>Metadati Markdown</value></data>
+  <data name="CommandCategoryExport" xml:space="preserve"><value>Esporta e condividi</value></data>
+  <data name="NoteColorNone" xml:space="preserve"><value>Nessun colore</value></data>
+  <data name="NoteColorRed" xml:space="preserve"><value>Rosso</value></data>
+  <data name="NoteColorOrange" xml:space="preserve"><value>Arancione</value></data>
+  <data name="NoteColorYellow" xml:space="preserve"><value>Giallo</value></data>
+  <data name="NoteColorGreen" xml:space="preserve"><value>Verde</value></data>
+  <data name="NoteColorTeal" xml:space="preserve"><value>Turchese</value></data>
+  <data name="NoteColorBlue" xml:space="preserve"><value>Blu</value></data>
+  <data name="NoteColorPurple" xml:space="preserve"><value>Viola</value></data>
+  <data name="NoteColorPink" xml:space="preserve"><value>Rosa</value></data>
+  <data name="ArchiveNewButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Nuova nota</value></data>
+  <data name="ArchiveNewButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Nuova nota</value></data>
+  <data name="ArchiveNoteMenuButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Azioni della nota</value></data>
+  <data name="ArchiveNoteMenuButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Azioni della nota</value></data>
+  <data name="ShortcutResetButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Ripristina predefinita</value></data>
+  <data name="ShortcutResetButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Ripristina predefinita</value></data>
+  <data name="OrganizationRenameButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Rinomina</value></data>
+  <data name="OrganizationRenameButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Rinomina</value></data>
+  <data name="OrganizationDeleteButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Elimina etichetta</value></data>
+  <data name="OrganizationDeleteButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Elimina etichetta</value></data>
+  <data name="CmdReplace.Label" xml:space="preserve"><value>Trova e sostituisci</value></data>
+  <data name="CmdToggleTask.Label" xml:space="preserve"><value>Spunta attività</value></data>
+  <data name="CmdZoomIn.Label" xml:space="preserve"><value>Ingrandisci testo</value></data>
+  <data name="CmdZoomOut.Label" xml:space="preserve"><value>Riduci testo</value></data>
+  <data name="CommandResults" xml:space="preserve"><value>Risultati</value></data>
+  <data name="SettingsCategorySecurity.Content" xml:space="preserve"><value>Sicurezza</value></data>
+  <data name="SecurityTitle" xml:space="preserve"><value>Sicurezza delle note</value></data>
+  <data name="SecurityProtect" xml:space="preserve"><value>Proteggi nota</value></data>
+  <data name="SecurityUnprotect" xml:space="preserve"><value>Rimuovi protezione</value></data>
+  <data name="SecurityUnlock" xml:space="preserve"><value>Sblocca note</value></data>
+  <data name="SecurityLockAll" xml:space="preserve"><value>Blocca note protette</value></data>
+  <data name="SecurityProtectedNote" xml:space="preserve"><value>Nota protetta</value></data>
+  <data name="SecurityPassword" xml:space="preserve"><value>Password delle note</value></data>
+  <data name="SecurityCurrentPassword" xml:space="preserve"><value>Password attuale</value></data>
+  <data name="SecurityNewPassword" xml:space="preserve"><value>Nuova password: almeno 12 caratteri</value></data>
+  <data name="SecurityConfirmPassword" xml:space="preserve"><value>Conferma password</value></data>
+  <data name="SecurityConfigure" xml:space="preserve"><value>Configura la protezione</value></data>
+  <data name="SecurityChangePassword" xml:space="preserve"><value>Cambia password</value></data>
+  <data name="SecurityRecover" xml:space="preserve"><value>Recupera l’accesso</value></data>
+  <data name="SecurityRenewRecovery" xml:space="preserve"><value>Genera un nuovo codice di recupero</value></data>
+  <data name="SecurityRecoveryCode" xml:space="preserve"><value>Codice di recupero</value></data>
+  <data name="SecurityRecoveryDescription" xml:space="preserve"><value>Conserva questo codice in un posto sicuro, separato dall’archivio. Ti permette di impostare una nuova password se perdi l’accesso. Non verrà mostrato di nuovo; puoi generarne uno nuovo dalle impostazioni.</value></data>
+  <data name="SecurityCodeSaved" xml:space="preserve"><value>Ho conservato il codice</value></data>
+  <data name="SecurityPasswordRules" xml:space="preserve"><value>Usa almeno 12 caratteri, di cui almeno 5 diversi, e inserisci la stessa password nei due campi.</value></data>
+  <data name="SecurityHello" xml:space="preserve"><value>Windows Hello</value></data>
+  <data name="SecurityEnableHello" xml:space="preserve"><value>Attiva Windows Hello</value></data>
+  <data name="SecurityDisableHello" xml:space="preserve"><value>Disattiva Windows Hello</value></data>
+  <data name="SecurityHelloFailed" xml:space="preserve"><value>Windows Hello non ha sbloccato le note. Puoi usare la password oppure riprovare. Se il dispositivo non supporta questa protezione, Windows Hello non può essere attivato.</value></data>
+  <data name="SecurityUnlockFailed" xml:space="preserve"><value>Impossibile sbloccare le note. Controlla la password oppure usa il recupero nelle impostazioni.</value></data>
+  <data name="SecurityActionFailed" xml:space="preserve"><value>Impossibile completare l’operazione. Controlla le credenziali o riprova.</value></data>
+  <data name="SecurityPendingSave" xml:space="preserve"><value>Una modifica non è ancora salvata. Sblocca le note per recuperarla e riprovare prima di uscire.</value></data>
+  <data name="SecurityPlaintextTitle" xml:space="preserve"><value>Crea una copia leggibile</value></data>
+  <data name="SecurityPlaintextBody" xml:space="preserve"><value>Questa operazione rende i dati disponibili senza la protezione delle note. La copia esportata, condivisa, stampata o aperta in un’altra app non sarà protetta dalla password di Markdown MkII.</value></data>
+  <data name="SecurityContinue" xml:space="preserve"><value>Continua</value></data>
+  <data name="SecurityNotConfigured" xml:space="preserve"><value>Scegli Proteggi nota dal menu di una nota, oppure configura qui la password condivisa.</value></data>
+  <data name="SecuritySessionOpen" xml:space="preserve"><value>Le note protette sono sbloccate per questa sessione. Il blocco automatico rimane attivo.</value></data>
+  <data name="SecuritySessionLocked" xml:space="preserve"><value>Le note protette sono bloccate. Usa la password, Windows Hello o il codice di recupero.</value></data>
+  <data name="SecurityMinutes" xml:space="preserve"><value>{0} min</value></data>
+  <data name="SecurityPasswordCard.Header" xml:space="preserve"><value>Password delle note</value></data>
+  <data name="SecurityPasswordCard.Description" xml:space="preserve"><value>Una password dedicata per tutte le note che scegli di proteggere.</value></data>
+  <data name="SecurityConfigureButton.Content" xml:space="preserve"><value>Configura</value></data>
+  <data name="SecurityChangePasswordButton.Content" xml:space="preserve"><value>Cambia password</value></data>
+  <data name="SecurityHelloCard.Header" xml:space="preserve"><value>Windows Hello</value></data>
+  <data name="SecurityHelloCard.Description" xml:space="preserve"><value>Sblocca con il volto, l’impronta o il PIN di Windows su questo dispositivo.</value></data>
+  <data name="SecurityRecoveryCard.Header" xml:space="preserve"><value>Recupero dell’accesso</value></data>
+  <data name="SecurityRecoveryCard.Description" xml:space="preserve"><value>Conserva il codice separatamente. Generarne uno nuovo invalida quello precedente nell’archivio corrente.</value></data>
+  <data name="SecurityRenewButton.Content" xml:space="preserve"><value>Nuovo codice</value></data>
+  <data name="SecurityRecoverButton.Content" xml:space="preserve"><value>Recupera accesso</value></data>
+  <data name="SecurityDetailsCard.Header" xml:space="preserve"><value>Nascondi tutti i dettagli</value></data>
+  <data name="SecurityDetailsCard.Description" xml:space="preserve"><value>Nascondi titolo, tag, categoria, colore e preferito quando le note sono bloccate. Le anteprime del testo sono sempre nascoste.</value></data>
+  <data name="SecurityDetailsSwitch.OnContent" xml:space="preserve"><value>Dettagli nascosti</value></data>
+  <data name="SecurityDetailsSwitch.OffContent" xml:space="preserve"><value>Titolo e organizzazione visibili</value></data>
+  <data name="SecurityIdleCard.Header" xml:space="preserve"><value>Blocco automatico</value></data>
+  <data name="SecurityIdleCard.Description" xml:space="preserve"><value>Blocca dopo un periodo senza interazioni nell’app. Il blocco di Windows e l’uscita bloccano sempre le note.</value></data>
+  <data name="SecurityDiskCard.Header" xml:space="preserve"><value>Crittografia del disco</value></data>
+  <data name="SecurityDiskCard.Description" xml:space="preserve"><value>Mentre una nota protetta è aperta, il suo testo è in chiaro nella memoria dell’app e Windows può scriverne parti nel file di paging o di ibernazione. Attiva BitLocker o la crittografia del dispositivo per proteggere anche quei file.</value></data>
+  <data name="SecurityDiskButton.Content" xml:space="preserve"><value>Apri la crittografia del dispositivo</value></data>
+  <data name="SecurityUnlockButton.Content" xml:space="preserve"><value>Sblocca note</value></data>
+  <data name="SecurityLockButton.Content" xml:space="preserve"><value>Blocca ora</value></data>
+  <data name="SecurityAssetFileType" xml:space="preserve"><value>Allegato</value></data>
+  <data name="SecurityMonitoringFailed" xml:space="preserve"><value>La protezione non è disponibile perché non è possibile rilevare il blocco della sessione Windows. Riavvia l’app e riprova.</value></data>
+  <data name="SecurityUnprotectBody" xml:space="preserve"><value>Il testo, la cronologia e gli allegati di questa nota saranno leggibili nell’archivio senza la password. Le altre note protette rimangono protette.</value></data>
+  <data name="SecurityRecoveredTitle" xml:space="preserve"><value>{0} (modifica recuperata)</value></data>
+  <data name="SecurityRetryMaintenanceButton.Content" xml:space="preserve"><value>Riprova pulizia archivio</value></data>
+  <data name="SecurityMaintenancePending" xml:space="preserve"><value>La cifratura è stata scritta, ma la pulizia delle copie precedenti non è conclusa. Riprova per completare la protezione.</value></data>
+  <data name="WorkspaceEmpty.Text" xml:space="preserve"><value>Apri una nota dalla barra laterale o creane una nuova.</value></data>
+  <data name="RecoveryDownload" xml:space="preserve"><value>Scarica codice</value></data>
+  <data name="RecoveryDownloadDescription" xml:space="preserve"><value>Scarica il codice prima di continuare. Recupera tutte le note protette di questo archivio. Diventa valido solo dopo la conferma.</value></data>
+  <data name="RecoveryDownloaded" xml:space="preserve"><value>File salvato. Conferma per attivare il codice.</value></data>
+  <data name="RecoveryDownloadFailed" xml:space="preserve"><value>Impossibile salvare il file. Scegli una destinazione e riprova.</value></data>
+  <data name="RecoveryFileType" xml:space="preserve"><value>Codice di recupero</value></data>
+  <data name="RecoveryArchive" xml:space="preserve"><value>Identificativo archivio</value></data>
+  <data name="RecoveryCreated" xml:space="preserve"><value>Data di generazione</value></data>
+  <data name="RecoveryInstructions" xml:space="preserve"><value>ATTIVAZIONE: questo codice diventa valido soltanto dopo aver confermato «Ho salvato il codice» nell’app. Se annulli, il codice precedente resta valido.
+
+RECUPERO: apri Impostazioni → Sicurezza → Recupera accesso. Inserisci questo codice e scegli una nuova password. Il recupero genera un nuovo codice: scaricalo e confermalo.
+
+AMBITO: tutte le note protette dell’archivio indicato, comprese quelle protette in futuro. Il titolo della nota serve soltanto a riconoscere l’origine.
+
+CONSERVAZIONE: conserva questo file separatamente dall’archivio. Chi lo possiede può recuperare le note protette.</value></data>
+  <data name="Filters" xml:space="preserve"><value>Filtri</value></data>
+  <data name="FiltersActive" xml:space="preserve"><value>Filtri attivi</value></data>
+  <data name="FiltersReset" xml:space="preserve"><value>Azzera filtri</value></data>
+  <data name="FiltersRemove" xml:space="preserve"><value>Rimuovi filtro</value></data>
+  <data name="BulkSelect" xml:space="preserve"><value>Seleziona note</value></data>
+  <data name="BulkExit" xml:space="preserve"><value>Esci dalla selezione</value></data>
+  <data name="BulkDone" xml:space="preserve"><value>Fine</value></data>
+  <data name="BulkActions" xml:space="preserve"><value>Azioni</value></data>
+  <data name="BulkSelected" xml:space="preserve"><value>{0} selezionate</value></data>
+  <data name="BulkSelectAll" xml:space="preserve"><value>Seleziona tutti i risultati</value></data>
+  <data name="ArchiveSection" xml:space="preserve"><value>Sezione</value></data>
+  <data name="ArchiveAllCategories" xml:space="preserve"><value>Tutte le categorie</value></data>
+  <data name="ArchiveAllTags" xml:space="preserve"><value>Tutti i tag</value></data>
+  <data name="ArchiveNoResults" xml:space="preserve"><value>Nessuna nota corrisponde alla ricerca e ai filtri.</value></data>
+  <data name="ArchiveClearQuery" xml:space="preserve"><value>Azzera ricerca e filtri</value></data>
+  <data name="ArchiveFavoritesEmpty" xml:space="preserve"><value>Nessuna nota preferita. Aggiungi la stella dal menu di una nota.</value></data>
+  <data name="ArchiveArchiveEmpty" xml:space="preserve"><value>L’archivio è vuoto. Le note archiviate escono dall’elenco principale senza essere eliminate.</value></data>
+  <data name="ArchiveTrashEmpty" xml:space="preserve"><value>Il cestino è vuoto.</value></data>
+  <data name="NoteModifiedNow" xml:space="preserve"><value>Adesso</value></data>
+  <data name="NoteModifiedMinutes" xml:space="preserve"><value>{0} min</value></data>
+  <data name="NoteModifiedHours" xml:space="preserve"><value>{0} h</value></data>
+  <data name="NoteModifiedYesterday" xml:space="preserve"><value>Ieri</value></data>
+  <data name="NoteStateFavorite" xml:space="preserve"><value>preferita</value></data>
+  <data name="NoteStateProtected" xml:space="preserve"><value>protetta</value></data>
+  <data name="CmdSearchNotes.Label" xml:space="preserve"><value>Cerca nelle note</value></data>
+  <data name="BulkFavorite" xml:space="preserve"><value>Aggiungi ai preferiti</value></data>
+  <data name="BulkUnfavorite" xml:space="preserve"><value>Rimuovi dai preferiti</value></data>
+  <data name="BulkCategory" xml:space="preserve"><value>Assegna categoria</value></data>
+  <data name="BulkAddTags" xml:space="preserve"><value>Aggiungi tag</value></data>
+  <data name="BulkRemoveTags" xml:space="preserve"><value>Rimuovi tag</value></data>
+  <data name="BulkColor" xml:space="preserve"><value>Assegna colore</value></data>
+  <data name="BulkArchive" xml:space="preserve"><value>Archivia</value></data>
+  <data name="BulkUnarchive" xml:space="preserve"><value>Rimuovi dall’archivio</value></data>
+  <data name="BulkTrash" xml:space="preserve"><value>Sposta nel cestino</value></data>
+  <data name="BulkRestore" xml:space="preserve"><value>Ripristina</value></data>
+  <data name="BulkDelete" xml:space="preserve"><value>Elimina definitivamente</value></data>
+  <data name="BulkDuplicate" xml:space="preserve"><value>Duplica</value></data>
+  <data name="BulkProtect" xml:space="preserve"><value>Proteggi</value></data>
+  <data name="BulkUnprotect" xml:space="preserve"><value>Rimuovi protezione</value></data>
+  <data name="BulkExport" xml:space="preserve"><value>Esporta</value></data>
+  <data name="BulkTagsHint" xml:space="preserve"><value>separa i tag con virgole</value></data>
+  <data name="BulkConfirm" xml:space="preserve"><value>L’operazione riguarda {0} note selezionate. Confermi?</value></data>
+  <data name="BulkProgress" xml:space="preserve"><value>{0} di {1} note elaborate</value></data>
+  <data name="BulkResult" xml:space="preserve"><value>Completate: {0}
+Invariate: {1}
+Non riuscite: {2}
+Non eseguite: {3}</value></data>
+</root>

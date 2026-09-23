@@ -1,0 +1,13 @@
+﻿<ContentDialog x:Class="MarkdownMkII.Views.CommandPaletteDialog" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vm="using:MarkdownMkII.ViewModels" Style="{StaticResource DefaultContentDialogStyle}">
+    <ContentDialog.Resources><x:Double x:Key="ContentDialogMaxWidth">600</x:Double></ContentDialog.Resources>
+    <Grid MinWidth="280" Width="500" MaxWidth="540" RowSpacing="12">
+        <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+        <TextBox x:Name="SearchBox" x:Uid="CommandSearchBox" TextChanged="OnSearch" KeyDown="OnSearchKey"/>
+        <ListView x:Name="ResultsList" Grid.Row="1" MaxHeight="360" IsItemClickEnabled="True" ItemClick="OnCommandClick" SelectionMode="Single">
+            <ListView.GroupStyle><GroupStyle><GroupStyle.HeaderTemplate><DataTemplate><TextBlock Text="{Binding Name}" FontSize="12" Margin="10,10,0,4" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/></DataTemplate></GroupStyle.HeaderTemplate></GroupStyle></ListView.GroupStyle>
+            <ListView.ItemContainerStyle><Style TargetType="ListViewItem"><Setter Property="HorizontalContentAlignment" Value="Stretch"/><Setter Property="Padding" Value="10,8"/></Style></ListView.ItemContainerStyle>
+            <ListView.ItemTemplate><DataTemplate x:DataType="vm:PaletteCommand"><Grid ColumnSpacing="14"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="100"/><ColumnDefinition Width="100"/></Grid.ColumnDefinitions><TextBlock Text="{x:Bind Label}" TextTrimming="CharacterEllipsis"/><TextBlock Grid.Column="1" Text="{x:Bind Category}" FontSize="11" TextTrimming="CharacterEllipsis" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/><TextBlock Grid.Column="2" Text="{x:Bind Shortcut}" FontSize="12" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/></Grid></DataTemplate></ListView.ItemTemplate>
+        </ListView>
+        <TextBlock x:Name="HintText" Grid.Row="2" FontSize="12" TextWrapping="Wrap" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+    </Grid>
+</ContentDialog>

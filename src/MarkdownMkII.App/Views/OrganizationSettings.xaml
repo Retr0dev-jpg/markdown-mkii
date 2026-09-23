@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="MarkdownMkII.Views.OrganizationSettings" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:model="using:MarkdownMkII.Storage">
+    <StackPanel Spacing="12">
+        <TextBlock x:Uid="OrganizationIntro" TextWrapping="Wrap"/>
+        <ComboBox x:Name="KindBox" SelectionChanged="OnKindChanged"/>
+        <Grid ColumnSpacing="8"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><TextBox x:Name="NameBox" x:Uid="OrganizationNameBox"/><Button Grid.Column="1" x:Uid="OrganizationAddButton" Click="OnAdd"/></Grid>
+        <ListView x:Name="LabelsList" SelectionMode="None" MaxHeight="500">
+            <ListView.ItemContainerStyle><Style TargetType="ListViewItem"><Setter Property="HorizontalContentAlignment" Value="Stretch"/></Style></ListView.ItemContainerStyle>
+            <ListView.ItemTemplate><DataTemplate x:DataType="model:NamedLabel"><Grid Padding="4,8" ColumnSpacing="12"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/><ColumnDefinition Width="Auto"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                <TextBlock Text="{x:Bind Name}" VerticalAlignment="Center"/><TextBlock Grid.Column="1" Text="{x:Bind Count}" VerticalAlignment="Center" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                <Button Grid.Column="2" x:Uid="OrganizationRenameButton" Tag="{x:Bind Id}" Click="OnRename"><SymbolIcon Symbol="Edit"/></Button>
+                <Button Grid.Column="3" x:Uid="OrganizationDeleteButton" Tag="{x:Bind Id}" Click="OnDelete"><SymbolIcon Symbol="Delete"/></Button>
+            </Grid></DataTemplate></ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
+</UserControl>
