@@ -93,7 +93,7 @@ public sealed partial class NoteDatabase
     /// </summary>
     public Task<string?> FindAttachmentAsync(string name, string? noteId = null) => Read(db =>
     {
-        name = Path.GetFileName(name ?? string.Empty);
+        name = AttachmentName(name);
         if (name.Length == 0) return null;
         if (noteId is not null && Protected(db, noteId) && IsUnlocked)
         {

@@ -1,20 +1,20 @@
 # AGENTS.md
 
-Guida rapida per agenti AI e nuovi contributori. Documentazione in italiano; codice e commenti in inglese.
+Short guide for AI agents and new contributors. Documentation, code, and comments are in English.
 
-## Progetto
+## Project
 
-Markdown MkII: gestore di note Markdown per Windows (C#, .NET 10, WinUI 3). Tutte le note stanno in un archivio SQLite locale; una nota aperta alla volta; note protette facoltative con cifratura AES-256-GCM.
+Markdown MkII: a Markdown note manager for Windows (C#, .NET 10, WinUI 3). All notes live in a local SQLite archive; one note is open at a time; optional protected notes use AES-256-GCM encryption.
 
-| Percorso | Contenuto |
+| Path | Contents |
 | --- | --- |
-| `src/MarkdownMkII.Core` | Parsing e comandi Markdown, anteprima (IR), cronologia annulla/ripeti. Non dipende da WinUI né da SQLite. |
-| `src/MarkdownMkII.Storage` | `NoteDatabase` (partial class in più file): SQLite, ricerca FTS5, cronologia, allegati, import/export, cifratura, sigillo di integrità. |
-| `src/MarkdownMkII.App` | WinUI 3: `Views/`, `ViewModels/`, `Services/` (sicurezza, backup, reset, localizzazione), `Strings/` (risorse it e en-US). |
-| `tests/` | xUnit: `Core.Tests`, `Storage.Tests`, `App.Logic.Tests` (collega singoli file dell'app); `App.RuntimeChecks` si esegue solo dentro l'app. |
-| `docs/` | `architettura.md`, `note-protette.md`, `sviluppo.md`, `limiti.md`. |
+| `src/MarkdownMkII.Core` | Markdown parsing and commands, preview (IR), undo/redo history. Depends on neither WinUI nor SQLite. |
+| `src/MarkdownMkII.Storage` | `NoteDatabase` (a partial class across several files): SQLite, FTS5 search, history, attachments, import/export, encryption, integrity seal. |
+| `src/MarkdownMkII.App` | WinUI 3: `Views/`, `ViewModels/`, `Services/` (security, backup, reset, localization), `Strings/` (it and en-US resources). |
+| `tests/` | xUnit: `Core.Tests`, `Storage.Tests`, `App.Logic.Tests` (links individual app files); `App.RuntimeChecks` runs only inside the app. |
+| `docs/` | `architecture.md`, `protected-notes.md`, `development.md`, `limits.md`. |
 
-## Comandi
+## Commands
 
 ```powershell
 dotnet test tests/MarkdownMkII.Core.Tests -warnaserror
@@ -23,26 +23,26 @@ dotnet test tests/MarkdownMkII.App.Logic.Tests -warnaserror
 dotnet build src/MarkdownMkII.App -warnaserror -p:Platform=x64 -p:WindowsPackageType=MSIX -p:WindowsAppSDKSelfContained=false
 ```
 
-L'app si compila solo su Windows. Per provarla va avviata da Visual Studio con F5 (Debug x64, profilo MSIX); vedi [docs/sviluppo.md](docs/sviluppo.md).
+The app builds only on Windows. To try it, start it from Visual Studio with F5 (Debug x64, MSIX profile); see [docs/development.md](docs/development.md).
 
-## Regole
+## Rules
 
-- **Zero avvisi:** CI e `scripts/verify.ps1` compilano con `-warnaserror`.
-- **Codifica:** i file `.cs`, `.xaml`, `.resw`, `.csproj`, `.props`, `.slnx`, `.appxmanifest`, `.pubxml` e `.ps1` sono UTF-8 con BOM (`.editorconfig`). Markdown, JSON e YAML senza BOM.
-- **Stringhe dell'interfaccia:** ogni chiave va aggiunta sia in `Strings/it/Resources.resw` sia in `Strings/en-US/Resources.resw`, con gli stessi segnaposto (`ResourceParityTests`). Nel codice si leggono con `Strings.T("Chiave")` o `Strings.Format(...)`.
-- **Comandi dell'editor:** si registrano in `ViewModels/EditorPalette.cs`; menu, scorciatoie e ricerca comandi derivano da lì.
-- **Scritture nell'archivio:** le transazioni che modificano note, revisioni o allegati terminano con `Commit(db, tx)`, che prima sigilla le modifiche alle note protette (`NoteDatabase.Integrity.cs`). Il `tx.Commit()` diretto resta solo nelle migrazioni e nel codice del sigillo stesso.
-- **Schema del database:** la versione è in `PRAGMA user_version` (attuale: 3). Una modifica allo schema richiede migrazione, aggiornamento dei controlli in `RestoreAsync` e test.
-- **Chiavi crittografiche:** si allocano con `SecretMemory` e si azzerano con `CryptographicOperations.ZeroMemory`. Il testo decifrato non va scritto su disco né nei log.
-- **Commenti:** in inglese, brevi, solo per vincoli che il codice non rende evidenti.
-- **Modifiche coerenti:** quando cambi un comportamento, aggiorna anche i test e la sezione pertinente di `docs/`.
+- **Zero warnings:** CI and `scripts/verify.ps1` build with `-warnaserror`.
+- **Encoding:** `.cs`, `.xaml`, `.resw`, `.csproj`, `.props`, `.slnx`, `.appxmanifest`, `.pubxml`, and `.ps1` files are UTF-8 with BOM (`.editorconfig`). Markdown, JSON, and YAML have no BOM.
+- **UI strings:** every key goes in both `Strings/it/Resources.resw` and `Strings/en-US/Resources.resw`, with the same placeholders (`ResourceParityTests`). Code reads them with `Strings.T("Key")` or `Strings.Format(...)`.
+- **Editor commands:** registered in `ViewModels/EditorPalette.cs`; menus, shortcuts, and command search derive from there.
+- **Archive writes:** transactions that modify notes, revisions, or attachments end with `Commit(db, tx)`, which seals protected-note changes first (`NoteDatabase.Integrity.cs`). A direct `tx.Commit()` remains only in migrations and in the seal code itself.
+- **Database schema:** the version lives in `PRAGMA user_version` (current: 3). A schema change requires a migration, an update of the checks in `RestoreAsync`, and tests.
+- **Cryptographic keys:** allocate them with `SecretMemory` and wipe them with `CryptographicOperations.ZeroMemory`. Decrypted text must not be written to disk or to logs.
+- **Comments:** in English, brief, and only for constraints the code does not make obvious.
+- **Consistent changes:** when you change a behavior, also update the tests and the relevant section of `docs/`.
 
-## Dove guardare
+## Where to look
 
-| Argomento | File |
+| Topic | File |
 | --- | --- |
-| Flusso dei dati, editor, salvataggio, backup, reset | `docs/architettura.md` |
-| Note protette, chiavi, integrità, memoria | `docs/note-protette.md` |
-| Build, test, dati di prova separati, prove manuali | `docs/sviluppo.md` |
-| Cosa l'app non fa | `docs/limiti.md` |
-| Release automatica | `.github/workflows/release.yml` |
+| Data flow, editor, save, backup, reset | `docs/architecture.md` |
+| Protected notes, keys, integrity, memory | `docs/protected-notes.md` |
+| Build, tests, separate trial data, manual checks | `docs/development.md` |
+| What the app does not do | `docs/limits.md` |
+| Automatic release | `.github/workflows/release.yml` |

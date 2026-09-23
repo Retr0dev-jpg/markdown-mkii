@@ -210,15 +210,22 @@ public sealed partial class NoteDatabase
         var id = "p-" + noteId + "-" + Convert.ToHexString(digest).ToLowerInvariant();
         Execute(db, "INSERT OR IGNORE INTO Attachments(Id,Name,Data,OwnerId,CipherName) VALUES($id,'',$data,$owner,$name)",
             ("$id", id), ("$owner", noteId), ("$data", NoteCipher.EncryptPadded(key, bytes, Context(noteId, "asset:" + id))),
-            ("$name", NoteCipher.EncryptText(key, Path.GetFileName(name), Context(noteId, "asset-name:" + id))));
+            ("$name", NoteCipher.EncryptText(key, AttachmentName(name), Context(noteId, "asset-name:" + id))));
         return id;
     });
 
     private static string AddPublicAttachment(SqliteConnection db, string name, byte[] bytes)
     {
         var id = Convert.ToHexString(SHA256.HashData(bytes)).ToLowerInvariant();
-        Execute(db, "INSERT OR IGNORE INTO Attachments(Id,Name,Data) VALUES($id,$name,$data)", ("$id", id), ("$name", Path.GetFileName(name)), ("$data", bytes));
+        Execute(db, "INSERT OR IGNORE INTO Attachments(Id,Name,Data) VALUES($id,$name,$data)", ("$id", id), ("$name", AttachmentName(name)), ("$data", bytes));
         return id;
+    }
+
+    // Names are archive data: both separators count on every platform, unlike Path.GetFileName.
+    private static string AttachmentName(string? name)
+    {
+        name ??= string.Empty;
+        return name[(name.LastIndexOfAny(['/', '\\']) + 1)..];
     }
 
     private (string Name, byte[] Bytes)? ReadAttachment(SqliteConnection db, string id, string? noteId)

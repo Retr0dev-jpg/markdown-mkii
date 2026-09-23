@@ -1,47 +1,47 @@
 # Markdown MkII
 
-Un gestore di note Markdown per Windows, veloce e locale. Scritto in C# con WinUI 3.
+A fast, local Markdown note manager for Windows. Written in C# with WinUI 3.
 
-Le note vivono in un unico archivio sul tuo PC: niente cloud, niente account. Puoi proteggere le note più riservate con una password.
+Notes live in a single archive on your PC: no cloud, no account. You can protect the most private notes with a password.
 
 ## Download
 
-Scarica `MarkdownMkII-win-x64.zip` dall'ultima [release](../../releases/latest), estrai la cartella e avvia `MarkdownMkII.App.exe`. Non serve installare nulla.
+Download `MarkdownMkII-win-x64.zip` from the latest [release](../../releases/latest), extract the folder, and start `MarkdownMkII.App.exe`. Nothing else needs to be installed.
 
-Requisiti: Windows 10 (1809) o Windows 11, 64 bit.
+Requirements: Windows 10 (1809) or Windows 11, 64-bit.
 
-## Cosa fa
+## What it does
 
-- **Scrittura:** editor Markdown con salvataggio automatico, formattazione, tabelle, ricerca e sostituzione, outline e minimappa.
-- **Anteprima:** anteprima nativa con wikilink, collegamenti tra note, allegati, note incorporate e diagrammi.
-- **Organizzazione:** categorie, tag, preferiti, colori, archivio e cestino, con ricerca a testo pieno.
-- **Cronologia e backup:** fino a 30 versioni per nota, più backup completi e ripristino dell'archivio.
-- **Note protette:** cifratura AES-256 per singola nota, codice di recupero e sblocco facoltativo con Windows Hello ([dettagli](docs/note-protette.md)).
-- **Importazione ed esportazione:** file e cartelle Markdown in entrata; Markdown, HTML, stampa e condivisione in uscita.
-- **Interfaccia:** italiano e inglese, tema chiaro o scuro, scorciatoie personalizzabili.
+- **Writing:** a Markdown editor with autosave, formatting, tables, find and replace, an outline, and a minimap.
+- **Preview:** a native preview with wikilinks, links between notes, attachments, embedded notes, and diagrams.
+- **Organization:** categories, tags, favorites, colors, archive, and trash, with full-text search.
+- **History and backup:** up to 30 versions per note, plus full backups and archive restore.
+- **Protected notes:** per-note AES-256 encryption, a recovery code, and optional unlock with Windows Hello ([details](docs/protected-notes.md)).
+- **Import and export:** Markdown files and folders in; Markdown, HTML, print, and share out.
+- **Interface:** Italian and English, light or dark theme, customizable shortcuts.
 
-I file importati vengono copiati nell'archivio. Gli originali non vengono mai modificati.
+Imported files are copied into the archive. The originals are never modified.
 
-## Dove sono i dati
+## Where the data lives
 
-- **Versione zip:** `%LOCALAPPDATA%\Markdown MkII`.
-- **Versione MSIX:** la cartella dati del pacchetto.
+- **Zip build:** `%LOCALAPPDATA%\Markdown MkII`.
+- **MSIX build:** the package data folder.
 
-In entrambi i casi la cartella contiene `notes.db` (le note) e `settings.json` (le preferenze). Per spostare tutto su un altro PC usa **Impostazioni → Dati → Backup**.
+In both cases the folder contains `notes.db` (the notes) and `settings.json` (preferences). To move everything to another PC, use **Settings → Data → Backup**.
 
-## Compilare dal codice
+## Build from source
 
-Servono Windows e il [.NET SDK 10](https://dotnet.microsoft.com/download).
+You need Windows and the [.NET SDK 10](https://dotnet.microsoft.com/download).
 
 ```powershell
-git clone <url-del-repository>
+git clone <repository-url>
 cd markdown-mkii
 dotnet build src/MarkdownMkII.App -p:Platform=x64
 ```
 
-Per sviluppare, apri `MarkdownMkII.slnx` in Visual Studio, scegli `MarkdownMkII.App` in configurazione Debug x64 e premi **F5**.
+To develop, open `MarkdownMkII.slnx` in Visual Studio, select `MarkdownMkII.App` in the Debug x64 configuration, and press **F5**.
 
-Test:
+Tests:
 
 ```powershell
 dotnet test tests/MarkdownMkII.Core.Tests
@@ -49,25 +49,25 @@ dotnet test tests/MarkdownMkII.Storage.Tests
 dotnet test tests/MarkdownMkII.App.Logic.Tests
 ```
 
-Documentazione:
+Documentation:
 
-- [Sviluppo e verifica](docs/sviluppo.md): build, test, dati di prova separati, convenzioni.
-- [Architettura](docs/architettura.md): come sono organizzati archivio, editor e interfaccia.
-- [Note protette](docs/note-protette.md): cifratura, integrità e limiti di sicurezza.
-- [Limiti noti](docs/limiti.md): cosa l'app non fa.
-- [AGENTS.md](AGENTS.md): guida rapida per agenti AI.
+- [Development and verification](docs/development.md): build, tests, separate trial data, conventions.
+- [Architecture](docs/architecture.md): how the archive, editor, and interface are organized.
+- [Protected notes](docs/protected-notes.md): encryption, integrity, and security limits.
+- [Known limits](docs/limits.md): what the app does not do.
+- [AGENTS.md](AGENTS.md): a short guide for AI agents.
 
-| Cartella | Contenuto |
+| Folder | Contents |
 | --- | --- |
-| `src/MarkdownMkII.Core` | Parsing e trasformazioni Markdown, anteprima |
-| `src/MarkdownMkII.Storage` | Archivio SQLite, ricerca, cifratura, import ed export |
-| `src/MarkdownMkII.App` | Interfaccia WinUI 3 |
-| `tests/` | Test automatici |
+| `src/MarkdownMkII.Core` | Markdown parsing and transforms, preview |
+| `src/MarkdownMkII.Storage` | SQLite archive, search, encryption, import and export |
+| `src/MarkdownMkII.App` | WinUI 3 interface |
+| `tests/` | Automated tests |
 
-## Contribuire
+## Contributing
 
-Segnalazioni e pull request sono benvenute. Prima di aprire una pull request esegui i test e segui le convenzioni in [docs/sviluppo.md](docs/sviluppo.md#convenzioni).
+Issues and pull requests are welcome. Before opening a pull request, run the tests and follow the conventions in [docs/development.md](docs/development.md#conventions).
 
-## Licenza
+## License
 
-Distribuito con licenza [GNU General Public License v3.0](LICENSE). Puoi usare, studiare, modificare e ridistribuire il programma, anche modificato, purché le versioni distribuite restino sotto la stessa licenza e con il codice sorgente disponibile.
+Distributed under the [GNU General Public License v3.0](LICENSE). You may use, study, modify, and redistribute the program, including modified versions, provided that distributed versions stay under the same license and the source code remains available.
