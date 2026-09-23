@@ -14,6 +14,29 @@ public sealed class NoteDatabaseTests : IDisposable
     }
 
     [Fact]
+    public async Task DiagnosticsReportCountsWithoutExposingContent()
+    {
+        var db = Database;
+        var note = await db.CreateAsync("SECRET_TITLE", "SECRET_BODY");
+        await db.SaveAsync(note.Summary.Id, "SECRET_BODY edited", note.Version, true);
+        var trashed = await db.CreateAsync("Other");
+        await db.SetStateAsync(trashed.Summary.Id, false, true);
+        using (var input = new MemoryStream([1, 2, 3, 4]))
+            await db.AddAttachmentAsync(input, "file.bin");
+
+        var report = await db.DiagnosticsAsync();
+        Assert.Equal(3, report.SchemaVersion);
+        Assert.Equal("wal", report.JournalMode);
+        Assert.Equal(1, report.Notes);
+        Assert.Equal(1, report.TrashedNotes);
+        Assert.Equal(1, report.Attachments);
+        Assert.Equal(4, report.AttachmentBytes);
+        Assert.True(report.Revisions >= 2);
+        Assert.False(report.ProtectionConfigured);
+        Assert.DoesNotContain("SECRET", report.ToString());
+    }
+
+    [Fact]
     public async Task InitializationCanRetryAfterAnIoFailure()
     {
         Directory.CreateDirectory(root);

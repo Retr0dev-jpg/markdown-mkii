@@ -18,10 +18,26 @@
             <controls:SettingsCard x:Uid="InfoAppCard" Header="Markdown MkII">
                 <controls:SettingsCard.HeaderIcon><FontIcon Glyph="&#xE8A5;" /></controls:SettingsCard.HeaderIcon>
             </controls:SettingsCard>
+            <controls:SettingsCard x:Uid="InfoProjectCard" Description="{x:Bind ViewModel.ProjectSummary}">
+                <controls:SettingsCard.HeaderIcon><FontIcon Glyph="&#xE77B;" /></controls:SettingsCard.HeaderIcon>
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                    <Button x:Uid="InfoGitHub" Command="{x:Bind ViewModel.OpenRepositoryCommand}" />
+                    <Button x:Uid="InfoLicense" Command="{x:Bind ViewModel.OpenLicenseCommand}" />
+                </StackPanel>
+            </controls:SettingsCard>
             <controls:SettingsCard x:Uid="InfoVersionCard">
                 <controls:SettingsCard.HeaderIcon><FontIcon Glyph="&#xE946;" /></controls:SettingsCard.HeaderIcon>
                 <TextBlock Text="{x:Bind ViewModel.VersionSummary}" FontWeight="SemiBold" />
             </controls:SettingsCard>
+            <controls:SettingsCard x:Uid="InfoReportCard">
+                <controls:SettingsCard.HeaderIcon><FontIcon Glyph="&#xEBE8;" /></controls:SettingsCard.HeaderIcon>
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                    <Button x:Uid="InfoCopyDiagnostics" Command="{x:Bind ViewModel.CopyDiagnosticsCommand}" />
+                    <Button x:Uid="InfoReportIssue" Style="{StaticResource AccentButtonStyle}" Command="{x:Bind ViewModel.ReportIssueCommand}" />
+                </StackPanel>
+            </controls:SettingsCard>
+            <InfoBar x:Uid="InfoDiagnosticsCopied" IsOpen="{x:Bind ViewModel.DiagnosticsCopied, Mode=TwoWay}" Severity="Success" />
+
             <controls:SettingsExpander x:Uid="InfoComponents">
                 <controls:SettingsExpander.HeaderIcon><FontIcon Glyph="&#xE950;" /></controls:SettingsExpander.HeaderIcon>
                 <controls:SettingsExpander.Items>
@@ -33,26 +49,29 @@
             <controls:SettingsExpander x:Uid="InfoDataPaths" IsExpanded="False">
                 <controls:SettingsExpander.HeaderIcon><FontIcon Glyph="&#xE838;" /></controls:SettingsExpander.HeaderIcon>
                 <controls:SettingsExpander.Items>
-                    <controls:SettingsCard x:Uid="InfoDatabasePath" ContentAlignment="Vertical" HorizontalContentAlignment="Stretch">
-                        <StackPanel Spacing="8"><TextBlock Text="{x:Bind ViewModel.DatabasePath}" TextWrapping="Wrap" IsTextSelectionEnabled="True"/><StackPanel Orientation="Horizontal" Spacing="8"><Button x:Uid="InfoCopyPath" Tag="{x:Bind ViewModel.DatabasePath}" Click="OnCopyPath"/><Button x:Uid="InfoOpenPath" Tag="{x:Bind ViewModel.DatabasePath}" Click="OnOpenPath"/></StackPanel></StackPanel>
-                        
-                    </controls:SettingsCard>
-                    <controls:SettingsCard x:Uid="InfoSettingsPath" ContentAlignment="Vertical" HorizontalContentAlignment="Stretch">
-                        <StackPanel Spacing="8"><TextBlock Text="{x:Bind ViewModel.SettingsPath}" TextWrapping="Wrap" IsTextSelectionEnabled="True" /><StackPanel Orientation="Horizontal" Spacing="8"><Button x:Uid="InfoCopyPath" Tag="{x:Bind ViewModel.SettingsPath}" Click="OnCopyPath"/><Button x:Uid="InfoOpenPath" Tag="{x:Bind ViewModel.SettingsPath}" Click="OnOpenPath"/></StackPanel></StackPanel>
-                    </controls:SettingsCard>
-                    <controls:SettingsCard x:Uid="InfoLogPath" ContentAlignment="Vertical" HorizontalContentAlignment="Stretch">
-                        <StackPanel Spacing="8">
-                            <TextBlock Text="{x:Bind ViewModel.LogPath}" TextWrapping="Wrap" IsTextSelectionEnabled="True" />
-                            <StackPanel Orientation="Horizontal" Spacing="8"><Button x:Uid="InfoCopyPath" Tag="{x:Bind ViewModel.LogPath}" Click="OnCopyPath"/><Button x:Uid="InfoOpenLog" Command="{x:Bind ViewModel.OpenLogCommand}"/></StackPanel>
+                    <controls:SettingsCard x:Uid="InfoDatabasePath">
+                        <controls:SettingsCard.Description><TextBlock Text="{x:Bind ViewModel.DatabasePath}" TextWrapping="Wrap" IsTextSelectionEnabled="True" /></controls:SettingsCard.Description>
+                        <StackPanel Orientation="Horizontal" Spacing="8">
+                            <Button x:Uid="InfoCopyPath" Tag="{x:Bind ViewModel.DatabasePath}" Click="OnCopyPath" />
+                            <Button x:Uid="InfoOpenPath" Tag="{x:Bind ViewModel.DatabasePath}" Click="OnOpenPath" />
                         </StackPanel>
                     </controls:SettingsCard>
-            <controls:SettingsCard x:Uid="InfoDiagnostics">
-                <controls:SettingsCard.HeaderIcon><FontIcon Glyph="&#xE8C8;" /></controls:SettingsCard.HeaderIcon>
-                <Button x:Uid="InfoCopyDiagnostics" Command="{x:Bind ViewModel.CopyDiagnosticsCommand}" />
-            </controls:SettingsCard>
+                    <controls:SettingsCard x:Uid="InfoSettingsPath">
+                        <controls:SettingsCard.Description><TextBlock Text="{x:Bind ViewModel.SettingsPath}" TextWrapping="Wrap" IsTextSelectionEnabled="True" /></controls:SettingsCard.Description>
+                        <StackPanel Orientation="Horizontal" Spacing="8">
+                            <Button x:Uid="InfoCopyPath" Tag="{x:Bind ViewModel.SettingsPath}" Click="OnCopyPath" />
+                            <Button x:Uid="InfoOpenPath" Tag="{x:Bind ViewModel.SettingsPath}" Click="OnOpenPath" />
+                        </StackPanel>
+                    </controls:SettingsCard>
+                    <controls:SettingsCard x:Uid="InfoLogPath">
+                        <controls:SettingsCard.Description><TextBlock Text="{x:Bind ViewModel.LogPath}" TextWrapping="Wrap" IsTextSelectionEnabled="True" /></controls:SettingsCard.Description>
+                        <StackPanel Orientation="Horizontal" Spacing="8">
+                            <Button x:Uid="InfoCopyPath" Tag="{x:Bind ViewModel.LogPath}" Click="OnCopyPath" />
+                            <Button x:Uid="InfoOpenLog" Command="{x:Bind ViewModel.OpenLogCommand}" />
+                        </StackPanel>
+                    </controls:SettingsCard>
                 </controls:SettingsExpander.Items>
             </controls:SettingsExpander>
-            <InfoBar x:Uid="InfoDiagnosticsCopied" IsOpen="{x:Bind ViewModel.DiagnosticsCopied, Mode=TwoWay}" Severity="Success" Margin="0,6,0,0" />
         </StackPanel>
     </ScrollViewer>
     </Grid>

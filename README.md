@@ -34,7 +34,7 @@ In both cases the folder contains `notes.db` (the notes) and `settings.json` (pr
 You need Windows and the [.NET SDK 10](https://dotnet.microsoft.com/download).
 
 ```powershell
-git clone <repository-url>
+git clone https://github.com/Retr0dev-jpg/markdown-mkii
 cd markdown-mkii
 dotnet build src/MarkdownMkII.App -p:Platform=x64
 ```
@@ -66,7 +66,7 @@ Documentation:
 
 ## Contributing
 
-Issues and pull requests are welcome. Before opening a pull request, run the tests and follow the conventions in [docs/development.md](docs/development.md#conventions).
+Issues and pull requests are welcome. To report a problem, use **About → Report a problem** in the app: it opens an issue with a technical report already filled in (version, Windows, archive state, recent errors) and never includes note text. Before opening a pull request, run the tests and follow the conventions in [docs/development.md](docs/development.md#conventions).
 
 ## License
 

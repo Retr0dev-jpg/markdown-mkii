@@ -952,16 +952,32 @@
   <data name="InfoComponents.Header" xml:space="preserve"><value>Componenti</value></data>
   <data name="InfoComponents.Description" xml:space="preserve"><value>Piattaforma su cui l’app è in esecuzione.</value></data>
   <data name="InfoDataPaths.Header" xml:space="preserve"><value>Dettagli tecnici</value></data>
-  <data name="InfoDataPaths.Description" xml:space="preserve"><value>Percorsi dei dati e strumenti diagnostici.</value></data>
+  <data name="InfoDataPaths.Description" xml:space="preserve"><value>Dove si trovano archivio, impostazioni e registro diagnostico.</value></data>
   <data name="InfoSettingsPath.Header" xml:space="preserve"><value>Impostazioni</value></data>
   <data name="InfoRecoveryPath.Header" xml:space="preserve"><value>Bozze di recupero</value></data>
   <data name="InfoHistoryPath.Header" xml:space="preserve"><value>Cronologia</value></data>
   <data name="InfoLogPath.Header" xml:space="preserve"><value>Registro diagnostico</value></data>
-  <data name="InfoDiagnostics.Header" xml:space="preserve"><value>Informazioni di diagnostica</value></data>
-  <data name="InfoDiagnostics.Description" xml:space="preserve"><value>Copia versione, sistema e percorsi da allegare a una segnalazione.</value></data>
-  <data name="InfoCopyDiagnostics.Content" xml:space="preserve"><value>Copia informazioni</value></data>
-  <data name="InfoDiagnosticsCopied.Title" xml:space="preserve"><value>Informazioni copiate</value></data>
-  <data name="InfoDiagnosticsCopied.Message" xml:space="preserve"><value>Puoi incollarle nella tua segnalazione.</value></data>
+  <data name="InfoProjectCard.Header" xml:space="preserve"><value>Progetto open source</value></data>
+  <data name="InfoProjectSummary" xml:space="preserve"><value>Creato da {0} · Licenza {1}</value></data>
+  <data name="InfoGitHub.Content" xml:space="preserve"><value>GitHub</value></data>
+  <data name="InfoLicense.Content" xml:space="preserve"><value>Licenza</value></data>
+  <data name="InfoReportCard.Header" xml:space="preserve"><value>Segnala un problema</value></data>
+  <data name="InfoReportCard.Description" xml:space="preserve"><value>Apre una issue su GitHub con un rapporto tecnico già inserito: versione, Windows, stato dell’archivio ed errori recenti. Non contiene testo, titoli delle note o password, e il nome utente di Windows è nascosto.</value></data>
+  <data name="InfoReportIssue.Content" xml:space="preserve"><value>Apri una issue</value></data>
+  <data name="InfoCopyDiagnostics.Content" xml:space="preserve"><value>Copia rapporto</value></data>
+  <data name="InfoDiagnosticsCopied.Title" xml:space="preserve"><value>Rapporto copiato</value></data>
+  <data name="InfoDiagnosticsCopied.Message" xml:space="preserve"><value>È negli appunti: incollalo nella segnalazione se non compare già.</value></data>
+  <data name="InfoIssueTemplate" xml:space="preserve"><value>## Cosa è successo
+
+
+## Passi per riprodurre
+1. 
+2. 
+
+## Cosa ti aspettavi
+
+
+{0}</value></data>
   <data name="LibraryIntro.Text" xml:space="preserve"><value>Le tue note, in un unico posto.</value></data>
   <data name="LibraryFolderMenu.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Cartelle della libreria</value></data>
   <data name="LibraryFolderMenu.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Gestisci cartelle</value></data>

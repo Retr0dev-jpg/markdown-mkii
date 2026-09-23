@@ -952,16 +952,32 @@
   <data name="InfoComponents.Header" xml:space="preserve"><value>Components</value></data>
   <data name="InfoComponents.Description" xml:space="preserve"><value>The platform running the app.</value></data>
   <data name="InfoDataPaths.Header" xml:space="preserve"><value>Technical details</value></data>
-  <data name="InfoDataPaths.Description" xml:space="preserve"><value>Data locations and diagnostics.</value></data>
+  <data name="InfoDataPaths.Description" xml:space="preserve"><value>Where the archive, settings and diagnostic log are stored.</value></data>
   <data name="InfoSettingsPath.Header" xml:space="preserve"><value>Settings</value></data>
   <data name="InfoRecoveryPath.Header" xml:space="preserve"><value>Recovery drafts</value></data>
   <data name="InfoHistoryPath.Header" xml:space="preserve"><value>History</value></data>
   <data name="InfoLogPath.Header" xml:space="preserve"><value>Diagnostic log</value></data>
-  <data name="InfoDiagnostics.Header" xml:space="preserve"><value>Diagnostic information</value></data>
-  <data name="InfoDiagnostics.Description" xml:space="preserve"><value>Copy version, system and data locations to include in a bug report.</value></data>
-  <data name="InfoCopyDiagnostics.Content" xml:space="preserve"><value>Copy information</value></data>
-  <data name="InfoDiagnosticsCopied.Title" xml:space="preserve"><value>Information copied</value></data>
-  <data name="InfoDiagnosticsCopied.Message" xml:space="preserve"><value>You can paste them into your bug report.</value></data>
+  <data name="InfoProjectCard.Header" xml:space="preserve"><value>Open source project</value></data>
+  <data name="InfoProjectSummary" xml:space="preserve"><value>Created by {0} · License: {1}</value></data>
+  <data name="InfoGitHub.Content" xml:space="preserve"><value>GitHub</value></data>
+  <data name="InfoLicense.Content" xml:space="preserve"><value>License</value></data>
+  <data name="InfoReportCard.Header" xml:space="preserve"><value>Report a problem</value></data>
+  <data name="InfoReportCard.Description" xml:space="preserve"><value>Opens a GitHub issue with a technical report already included: version, Windows, archive state and recent errors. It contains no note text, titles or passwords, and your Windows user name is hidden.</value></data>
+  <data name="InfoReportIssue.Content" xml:space="preserve"><value>Open an issue</value></data>
+  <data name="InfoIssueTemplate" xml:space="preserve"><value>## What happened
+
+
+## Steps to reproduce
+1. 
+2. 
+
+## What you expected
+
+
+{0}</value></data>
+  <data name="InfoCopyDiagnostics.Content" xml:space="preserve"><value>Copy report</value></data>
+  <data name="InfoDiagnosticsCopied.Title" xml:space="preserve"><value>Report copied</value></data>
+  <data name="InfoDiagnosticsCopied.Message" xml:space="preserve"><value>It is on the clipboard: paste it into the issue if it is not already there.</value></data>
   <data name="LibraryIntro.Text" xml:space="preserve"><value>Your notes, together in one place.</value></data>
   <data name="LibraryFolderMenu.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve"><value>Library folders</value></data>
   <data name="LibraryFolderMenu.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve"><value>Manage folders</value></data>

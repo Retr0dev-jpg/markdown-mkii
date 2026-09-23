@@ -57,6 +57,17 @@ Only **Debug** builds can use a data folder other than the real one, so trials d
 
 Edit the file while the app is closed, and clear it when you finish so the app returns to the normal archive.
 
+## Diagnostic report
+
+**About → Report a problem** opens a new GitHub issue with a Markdown report already filled in. It also copies the report to the clipboard, because GitHub trims long prefilled bodies. **Copy report** only copies it. `Services/DiagnosticsReport.cs` builds the report, which contains:
+
+- App version, architecture, installation type (MSIX or zip) and build configuration.
+- Windows version and build, .NET, Windows App SDK, app and Windows languages, theme, memory and uptime.
+- Archive state (`NoteDatabase.DiagnosticsAsync`): schema, SQLite version, sizes, counts of notes, revisions and attachments, and the state of protection, Windows Hello, cleanup and integrity.
+- The last 20 errors from the diagnostic log.
+
+It never contains note text or titles, passwords or keys. Paths inside the user profile become `%USERPROFILE%`, and the Windows user name becomes `<user>`. Author, license and repository address live in `Services/AppLinks.cs`.
+
 ## Conventions
 
 - **Encoding:** C#, XAML, RESW, project files, the solution, the manifest, and PowerShell scripts are UTF-8 **with BOM** (see `.editorconfig`); without a BOM, Visual Studio reads files that contain only ASCII as Windows-1252. Documentation, JSON, and YAML are UTF-8 without a BOM.
