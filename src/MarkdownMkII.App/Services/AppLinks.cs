@@ -3,9 +3,16 @@
 /// <summary>Project identity shown in Information and used to open issues.</summary>
 public static class AppLinks
 {
-    public const string Author = "Marco Simone";
+    // Authors in Directory.Build.props: the SDK stamps it as the assembly company when Company is not set.
+    public static readonly string Author = typeof(AppLinks).Assembly
+        .GetCustomAttributes(typeof(System.Reflection.AssemblyCompanyAttribute), false)
+        .OfType<System.Reflection.AssemblyCompanyAttribute>().FirstOrDefault()?.Company ?? "";
     public const string License = "GNU General Public License v3.0";
-    private const string RepositoryUrl = "https://github.com/Retr0dev-jpg/markdown-mkii";
+    // RepositoryUrl in Directory.Build.props, embedded as assembly metadata.
+    private static readonly string RepositoryUrl = typeof(AppLinks).Assembly
+        .GetCustomAttributes(typeof(System.Reflection.AssemblyMetadataAttribute), false)
+        .OfType<System.Reflection.AssemblyMetadataAttribute>()
+        .FirstOrDefault(a => a.Key == "RepositoryUrl")?.Value?.TrimEnd('/') ?? "";
     public static readonly Uri Repository = new(RepositoryUrl);
     public static readonly Uri LicenseText = new(RepositoryUrl + "/blob/main/LICENSE");
 

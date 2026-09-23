@@ -163,4 +163,7 @@ public sealed class ExportSettings
 public sealed class DiagnosticsSettings
 {
     public LogLevel LogLevel { get; set; } = LogLevel.ErrorsOnly;
+
+    /// <summary>Whether an installed copy asks GitHub for a newer release at startup.</summary>
+    public bool CheckForUpdates { get; set; } = true;
 }

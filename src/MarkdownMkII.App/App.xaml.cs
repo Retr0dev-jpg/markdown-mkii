@@ -63,6 +63,7 @@ public partial class App : Application
         window.Activate();
         window.ShowEmptyWorkspace();
         _ = HandleActivationAsync(current.GetActivatedEventArgs());
+        _ = AppUpdates.CheckAtStartupAsync();
     }
 
     private void OnRedirectedActivation(object? sender, AppActivationArguments e)

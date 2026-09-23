@@ -1,26 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="7e4c2a91-8b16-4d3f-9c0e-a1b2c3d4e5f6"
-    Publisher="CN=Marco Simone"
+    Name="Retr0dev-jpg.MarkdownMKII"
+    Publisher="CN=76B99A94-30A2-4C93-BCA5-E1E64A286AB1"
     Version="1.0.0.0" />
-
-  <mp:PhoneIdentity PhoneProductId="7e4c2a91-8b16-4d3f-9c0e-a1b2c3d4e5f6" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>Markdown MkII</DisplayName>
-    <PublisherDisplayName>Marco Simone</PublisherDisplayName>
+    <PublisherDisplayName>Retr0dev-jpg</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
   <Dependencies>
-    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.17763.0" MaxVersionTested="10.0.26226.0" />
     <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.26226.0" />
   </Dependencies>
 
@@ -34,7 +30,7 @@
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
         DisplayName="Markdown MkII"
-        Description="Editor Markdown nativo per Windows"
+        Description="ms-resource:AppDescription"
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png">
@@ -50,7 +46,7 @@
               <uap:FileType>.mdown</uap:FileType>
               <uap:FileType>.mkd</uap:FileType>
             </uap:SupportedFileTypes>
-            <uap:DisplayName>Documento Markdown</uap:DisplayName>
+            <uap:DisplayName>ms-resource:MarkdownFileType</uap:DisplayName>
           </uap:FileTypeAssociation>
         </uap:Extension>
       </Extensions>

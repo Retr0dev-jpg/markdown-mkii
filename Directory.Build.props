@@ -5,4 +5,24 @@
     <LangVersion>latest</LangVersion>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
+
+  <!-- Single source of the app version. Bump AppVersionBase by hand for new features or breaking changes;
+       the release workflow passes -p:VersionPatch with its run number, local builds stay "-dev". -->
+  <PropertyGroup>
+    <AppVersionBase>1.0</AppVersionBase>
+    <VersionPatch Condition="'$(VersionPatch)' == ''">0</VersionPatch>
+    <VersionPrefix>$(AppVersionBase).$(VersionPatch)</VersionPrefix>
+    <VersionSuffix Condition="'$(VersionPatch)' == '0'">dev</VersionSuffix>
+    <Authors>Marco Simone Cannizzaro</Authors>
+    <Product>Markdown MkII</Product>
+    <RepositoryUrl>https://github.com/Retr0dev-jpg/markdown-mkii</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>$(RepositoryUrl)</PackageProjectUrl>
+    <Copyright>Copyright © Marco Simone Cannizzaro. Licensed under the GNU GPL v3.0.</Copyright>
+  </PropertyGroup>
+
+  <!-- The app reads the repository address from the assembly, so it is defined only here. -->
+  <ItemGroup>
+    <AssemblyMetadata Include="RepositoryUrl" Value="$(RepositoryUrl)" />
+  </ItemGroup>
 </Project>

@@ -26,4 +26,4 @@ The limits of protection (memory, the paging file, and restoring the whole archi
 ## Platform
 
 - Windows only, x64. x86 and ARM64 publish profiles exist but are not tested.
-- The published release is the unpackaged build (zip). The MSIX package requires a signing certificate, which is not included in the project.
+- Releases contain the installer and the portable zip, both unpackaged and not yet code-signed, so SmartScreen can warn on first run. The signed MSIX is distributed only through the Microsoft Store, which signs it (see [development](development.md#microsoft-store)).

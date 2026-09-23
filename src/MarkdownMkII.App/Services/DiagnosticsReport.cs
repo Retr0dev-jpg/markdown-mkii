@@ -15,7 +15,14 @@ public static class DiagnosticsReport
 {
     private const int RecentErrors = 20;
 
-    public static string AppVersion { get; } = ReadVersion();
+    // InformationalVersion is "1.0.42+<commit>" in releases and "1.0.0-dev+<commit>" in local builds.
+    private static readonly string[] InformationalVersion = (typeof(DiagnosticsReport).Assembly
+        .GetCustomAttributes(typeof(System.Reflection.AssemblyInformationalVersionAttribute), false)
+        .OfType<System.Reflection.AssemblyInformationalVersionAttribute>().FirstOrDefault()?.InformationalVersion ?? "0.0.0")
+        .Split('+', 2);
+
+    public static string AppVersion { get; } = InformationalVersion[0];
+    public static string Commit { get; } = InformationalVersion.Length > 1 ? InformationalVersion[1][..Math.Min(7, InformationalVersion[1].Length)] : "unknown";
     public static bool IsPackaged { get; } = ReadIsPackaged();
 
     public static async Task<string> BuildAsync()
@@ -25,7 +32,8 @@ public static class DiagnosticsReport
         text.AppendLine("| | |").AppendLine("| --- | --- |");
         void Row(string name, string value) => text.AppendLine($"| {name} | {value.Replace("|", "\\|")} |");
 
-        Row("App", $"{AppVersion} · {RuntimeInformation.ProcessArchitecture} · {(IsPackaged ? "MSIX" : "zip (unpackaged)")} · {Configuration}");
+        Row("App", $"{AppVersion} · commit {Commit} · {RuntimeInformation.ProcessArchitecture} · {(IsPackaged ? "MSIX" : AppUpdates.InstallKind)} · {Configuration}");
+        Row("Updates", AppUpdates.IsSupported ? $"{AppUpdates.State} · check at startup: {YesNo(SettingsService.Instance.Diagnostics.CheckForUpdates)}" : "n/a");
         Row("Windows", WindowsVersion());
         Row(".NET", RuntimeInformation.FrameworkDescription);
         Row("Windows App SDK", WindowsAppSdkVersion());
@@ -67,19 +75,6 @@ public static class DiagnosticsReport
 #else
         "Release";
 #endif
-
-    private static string ReadVersion()
-    {
-        try
-        {
-            var version = Windows.ApplicationModel.Package.Current.Id.Version;
-            return $"{version.Major}.{version.Minor}.{version.Build}.{version.Revision}";
-        }
-        catch (Exception ex) when (ex is InvalidOperationException or COMException)
-        {
-            return typeof(DiagnosticsReport).Assembly.GetName().Version?.ToString() ?? "1.0.0";
-        }
-    }
 
     private static bool ReadIsPackaged()
     {

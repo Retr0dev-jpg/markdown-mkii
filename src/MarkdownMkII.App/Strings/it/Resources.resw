@@ -115,6 +115,8 @@
   <data name="SettingsOpenLog.Content" xml:space="preserve"><value>Apri log</value></data>
   <data name="SettingsReset.Header" xml:space="preserve"><value>Ripristina predefiniti</value></data>
   <data name="SettingsResetButton.Content" xml:space="preserve"><value>Ripristina</value></data>
+  <data name="AppDescription" xml:space="preserve"><value>Note Markdown locali, con ricerca e note protette.</value></data>
+  <data name="MarkdownFileType" xml:space="preserve"><value>Documento Markdown</value></data>
   <data name="InfoTitle.Text" xml:space="preserve"><value>Informazioni</value></data>
   <data name="InfoBlurb.Text" xml:space="preserve"><value>Il tuo spazio per scrivere e organizzare le note.</value></data>
   <data name="InfoVersion.Text" xml:space="preserve"><value>Versione: </value></data>
@@ -961,6 +963,17 @@
   <data name="InfoProjectSummary" xml:space="preserve"><value>Creato da {0} · Licenza {1}</value></data>
   <data name="InfoGitHub.Content" xml:space="preserve"><value>GitHub</value></data>
   <data name="InfoLicense.Content" xml:space="preserve"><value>Licenza</value></data>
+  <data name="InfoUpdatesCard.Header" xml:space="preserve"><value>Aggiornamenti</value></data>
+  <data name="InfoUpdatesUnsupported" xml:space="preserve"><value>Gli aggiornamenti automatici funzionano nella versione installata con il setup scaricato da GitHub.</value></data>
+  <data name="InfoUpdatesIdle" xml:space="preserve"><value>Versione installata: {0}.</value></data>
+  <data name="InfoUpdatesChecking" xml:space="preserve"><value>Ricerca e download degli aggiornamenti…</value></data>
+  <data name="InfoUpdatesUpToDate" xml:space="preserve"><value>Stai usando la versione più recente ({0}).</value></data>
+  <data name="InfoUpdatesReady" xml:space="preserve"><value>La versione {0} è pronta e verrà installata alla chiusura dell’app.</value></data>
+  <data name="InfoUpdatesFailed" xml:space="preserve"><value>Impossibile controllare gli aggiornamenti. Controlla la connessione e riprova.</value></data>
+  <data name="InfoCheckUpdates.Content" xml:space="preserve"><value>Cerca aggiornamenti</value></data>
+  <data name="InfoRestartUpdate.Content" xml:space="preserve"><value>Riavvia e aggiorna</value></data>
+  <data name="InfoAutoUpdates.Header" xml:space="preserve"><value>Controlla all’avvio</value></data>
+  <data name="InfoAutoUpdates.Description" xml:space="preserve"><value>All’avvio l’app chiede a GitHub se esiste una versione più recente. È l’unica connessione che fa da sola; le note non vengono mai inviate.</value></data>
   <data name="InfoReportCard.Header" xml:space="preserve"><value>Segnala un problema</value></data>
   <data name="InfoReportCard.Description" xml:space="preserve"><value>Apre una issue su GitHub con un rapporto tecnico già inserito: versione, Windows, stato dell’archivio ed errori recenti. Non contiene testo, titoli delle note o password, e il nome utente di Windows è nascosto.</value></data>
   <data name="InfoReportIssue.Content" xml:space="preserve"><value>Apri una issue</value></data>

@@ -1,3 +1,5 @@
+<img src="src/MarkdownMkII.App/Assets/Square44x44Logo.targetsize-96_altform-unplated.png" width="72" alt="Markdown MkII icon">
+
 # Markdown MkII
 
 A fast, local Markdown note manager for Windows. Written in C# with WinUI 3.
@@ -6,7 +8,12 @@ Notes live in a single archive on your PC: no cloud, no account. You can protect
 
 ## Download
 
-Download `MarkdownMkII-win-x64.zip` from the latest [release](../../releases/latest), extract the folder, and start `MarkdownMkII.App.exe`. Nothing else needs to be installed.
+From the latest [release](../../releases/latest), download one of:
+
+- **`MarkdownMkII-<version>-Setup.exe`** (recommended): installs the app for your user, with Start menu and desktop shortcuts, and keeps it up to date from GitHub.
+- **`MarkdownMkII-<version>-Portable.zip`**: extract the folder and start `MarkdownMkII.App.exe`; it can update itself too.
+
+Nothing else needs to be installed. The files are not code-signed yet, so Windows SmartScreen may show "Windows protected your PC": choose **More info → Run anyway**.
 
 Requirements: Windows 10 (1809) or Windows 11, 64-bit.
 
@@ -24,7 +31,7 @@ Imported files are copied into the archive. The originals are never modified.
 
 ## Where the data lives
 
-- **Zip build:** `%LOCALAPPDATA%\Markdown MkII`.
+- **Setup and portable builds:** `%LOCALAPPDATA%\Markdown MkII` (the app itself is installed separately, so updating or uninstalling it never touches your notes).
 - **MSIX build:** the package data folder.
 
 In both cases the folder contains `notes.db` (the notes) and `settings.json` (preferences). To move everything to another PC, use **Settings → Data → Backup**.

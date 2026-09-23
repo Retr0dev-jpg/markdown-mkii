@@ -40,6 +40,9 @@ public sealed partial class MainWindow : Window
         InitializeComponent();
         ExtendsContentIntoTitleBar = true;
         SetTitleBar(AppTitleBar);
+        // MSIX takes the taskbar icon from the manifest; the unpackaged build needs it set on the window.
+        var icon = Path.Combine(AppContext.BaseDirectory, "Assets", "AppIcon.ico");
+        if (File.Exists(icon)) AppWindow.SetIcon(icon);
 
         var appearance = SettingsService.Instance.Appearance;
         ApplyTheme(appearance.Theme);
@@ -321,6 +324,12 @@ public sealed partial class MainWindow : Window
         if (!isClosing) _ = ConfirmCloseAsync();
     }
 
+    /// <summary>Closes like the title-bar button: unsaved text is saved and notes are locked first.</summary>
+    internal void RequestClose()
+    {
+        if (!isClosing && !isCloseConfirmed) _ = ConfirmCloseAsync();
+    }
+
     private async Task ConfirmCloseAsync()
     {
         isClosing = true;
@@ -346,6 +355,7 @@ public sealed partial class MainWindow : Window
             if (Editor.CurrentNote is not null) return;
             SettingsButton.Focus(FocusState.Programmatic);
             isCloseConfirmed = true;
+            AppUpdates.ApplyOnExit();
             DispatcherQueue.TryEnqueue(Close);
         }
         catch (Exception ex)

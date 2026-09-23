@@ -20,40 +20,133 @@ jobs:
         with:
           dotnet-version: "10.0.x"
 
-      - name: Build
+      # Major.Minor come from Directory.Build.props; the run number is the patch, so every release is unique.
+      - name: Version
+        id: version
         shell: pwsh
         run: |
+          $version = (dotnet msbuild src/MarkdownMkII.App -nologo -getProperty:Version -p:Platform=x64 -p:VersionPatch=${{ github.run_number }} | Out-String).Trim()
+          if ($version -notmatch '^\d+\.\d+\.\d+$') { throw "Unexpected version '$version'" }
+          "version=$version" >> $env:GITHUB_OUTPUT
+          Write-Host "Version $version"
+
+      - name: Publish app
+        shell: pwsh
+        run: |
+          $version = "${{ steps.version.outputs.version }}"
           $publish = Join-Path $env:GITHUB_WORKSPACE "artifacts/publish"
           dotnet publish src/MarkdownMkII.App --nologo -c Release `
             -p:PublishProfile=win-x64 `
             -p:WindowsPackageType=None `
             -p:WindowsAppSDKSelfContained=true `
+            -p:VersionPatch=${{ github.run_number }} `
             -p:PublishDir="$publish/"
           if ($LASTEXITCODE -ne 0) { throw "Publish failed" }
-          Compress-Archive -Path "$publish/*" -DestinationPath (Join-Path $env:GITHUB_WORKSPACE "artifacts/MarkdownMkII-win-x64.zip") -Force
+          $stamped = [Diagnostics.FileVersionInfo]::GetVersionInfo((Join-Path $publish "MarkdownMkII.App.exe")).ProductVersion
+          if (-not $stamped.StartsWith($version)) { throw "Executable carries version '$stamped', expected $version" }
+
+      # Setup, portable zip and update packages. The previous release is downloaded first so Velopack
+      # can also build a small delta update; the first release has none.
+      - name: Build
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: pwsh
+        run: |
+          $version = "${{ steps.version.outputs.version }}"
+          $repo = "${{ github.server_url }}/${{ github.repository }}"
+          $publish = Join-Path $env:GITHUB_WORKSPACE "artifacts/publish"
+          $releases = Join-Path $env:GITHUB_WORKSPACE "artifacts/releases"
+          $project = [xml](Get-Content src/MarkdownMkII.App/MarkdownMkII.App.csproj -Raw)
+          $velopack = ($project.Project.ItemGroup.PackageReference | Where-Object Include -eq 'Velopack').Version
+          dotnet tool install -g vpk --version $velopack
+          if ($LASTEXITCODE -ne 0) { throw "vpk $velopack could not be installed" }
+          $env:PATH += ";$env:USERPROFILE\.dotnet\tools"
+          vpk download github --repoUrl $repo --token $env:GH_TOKEN --outputDir $releases
+          if ($LASTEXITCODE -ne 0) { Write-Host "No previous Velopack release: building without a delta." }
+          $authors = (dotnet msbuild src/MarkdownMkII.App -nologo -getProperty:Authors -p:Platform=x64 | Out-String).Trim()
+          vpk pack --packId MarkdownMkII --packVersion $version --packDir $publish `
+            --mainExe MarkdownMkII.App.exe --packTitle "Markdown MkII" --packAuthors $authors `
+            --runtime win-x64 --icon (Join-Path $publish "Assets/AppIcon.ico") --outputDir $releases
+          if ($LASTEXITCODE -ne 0) { throw "vpk pack failed" }
+          Move-Item (Join-Path $releases "MarkdownMkII-win-Setup.exe") (Join-Path $releases "MarkdownMkII-$version-Setup.exe")
+          Move-Item (Join-Path $releases "MarkdownMkII-win-Portable.zip") (Join-Path $releases "MarkdownMkII-$version-Portable.zip")
+
+      # Microsoft Store bundle (x64 + ARM64) with the same version; unsigned, the Store signs it.
+      - name: Store package
+        id: store
+        shell: pwsh
+        run: |
+          $version = "${{ steps.version.outputs.version }}"
+          $dir = Join-Path $env:GITHUB_WORKSPACE "artifacts/store"
+          ./scripts/build-store.ps1 -VersionPatch ${{ github.run_number }} -OutputDir $dir
+          $built = Get-ChildItem $dir -Filter '*.msixupload' | Select-Object -First 1
+          if (-not $built) { throw "No .msixupload was produced" }
+          $file = Join-Path $dir "MarkdownMkII-$version-Store.msixupload"
+          Move-Item $built.FullName $file
+          "file=$file" >> $env:GITHUB_OUTPUT
+
+      # Kept with the workflow run, not in the release: users cannot install an unsigned Store package.
+      - name: Upload Store package
+        uses: actions/upload-artifact@v5
+        with:
+          name: MarkdownMkII-${{ steps.version.outputs.version }}-Store
+          path: ${{ steps.store.outputs.file }}
+          if-no-files-found: error
+          retention-days: 90
 
       - name: Publish Latest GitHub Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: pwsh
         run: |
+          $version = "${{ steps.version.outputs.version }}"
+          $tag = "v$version"
           $sha = "${{ github.sha }}"
           $run = "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          $releases = Join-Path $env:GITHUB_WORKSPACE "artifacts/releases"
           $notes = @"
-          Automated build.
+          Markdown MkII $version
 
+          - **Installer:** ``MarkdownMkII-$version-Setup.exe`` (updates itself from GitHub)
+          - **Portable:** ``MarkdownMkII-$version-Portable.zip``
           - Commit: ``$sha``
           - Workflow run: $run
           "@
-          $files = @(
-            (Join-Path $env:GITHUB_WORKSPACE "artifacts/MarkdownMkII-win-x64.zip")
-          )
-          foreach ($f in $files) {
-            if (-not (Test-Path -LiteralPath $f)) { throw "Missing artifact $f" }
+          # Only this version's packages plus the feed files; older packages were downloaded for the delta.
+          $files = @(Get-ChildItem $releases -File | Where-Object {
+            $_.Name -like "*-$version-*" -or $_.Name -in @('releases.win.json', 'assets.win.json', 'RELEASES')
+          } | ForEach-Object FullName)
+          foreach ($required in "MarkdownMkII-$version-Setup.exe", "MarkdownMkII-$version-full.nupkg", "releases.win.json") {
+            if (-not (Test-Path -LiteralPath (Join-Path $releases $required))) { throw "Missing artifact $required" }
           }
+          # The unversioned release used before versioning, and a previous attempt of this same run.
           gh release delete latest --yes --cleanup-tag 2>$null
-          gh release create latest @files `
-            --title "Latest" `
+          gh release delete $tag --yes --cleanup-tag 2>$null
+          $global:LASTEXITCODE = 0
+          gh release create $tag @files `
+            --title "Markdown MkII $version" `
             --notes $notes `
+            --generate-notes `
             --latest `
             --target $sha
+
+      # Optional: runs only when the MSSTORE_APP_ID variable and the Partner Center secrets are set.
+      # A Store failure (for example a submission still in certification) never blocks the GitHub release.
+      - name: Setup Microsoft Store CLI
+        if: vars.MSSTORE_APP_ID != ''
+        uses: microsoft/microsoft-store-apppublisher@v1.2
+
+      - name: Submit to Microsoft Store
+        if: vars.MSSTORE_APP_ID != ''
+        continue-on-error: true
+        env:
+          TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
+          SELLER_ID: ${{ secrets.SELLER_ID }}
+          CLIENT_ID: ${{ secrets.AZURE_AD_APPLICATION_CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.AZURE_AD_APPLICATION_SECRET }}
+        shell: pwsh
+        run: |
+          msstore reconfigure --tenantId $env:TENANT_ID --sellerId $env:SELLER_ID --clientId $env:CLIENT_ID --clientSecret $env:CLIENT_SECRET
+          if ($LASTEXITCODE -ne 0) { throw "Partner Center sign-in failed" }
+          msstore publish -i "${{ steps.store.outputs.file }}" -id "${{ vars.MSSTORE_APP_ID }}"
+          if ($LASTEXITCODE -ne 0) { throw "Store submission failed" }
