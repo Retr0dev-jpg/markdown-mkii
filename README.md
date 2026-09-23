@@ -73,7 +73,7 @@ Documentation:
 
 ## Contributing
 
-Issues and pull requests are welcome. To report a problem, use **About → Report a problem** in the app: it opens an issue with a technical report already filled in (version, Windows, archive state, recent errors) and never includes note text. See [CONTRIBUTING.md](CONTRIBUTING.md) for pull requests, and [SECURITY.md](SECURITY.md) to report a vulnerability privately.
+Issues and pull requests are welcome. To report a problem, use **About → Report a problem** in the app: it opens an issue with a technical report already filled in (version, Windows, archive state, recent errors) and never includes note text. See [CONTRIBUTING.md](CONTRIBUTING.md) for pull requests, [SECURITY.md](SECURITY.md) to report a vulnerability privately, and [PRIVACY.md](PRIVACY.md) for what the app stores and when it connects to the internet.
 
 ## License
 
