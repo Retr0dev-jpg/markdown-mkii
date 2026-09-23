@@ -66,7 +66,7 @@ Documentation:
 
 ## Contributing
 
-Issues and pull requests are welcome. To report a problem, use **About → Report a problem** in the app: it opens an issue with a technical report already filled in (version, Windows, archive state, recent errors) and never includes note text. Before opening a pull request, run the tests and follow the conventions in [docs/development.md](docs/development.md#conventions).
+Issues and pull requests are welcome. To report a problem, use **About → Report a problem** in the app: it opens an issue with a technical report already filled in (version, Windows, archive state, recent errors) and never includes note text. See [CONTRIBUTING.md](CONTRIBUTING.md) for pull requests, and [SECURITY.md](SECURITY.md) to report a vulnerability privately.
 
 ## License
 

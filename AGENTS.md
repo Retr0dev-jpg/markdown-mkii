@@ -46,3 +46,5 @@ The app builds only on Windows. To try it, start it from Visual Studio with F5 (
 | Build, tests, separate trial data, manual checks | `docs/development.md` |
 | What the app does not do | `docs/limits.md` |
 | Automatic release | `.github/workflows/release.yml` |
+| Pull request checklist | `CONTRIBUTING.md` |
+| Vulnerability reports and security scope | `SECURITY.md` |
